@@ -1,0 +1,31 @@
+﻿
+<section>
+
+    @if (p_hz_dv_1_active)
+    {
+        <Horizontal_divider_1 
+            tittle_hz_div_1="@p_tittle_hz_div_1" >
+        </Horizontal_divider_1>
+    }
+    
+
+@ChildContent
+
+</section>
+
+
+@code {
+    [Parameter]
+    public bool p_hz_dv_1_active { get; set; }
+    [Parameter]
+    public string? p_tittle_hz_div_1 { get; set; }
+    
+    //Horizotal divider's Background Color
+    private Desing segment_desing = new Desing();
+
+
+    [Parameter]
+    public RenderFragment ChildContent { get; set; } = null!;
+
+
+}

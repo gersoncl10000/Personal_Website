@@ -1,0 +1,96 @@
+﻿<!---------------------------- First Section lg view -------------------------------------------------------------------->
+<!-- First Section -->
+@if(ActiveDivider1)
+{
+    <!-- Outside Tittle Divider 1 -->
+    @if (ActiveTittleDivider1)
+    {
+
+        <div class="d-flex align-items-stretch">
+            <div class="d-flex justify-content-start align-items-center width-culumn1 @BgColorOutsideTittle1 vt-height-sg-2">
+                <div class="text-color-sg-2 font-Atn-pt-18 ps-2">@OutsideTittle1</div>
+            </div>
+        </div>
+    }
+<!-- Divider 1 -->
+<div class="d-flex align-items-stretch">
+        <div class="d-flex justify-content-center align-items-center bg-sg-2 width-culumn1 vt-height-sg-2">
+            <div class="text-white">@Tittle1</div>
+    </div>
+</div>
+}
+<!-- Content First -->
+<div class="d-flex align-items-stretch">
+    <div class="width-culumn1">@Content1</div>
+</div>
+
+
+<!-- Second Section -->
+
+@if (ActiveSection2)
+{
+    <!-- Outside Tittle Divider 2 -->
+    @if (ActiveTittleDivider2)
+    {
+
+        <div class="d-flex align-items-stretch">
+            <div class="d-flex justify-content-start align-items-center width-culumn1 @BgColorOutsideTittle3 vt-height-sg-2">
+                <div class="text-color-sg-2 font-Atn-pt-18 ps-2">@OutsideTittle3</div>
+            </div>
+        </div>
+    }
+    
+    @if (ActiveDivider2)
+    {
+        <!-- Divider 2 -->
+        <div class="d-flex align-items-stretch">
+            <div class="d-flex justify-content-center align-items-center bg-sg-2 width-culumn1 vt-height-sg-2">
+                    <div class="text-white">@Tittle3</div>
+            </div>
+        </div>
+    }
+    <!-- Content Second -->
+    <div class="d-flex align-items-stretch">
+        <div class="width-culumn1">@Content3</div>
+    </div>
+}
+
+
+
+
+@code {
+
+    [Parameter]
+    public bool ActiveDivider1 { get; set; } = false;
+    [Parameter]
+    public bool ActiveSection2 { get; set; } = false;
+    [Parameter]
+    public bool ActiveDivider2 { get; set; } = true;
+    [Parameter]
+    public bool ActiveTittleDivider1 { get; set; } = false;
+    [Parameter]
+    public bool ActiveTittleDivider2 { get; set; } = false;    
+    [Parameter]
+    public RenderFragment Content1 { get; set; } = null!;
+    [Parameter]
+    public RenderFragment Content3 { get; set; } = null!;
+
+    [Parameter]
+    public string? Tittle1 { get; set; } = null!;
+    [Parameter]
+    public string? Tittle3 { get; set; } = null!;
+
+
+    //Outside Tittle
+    [Parameter]
+    public string? OutsideTittle1 { get; set; } = null!;
+    [Parameter]
+    public string? OutsideTittle3 { get; set; } = null!;
+
+    //Bc ground Outside Tittle
+    [Parameter]
+    public string? BgColorOutsideTittle1 { get; set; } = null!;
+    [Parameter]
+    public string? BgColorOutsideTittle3 { get; set; } = null!;
+
+}

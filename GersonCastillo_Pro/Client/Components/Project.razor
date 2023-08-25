@@ -1,0 +1,46 @@
+﻿<div class="font-SC-pt-14 mt-2">
+    <div class="d-flex mb-1  align-items-center">
+        <div class="font-SC-pt-16">@tittle</div>
+        <div class="ms-2">
+            @if (Repository == "azure")
+            {
+                <a class="btn btn-dark p-1" href="">
+                    <img height="20" src="img/icons/azurelogo.svg" />
+                </a>
+            }
+            @if (Repository == "github")
+            {
+                <a class="btn btn-dark  p-1" href="">
+                    <img height="20" src="img/icons/github.svg" />
+                </a>
+            }
+        </div>
+    </div>
+    <ul class="list-unstyled text-color-cd-green">        
+        <li class="ps-2"><span class="me-2">/*</span> <span>@description</span><span class="ms-2">*/</span> </li>        
+    </ul>
+
+    <div class="d-flex">
+        <div class="text-color-cd-darkblue" style="min-width:60px;">@@using</div>
+        <div class="text-white-50 ms-1">@Languages</div>
+    </div>
+    <div class="d-flex">
+        <div class="text-color-cd-purple" style="min-width:60px;">@@import</div>
+        <div class="text-white-50 ms-1">@FrameworksLibraries</div>
+    </div>
+
+</div>
+
+@code {
+    [Parameter]
+    public string tittle { get; set; } = "";
+    [Parameter]
+    public string description { get; set; } = "";
+    [Parameter]
+    public string Languages { get; set; } = "";
+    [Parameter]
+    public string FrameworksLibraries { get; set; } = "";
+    [Parameter]
+    public string Repository { get; set; } = "";
+
+}

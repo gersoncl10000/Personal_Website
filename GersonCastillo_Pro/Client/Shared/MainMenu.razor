@@ -1,42 +1,48 @@
-﻿
+﻿@inject IJSRuntime JSRuntime
 
 
-<Bar 
-     Breakpoint="Breakpoint.Desktop"
-     Background="Background.Dark"
-     ThemeContrast="ThemeContrast.Dark">
-          
+
+<nav class="navbar navbar-dark fixed-top navbar-expand-lg bg-black" style="height:80px">
     <div class="container">
-    <BarBrand>
-        Gerson Castillo
-    </BarBrand>
-    <BarToggler />
-    <BarMenu>
-        <BarStart>
-            <BarItem>
-                <BarLink To="#home">Home</BarLink>
-            </BarItem>
-            <BarItem>
-                <BarLink To="#docs">Documentation</BarLink>
-            </BarItem>
-            <BarItem>
-                <BarDropdown>
-                    <BarDropdownToggle>Dropdown</BarDropdownToggle>
-                    <BarDropdownMenu>
-                        <BarDropdownItem>Action</BarDropdownItem>
-                        <BarDropdownDivider />
-                        <BarDropdownItem>Another action</BarDropdownItem>
-                    </BarDropdownMenu>
-                </BarDropdown>
-            </BarItem>
-        </BarStart>
-        <BarEnd>
-                <BarLink To="#home">Contact</BarLink>
-        </BarEnd>
-    </BarMenu>
+        <!-- Navbar content -->
+        <div class="container-fluid">
+            <div class="d-flex">
+                <a class="navbar-brand font-Atn-pt-28" href="#">Gerson Castillo</a>
+                <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+                    <span class="navbar-toggler-icon"></span>
+                </button>
+                <div class="collapse navbar-collapse" id="navbarSupportedContent">
+                    <ul class="navbar-nav me-auto mb-2 mb-lg-0 font-Atn-pt-18">
+                        <li class="nav-item">
+                            <a class="nav-link" @onclick="@(() => putFocusOn("Skills"))" style="cursor: pointer">Skills</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link" @onclick="@(() => putFocusOn("WorkProjects"))" style="cursor: pointer">Work & Projects</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link" @onclick="@(() => putFocusOn("Contact"))" style="cursor: pointer">Contact</a>
+                        </li>
+                    </ul>
+                   
+                </div>
+            </div>
+        </div>
     </div>
-</Bar>
+</nav>
+
 
 @code {
 
+
+    public async Task putFocusOn(string ElementId)
+    {
+        await JSRuntime.InvokeVoidAsync("focusOnElementbyId", ElementId);
+    }
+
+    private async Task ButtonClicked()
+    {
+        await JSRuntime.InvokeVoidAsync("console.log", "Prueba de Consolo");
+       
+       
+    }
 }

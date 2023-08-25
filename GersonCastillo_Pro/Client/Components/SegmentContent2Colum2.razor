@@ -1,0 +1,273 @@
+﻿<!---------------------------- First Section lg view -------------------------------------------------------------------->
+<!-- First Section -->
+
+<div class="d-none d-md-block">
+    @if (ActiveDivider1)
+    {
+        <!-- Outside Tittle Divider 1 -->
+        @if (ActiveTittleDivider1)
+        {
+
+            <div class="d-flex align-items-stretch">
+                <div class="d-flex justify-content-start align-items-center width-culumn1 @BgColorOutsideTittle1 vt-height-sg-2">
+                    <div class="text-color-sg-2 font-Atn-pt-18 ps-2">@OutsideTittle1</div>
+                </div>
+                <div class="bg-sg-2 vt-width-sg-2 vt-height-sg-2"></div>
+                <div class="d-flex justify-content-start align-items-center width-culumn2 @BgColorOutsideTittle2 vt-height-sg-2">
+                    <div class="text-color-sg-2 font-Atn-pt-18 ps-2">@OutsideTittle2</div>
+                </div>
+            </div>
+        }
+        <!-- Divider 1 -->
+        <div class="d-flex align-items-stretch">
+            <div class="d-flex justify-content-center align-items-center bg-sg-2 width-culumn1 vt-height-sg-2">
+                <div class="text-white">@Tittle1</div>
+            </div>
+            <div class="bg-sg-2 vt-width-sg-2 vt-height-sg-2"></div>
+            <div class="d-flex justify-content-center align-items-center bg-sg-2 width-culumn2 vt-height-sg-2">
+                <div class="text-white">@Tittle2</div>
+            </div>
+        </div>
+    }
+    <!-- Content First -->
+    <div class="d-flex align-items-stretch">
+        <div class="width-culumn1">@Content1</div>
+        <div class="bg-sg-2 vt-width-sg-2"></div>
+        <div class="width-culumn2">@Content2</div>
+    </div>
+
+</div>
+
+
+
+<!---------------------------- Second Section lg view -------------------------------------------------------------------->
+
+
+<div class="d-none d-md-block">
+    <!-- Second Section -->
+    @if (ActiveSection2)
+    {
+        <!-- Outside Tittle Divider 2 -->
+        @if (ActiveTittleDivider2)
+        {
+
+            <div class="d-flex align-items-stretch">
+                <div class="d-flex justify-content-start align-items-center width-culumn1 @BgColorOutsideTittle3 vt-height-sg-2">
+                    <div class="text-color-sg-2 font-Atn-pt-18 ps-2">@OutsideTittle3</div>
+                </div>
+                <div class="bg-sg-2 vt-width-sg-2 vt-height-sg-2"></div>
+                <div class="d-flex justify-content-start align-items-center width-culumn2 @BgColorOutsideTittle4 vt-height-sg-2">
+                    <div class="text-color-sg-2 font-Atn-pt-18 ps-2">@OutsideTittle4</div>
+                </div>
+            </div>
+        }
+        <!-- Second Section -->
+        @if (ActiveDivider2)
+        {
+            <!-- Divider 2 -->
+            <div class="d-flex align-items-stretch">
+                <div class="d-flex justify-content-center align-items-center bg-sg-2 width-culumn1 vt-height-sg-2">
+                    <div class="text-white">@Tittle3</div>
+                </div>
+                <div class="bg-sg-2 vt-width-sg-2 vt-height-sg-2"></div>
+                <div class="d-flex justify-content-center align-items-center bg-sg-2 width-culumn2 vt-height-sg-2">
+                    <div class="text-white">@Tittle4</div>
+                </div>
+            </div>
+        }
+        <!-- Content Second -->
+        <div class="d-flex align-items-stretch">
+            <div class="width-culumn1">@Content3</div>
+            <div class="bg-sg-2 vt-width-sg-2"></div>
+            <div class="width-culumn2">@Content4</div>
+        </div>
+    }
+</div>
+
+
+<!---------------------------- Second Section sm view -------------------------------------------------------------------->
+@if (ActiveSection2)
+{
+
+    <div class="d-block d-md-none">
+
+
+        <div class="d-flex">
+            <div class="bg-sg-2 vt-width-sg-2"></div>
+            <div class="d-flex flex-column width-culumn">
+            
+                <!-- Conten2 Tittle 1 -->
+                <div class="w-100 order-0">
+                    <!-- Outside Tittle Divider 1 -->
+                    @if (ActiveTittleDivider1)
+                    {
+
+                        <div class="d-flex align-items-stretch w-100">
+                            <div class="d-flex justify-content-start align-items-center w-100 @BgColorOutsideTittle1 vt-height-sg-2">
+                                <div class="text-color-sg-2 font-Atn-pt-18 ps-2">@OutsideTittle1</div>
+                            </div>
+                        </div>
+                    }
+                    <!-- First Section -->
+                    @if (ActiveDivider1)
+                    {
+
+
+                        <!-- Divider 1 -->
+                        <div class="d-flex align-items-stretch w-100">
+                            <div class="d-flex justify-content-center align-items-center bg-sg-2 w-100 vt-height-sg-2">
+                                <div class="text-white">@Tittle1</div>
+                            </div>
+                        </div>
+                    }
+                    <!-- Content First -->
+                    <div class="d-flex align-items-stretch w-100">
+                        <div class="w-100">@Content1</div>
+                    </div>
+                </div>
+                <!-- Conten2 Tittle 2 -->
+                <div class="w-100 order-1">
+                    <!-- Outside Tittle Divider 1 -->
+                    @if (ActiveTittleDivider1)
+                    {
+                        <div class="d-flex align-items-stretch w-100">
+                            <div class="d-flex justify-content-start align-items-center w-100 @BgColorOutsideTittle2 vt-height-sg-2">
+                                <div class="text-color-sg-2 font-Atn-pt-18 ps-2">@OutsideTittle2</div>
+                            </div>
+                        </div>
+                    }
+                    <!-- First Section -->
+                    @if (ActiveDivider1)
+                    {
+                        <!-- Divider 1 -->
+                        <div class="d-flex align-items-stretch w-100">
+                            <div class="d-flex justify-content-center align-items-center bg-sg-2 w-100 vt-height-sg-2">
+                                <div class="text-white">@Tittle2</div>
+                            </div>
+                        </div>
+                    }
+                    <!-- Content First -->
+                    <div class="d-flex align-items-stretch w-100 ">
+                        <div class="w-100">@Content2</div>
+                    </div>
+
+                    <!-- Conten1 Tittle Divider 2 -->
+                    <div class="w-100">
+                    </div>
+                </div>          
+                <!-- Conten2 Tittle 3 -->
+                <div class="w-100 order-3">
+                    <!-- Outside Tittle 3 Divider 1 -->
+                    @if (ActiveTittleDivider2)
+                    {
+                        <div class="d-flex align-items-stretch w-100">
+                            <div class="d-flex justify-content-start align-items-center w-100 @BgColorOutsideTittle3 vt-height-sg-2">
+                                <div class="text-color-sg-2 font-Atn-pt-18 ps-2">@OutsideTittle3</div>
+                            </div>
+                        </div>
+                    }
+                    <!-- First Section -->
+                    @if (ActiveDivider2)
+                    {
+                        <!-- Divider 2 -->
+                        <div class="d-flex align-items-stretch w-100">
+                            <div class="d-flex justify-content-center align-items-center bg-sg-2 w-100 vt-height-sg-2">
+                                <div class="text-white">@Tittle3</div>
+                            </div>
+                        </div>
+                    }
+                    <!-- Content Second -->
+                    <div class="d-flex align-items-stretch w-100">
+                        <div class="w-100">@Content3</div>
+                    </div>
+                </div>
+                <!-- Conten2 Tittle 4 -->
+                <div class="w-100 order-2">
+                    <!-- Outside Tittle 4 Divider 1 -->
+                    @if (ActiveTittleDivider2)
+                    {
+                        <div class="d-flex align-items-stretch w-100">
+                            <div class="d-flex justify-content-start align-items-center w-100 @BgColorOutsideTittle4 vt-height-sg-2">
+                                <div class="text-color-sg-2 font-Atn-pt-18 ps-2">@OutsideTittle4</div>
+                            </div>
+                        </div>
+                    }
+                    <!-- First Section -->
+                    @if (ActiveDivider2)
+                    {
+                        <!-- Divider 2 -->
+                        <div class="d-flex align-items-stretch w-100">
+                            <div class="d-flex justify-content-center align-items-center bg-sg-2 w-100 vt-height-sg-2">
+                                <div class="text-white">@Tittle4</div>
+                            </div>
+                        </div>
+                    }
+                    <!-- Content Second -->
+                    <div class="d-flex align-items-stretch w-100">
+                        <div class="w-100">@Content4</div>
+                    </div>
+                </div>
+            </div>
+
+        </div>
+    </div>
+
+}
+
+
+
+
+
+
+@code {
+
+    [Parameter]
+    public bool ActiveDivider1 { get; set; } = false;
+    [Parameter]
+    public bool ActiveSection2 { get; set; } = false;
+    [Parameter]
+    public bool ActiveDivider2 { get; set; } = true;
+    [Parameter]
+    public bool ActiveTittleDivider1 { get; set; } = false;
+    [Parameter]
+    public bool ActiveTittleDivider2 { get; set; } = false;
+    [Parameter]
+    public RenderFragment Content1 { get; set; } = null!;
+    [Parameter]
+    public RenderFragment Content2 { get; set; } = null!;
+    [Parameter]
+    public RenderFragment Content3 { get; set; } = null!;
+    [Parameter]
+    public RenderFragment Content4 { get; set; } = null!;
+
+    [Parameter]
+    public string? Tittle1 { get; set; } = null!;
+    [Parameter]
+    public string? Tittle2 { get; set; } = null!;
+    [Parameter]
+    public string? Tittle3 { get; set; } = null!;
+    [Parameter]
+    public string? Tittle4 { get; set; } = null!;
+
+  
+    //Outside Tittle
+    [Parameter]
+    public string? OutsideTittle1 { get; set; } = null!;
+    [Parameter]
+    public string? OutsideTittle2 { get; set; } = null!;
+    [Parameter]
+    public string? OutsideTittle3 { get; set; } = null!;
+    [Parameter]
+    public string? OutsideTittle4 { get; set; } = null!;
+
+    //Bc ground Outside Tittle
+    [Parameter]
+    public string? BgColorOutsideTittle1 { get; set; } = null!;
+    [Parameter]
+    public string? BgColorOutsideTittle2 { get; set; } = null!;
+    [Parameter]
+    public string? BgColorOutsideTittle3 { get; set; } = null!;
+    [Parameter]
+    public string? BgColorOutsideTittle4 { get; set; } = null!;
+
+}
