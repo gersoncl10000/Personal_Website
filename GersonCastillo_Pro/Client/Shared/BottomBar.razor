@@ -1,10 +1,12 @@
 ﻿<div class="container-xl px-0">
 <div class="bg-sg-1" style="height:80px;">
-    <div class="row">
-        <div class="col-3"></div>
-        <div class="col-3"></div>
-        <div class="col-3"></div>
-        <div class="col-3"></div>
+        <div class="row mx-0 h-100 align-items-center">
+        <div class="col-12 col-sm-2 col-md-4 col-lg-5 col-xl-2"></div>
+            <div class=" col-12 col-sm-10 col-md-8 col-lg-7  col-xl-10">
+                <div class="d-flex justify-content-end ">
+                    <div class="bt-font-size  fst-italic text-white text-end px-0 px-sm-2 px-md-4 px-lg-3">This website has been developed by Gerson Castillo &copy@(getyear()) Copyright; using <span class="fw-bold"> Blazor <span class="text-nowrap"> WebAssembly </span> <span><img class="mb-1" height="22px" src="img/icons/blazorwhite.svg" /></span></span> from <span class="text-nowrap">ASP.NET Core.</span></div>
+                </div>
+            </div>
     </div>
 
 </div>
@@ -14,5 +16,11 @@
 
 
 @code {
-    
+    private int year { get; set; } = 0;
+
+    private int getyear()
+    {
+        year = DateTime.Now.Year;
+        return year;
+    }
 }

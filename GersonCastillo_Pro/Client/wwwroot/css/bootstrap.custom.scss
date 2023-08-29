@@ -3,7 +3,8 @@ $segment: #000000;
 $segment1: #BF0413;
 $segment2: #F27405;
 
-
+$navbar-dark-toggler-border-color: #000000;
+$navbar-toggler-focus-width: 0px;
 
 @import "../bootstrap/scss/bootstrap";
 
@@ -48,6 +49,10 @@ $segment2: #F27405;
 .text-color-cd-blue {
     color: #9cdcfe;
 }
+//orange
+.text-color-cd-orange {
+    color: #d6b776;
+}
 //dark blue
 .text-color-cd-darkblue {
     color: #4e9cd0;
@@ -64,7 +69,7 @@ $segment2: #F27405;
 
 // Horizontal height
 .hz-height-dv-1 {
-    height: 40px;
+    height: 60px;
 }
 
 .hz-height-sg-1 {
@@ -102,15 +107,15 @@ $segment2: #F27405;
     // Horizontal height
 
     .hz-height-dv-1 {
-        height: 60px !important;
+        height: 50px !important;
     }
 
     .hz-height-sg-1 {
-        height: 35px !important;
+        height: 30px !important;
     }
 
     .hz-height-sg-2 {
-        height: 25px !important;
+        height: 20px !important;
     }
     // Vertical divider width 2
 

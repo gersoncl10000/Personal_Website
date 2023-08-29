@@ -19,6 +19,11 @@
     font-size:21px;
 }
 
+.font-st-pt-18 {
+    font-family: 'PT Serif', serif;
+    font-size: 18px;
+}
+
 .font-st-pt-16 {
     font-family: 'PT Serif', serif;
     font-size: 16px;
@@ -58,7 +63,7 @@
     font-size: 14px;
 }
 
-/*Fjalla One*/
+/*Source Code*/
 
 .font-SC-pt-16 {
     font-family: 'Source Code Pro', monospace;
@@ -115,7 +120,7 @@
     background-position-y: top;
     background-position-x: center;
     box-shadow: 0px 0px 10px 10px #0D030B inset;
-    height: 180px;
+    height: 150px;
 }
 
 
@@ -145,6 +150,22 @@
 
 .w-contact-photo {
     width:80%;
+}
+
+/*Programming Logos*/
+
+.md-logo {
+    height:80px;
+}
+
+.lg-logo {
+    height: 120px;
+}
+
+/*Bottom font size*/
+
+.bt-font-size {
+    font-size:16px;
 }
 
 
@@ -179,6 +200,10 @@
         font-size: 20px;
     }
 
+    .font-st-pt-18 {
+        font-family: 'PT Serif', serif;
+        font-size: 17px;
+    }
 
     /*------------Bussiness Photo -------------*/
 
@@ -188,7 +213,7 @@
         background-position-y: bottom;
         background-position-x: center;
         box-shadow: 0px 0px 10px 10px #0D030B inset;
-        height: 400px;
+        height: 380px;
     }
 
     /*------------ Repository Photo -------------*/
@@ -219,6 +244,22 @@
         width: 95%;
     }
 
+    /*Programming Logos*/
+
+    .md-logo {
+        height: 80px;
+    }
+
+    .lg-logo {
+        height: 120px;
+    }
+
+    /*Bottom font size*/
+
+    .bt-font-size {
+        font-size: 16px;
+    }
+
 }
 
 /* md applies to small devices (landscape phones, less than 768px) */
@@ -247,7 +288,10 @@
         font-family: 'PT Serif', serif;
         font-size: 18px;
     }
-
+    .font-st-pt-18 {
+        font-family: 'PT Serif', serif;
+        font-size: 16px;
+    }
 
     /*------------Bussiness Photo -------------*/
 
@@ -288,9 +332,41 @@
     .w-contact-photo {
         width: 95%;
     }
+
+    /*Programming Logos*/
+
+    .md-logo {
+        height: 80px;
+    }
+
+    .lg-logo {
+        height: 120px;
+    }
+
+    /*Bottom font size*/
+
+    .bt-font-size {
+        font-size: 16px;
+    }
+
+
 }
 
 @media (max-width: 576px) {
+
+
+    /*------------Tittle -------------*/
+
+    .bg-photo-intro {
+        background-image: url('../img/Background2.jpg');
+        background-repeat: no-repeat;
+        background-position-x: center;
+        height: 400px;
+    }
+
+    .margin-top-tittle {
+        margin-top: 270px !important;
+    }
 
     /*------------Bussiness Photo -------------*/
 
@@ -302,16 +378,6 @@
         box-shadow: 0px 0px 10px 10px #0D030B inset;
         height: 200px;
     }
-
-    /*------------Tittle -------------*/
-
-    .bg-photo-intro {
-        background-image: url('../img/Background.jpg');
-        background-repeat: no-repeat;
-        background-position-x: center;
-        height: 400px;
-    }
-
 
     /*------------ Repository Photo -------------*/
 
@@ -343,6 +409,22 @@
 
     .p-tittle-photo {
         padding-top: 250px;
+    }
+
+    /*Programming Logos*/
+
+    .md-logo {
+        height: 55px;
+    }
+
+    .lg-logo {
+        height: 80px;
+    }
+
+    /*Bottom font size*/
+
+    .bt-font-size {
+        font-size: 13px;
     }
 
 
