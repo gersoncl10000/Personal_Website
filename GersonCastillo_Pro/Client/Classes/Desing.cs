@@ -29,23 +29,17 @@
         #endregion
 
 
-
-
-
         public Desing() {
 
             // Segment desing variables inizilization
             //Horizontal divider
             color_hz_div_1 = "bg-dark";
-            text_color_hz_div_1 = "text-white";
-            
+            text_color_hz_div_1 = "text-white";            
             //Vertical divider
             //width
             width_segment_content_v_div_1 = 40;
             //Color
             color_segment_content_v_div_1 = "bg-danger";
-
-
         }
 
 

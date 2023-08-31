@@ -40,7 +40,6 @@
 
 </div>
 
-
 <!---------------------------- Second Section lg view -------------------------------------------------------------------->
 <div class="d-none d-lg-block">
 
@@ -83,13 +82,9 @@
     }
 </div>
 
-
 <!---------------------------- sm view -------------------------------------------------------------------->
 
-
 <div class="d-block d-lg-none">
-
-
     <div class="d-flex">
         <div class="bg-sg-1 vt-width-sg-1"></div>
         <div class="d-flex flex-column width-culumn">
@@ -204,7 +199,6 @@
                 </div>
             }
         </div>
-
     </div>
 </div>
 
@@ -216,6 +210,7 @@
 
 @code {
 
+    // Sections activator
     [Parameter]
     public bool ActiveDivider1 { get; set; } = false;
     [Parameter]
@@ -223,6 +218,7 @@
     [Parameter]
     public bool ActiveDivider2 { get; set; } = true;
 
+    //Content divider once get smaller
     [Parameter]
     public bool smActiveDividerContent1 { get; set; } = true;
     [Parameter]
@@ -232,10 +228,13 @@
     [Parameter]
     public bool smActiveDividerContent4 { get; set; } = true;
 
+    //Title divider activator
     [Parameter]
     public bool ActiveTittleDivider1 { get; set; } = false;
     [Parameter]
     public bool ActiveTittleDivider2 { get; set; } = false;
+
+    //RenderFragment Content
     [Parameter]
     public RenderFragment Content1 { get; set; } = null!;
     [Parameter]
@@ -245,6 +244,7 @@
     [Parameter]
     public RenderFragment Content4 { get; set; } = null!;
 
+    //Titles
     [Parameter]
     public string? Tittle1 { get; set; } = null!;
     [Parameter]

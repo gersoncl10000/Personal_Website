@@ -16,10 +16,12 @@ $navbar-toggler-focus-width: 0px;
     background-color: $segment;
 }
 
+//Red
 .bg-sg-1 {
     background-color: $segment1;
 }
 
+//Orange
 .bg-sg-2 {
     background-color: $segment2;
 }
@@ -31,11 +33,11 @@ $navbar-toggler-focus-width: 0px;
 .text-color-div-1 {
     color: #0D030B;
 }
-
+//Red
 .text-color-sg-1 {
     color: #BF0413;
 }
-
+//Orange
 .text-color-sg-2 {
     color: #F27405;
 }
@@ -139,34 +141,28 @@ $navbar-toggler-focus-width: 0px;
 
 
 @include media-breakpoint-up(lg) {
+    
     // Horizontal height
-
     .hz-height-dv-1 {
         height: 60px !important;
     }
-
     .hz-height-sg-1 {
         height: 35px !important;
     }
-
     .hz-height-sg-2 {
         height: 25px !important;
     }
+
     // Vertical divider width 2
-
-
     .vt-width-sg-1 {
         width: 3% !important;
     }
-
     .vt-width-sg-2 {
         width: 3% !important;
     }
-
     .vt-height-sg-1 {
         height: 35px !important;
     }
-
     .vt-height-sg-2 {
         height: 25px !important;
     }

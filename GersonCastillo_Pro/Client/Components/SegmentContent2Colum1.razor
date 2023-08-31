@@ -24,7 +24,6 @@
     <div class="width-culumn1">@Content1</div>
 </div>
 
-
 <!-- Second Section -->
 
 @if (ActiveSection2)
@@ -60,21 +59,27 @@
 
 @code {
 
+    // Sections activator
     [Parameter]
     public bool ActiveDivider1 { get; set; } = false;
     [Parameter]
     public bool ActiveSection2 { get; set; } = false;
     [Parameter]
     public bool ActiveDivider2 { get; set; } = true;
+
+    //Title divider activator
     [Parameter]
     public bool ActiveTittleDivider1 { get; set; } = false;
     [Parameter]
-    public bool ActiveTittleDivider2 { get; set; } = false;    
+    public bool ActiveTittleDivider2 { get; set; } = false;  
+    
+    //RenderFragment Content
     [Parameter]
     public RenderFragment Content1 { get; set; } = null!;
     [Parameter]
     public RenderFragment Content3 { get; set; } = null!;
 
+    //Titles
     [Parameter]
     public string? Tittle1 { get; set; } = null!;
     [Parameter]
