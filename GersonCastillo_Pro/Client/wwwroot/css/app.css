@@ -37,6 +37,11 @@
     font-size: 14px;
 }
 
+.font-st-pt-12 {
+    font-family: 'PT Serif', serif;
+    font-size: 12px;
+}
+
 /*Anton*/
 .font-Atn-pt-28 {
     font-family: 'Anton', sans-serif;
