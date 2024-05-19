@@ -1,0 +1,136 @@
+﻿@page "/consolidacion"
+
+@using Microsoft.AspNetCore.Components
+
+<div class="container pt-4" style="margin-top:150px">
+    <h1 class="text-center mb-4 font-Atn-pt-24 text-color-div-1" >Ejercicio de Consolidación Financiera</h1>
+    <h2 class="text-center mb-4 font-Atn-pt-24 text-color-div-1">Normas Internacionales de Información Financiera (NIC-NIIF)</h2>
+    <h4 class="text-center mb-4 font-st-pt-16 text-color-div-1">Realizado por Gerson Castillo</h4>
+
+    <div class="mb-5">
+        <h3 class="font-Atn-pt-16 text-color-sg-1">Premisas</h3>
+        <ul class="font-st-pt-16 text-color-div-1">
+            <li>
+                Grupo Empresarial: Casa Matriz, S.A.
+                <ul>
+                    <li>Sede: España</li>
+                    <li>Moneda Funcional: EUR</li>
+                    <li>En junio de 2023, Casa Matriz, C.A. paga 100.000 € por el 70% de las acciones comunes de Subsidiaria, Inc.</li>
+                    <li>Vende mercancía a Subsidiaria, Inc. por 5.000 € con un margen de ganancia del 20%.</li>
+                    <li>Vende equipos a Subsidiaria, Inc. por 10.000 €, 1.000 € sobre el costo de adquisición.</li>
+                </ul>
+            </li>
+            <li>
+                Subsidiaria, Inc.
+                <ul>
+                    <li>Sede: Estados Unidos</li>
+                    <li>Moneda Funcional: USD</li>
+                </ul>
+            </li>
+            <li>Conforme a los principios establecidos en las Normas Internacionales de Información Financiera (NIC-NIIF), se establece la relación de control sobre Subsidiaria, Inc.</li>
+        </ul>
+    </div>
+
+    <div class="flex-column">
+        <div class="my-5">
+            <div class="comments-section p-4 border rounded bg-light">
+                <h3 class="font-Atn-pt-16 text-color-sg-1">Comentarios</h3>
+                <p class="font-st-pt-16 text-color-div-1">@currentReport.Comments</p>
+            </div>
+        </div>
+        <div class="mb-5">
+            <div class="report-section mb-4 p-4 border rounded bg-light">
+                <div class="report-title d-flex align-items-center">
+                    <i class="@currentReport.Icon fa-2x text-color-sg-2"></i>
+                    <h2 class="ms-2 font-Atn-pt-16 text-color-sg-2">@currentReport.Title</h2>
+                </div>
+                <div class="report-description mt-2 mb-3 font-st-pt-16 text-color-div-1">
+                    @currentReport.Description
+                </div>
+                @if (!string.IsNullOrEmpty(currentReport.Url))
+                {
+                    <iframe class="report-iframe w-100" height="1000" width="1050" src="@currentReport.Url"></iframe>
+                }
+                else if (!string.IsNullOrEmpty(currentReport.ImageUrl))
+                {
+                    <img src="@currentReport.ImageUrl" alt="Proceso de Consolidación" class="img-fluid" />
+                }
+            </div>
+        </div>
+    </div>
+
+    <div class="d-flex justify-content-between mt-4">
+        <button class="btn btn-dark" @onclick="PreviousReport" disabled="@IsFirstReport">Anterior</button>
+        <button class="btn btn-dark" @onclick="NextReport" disabled="@IsLastReport">Siguiente</button>
+    </div>
+</div>
+<div style="margin-top:150px">
+<Contact></Contact>
+</div>
+
+@code {
+    private List<Report> reports = new List<Report>
+    {
+      
+        new Report
+        {
+            Title = "Informe 1: Balance General Consolidado al Cierre del Año 2023 - Casa Matriz, S.A.",
+            Description = "Sección del activo del Balance General consolidado de Casa Matriz, S.A.",
+            Comments = "Esta sección muestra el balance general consolidado de Casa Matriz, S.A. al cierre del año 2023. Se destacan las eliminaciones contables necesarias para reflejar con precisión la situación financiera consolidada, incluyendo la eliminación de la cuenta de inversión en la compañía subsidiaria, la ganancia en ventas de activos, la ganancia en venta de mercancía y las cuentas por cobrar intercompañías, siguiendo las Normas Internacionales de Información Financiera (NIC-NIIF), especialmente la NIC 21 y la NIIF 10.",
+            Url = "https://app.powerbi.com/view?r=eyJrIjoiNmZkZGFmOTUtYTljOS00ZjZiLWJjZjgtN2EwYmY4ZmIyNjVmIiwidCI6ImJkOGZmYzQ0LTNmZjQtNDIwOC1hZDZlLThjMmEyMTg3MmEyNSIsImMiOjl9&pageName=ReportSection4cca4e73ce095957e6cd",
+            Icon = "fas fa-chart-line"
+        },
+
+        new Report
+        {
+            Title = "Informe 2: Balance General Consolidado al Cierre del Año 2023 - Casa Matriz, S.A.",
+            Description = "Sección del pasivo del Balance General consolidado de Casa Matriz, S.A.",
+            Comments = "En esta sección se muestran las eliminaciones correspondientes para reflejar con precisión la situación financiera consolidada. Esto incluye la eliminación de la inversión en subsidiaria y el registro de los intereses minoritarios, siguiendo las Normas Internacionales de Información Financiera (NIC-NIIF), especialmente la NIC 21 y la NIIF 10.",
+            Url = "https://app.powerbi.com/view?r=eyJrIjoiNmZkZGFmOTUtYTljOS00ZjZiLWJjZjgtN2EwYmY4ZmIyNjVmIiwidCI6ImJkOGZmYzQ0LTNmZjQtNDIwOC1hZDZlLThjMmEyMTg3MmEyNSIsImMiOjl9&pageName=ReportSection72e1e9710623a43d2ad7",
+            Icon = "fas fa-exchange-alt"
+        },
+
+        new Report
+        {
+            Title = "Informe 3: Estado de Resultados Consolidado al Cierre del Año 2023 - Casa Matriz, S.A.",
+            Description = "Estado de resultados consolidado que muestra los ingresos, gastos y resultados netos de Casa Matriz, S.A. y sus subsidiarias al cierre del año 2023.",
+            Comments = "Este informe muestra el estado de resultados consolidado de Casa Matriz, S.A. y sus subsidiarias al cierre del año 2023. La consolidación financiera implica la eliminación de ventas intercompañía y las ganancias por ventas de activos, así como las pérdidas por conversión monetaria de los estados financieros de la compañía subsidiaria, siguiendo las normas internacionales de información financiera (NIC-NIIF), especialmente la NIC 21 y la NIIF 10.",
+            Url = "https://app.powerbi.com/view?r=eyJrIjoiNmZkZGFmOTUtYTljOS00ZjZiLWJjZjgtN2EwYmY4ZmIyNjVmIiwidCI6ImJkOGZmYzQ0LTNmZjQtNDIwOC1hZDZlLThjMmEyMTg3MmEyNSIsImMiOjl9&pageName=ReportSectionf515442d4bcde9b7c70b",
+            Icon = "fas fa-chart-line"
+        },
+
+    };
+
+    private int currentReportIndex = 0;
+
+    private Report currentReport => reports[currentReportIndex];
+
+    private bool IsFirstReport => currentReportIndex == 0;
+    private bool IsLastReport => currentReportIndex == reports.Count - 1;
+
+    private void PreviousReport()
+    {
+        if (currentReportIndex > 0)
+        {
+            currentReportIndex--;
+        }
+    }
+
+    private void NextReport()
+    {
+        if (currentReportIndex < reports.Count - 1)
+        {
+            currentReportIndex++;
+        }
+    }
+
+    private class Report
+    {
+        public string Title { get; set; }
+        public string Description { get; set; }
+        public string Comments { get; set; }
+        public string Url { get; set; }
+        public string ImageUrl { get; set; }
+        public string Icon { get; set; }
+    }
+}
