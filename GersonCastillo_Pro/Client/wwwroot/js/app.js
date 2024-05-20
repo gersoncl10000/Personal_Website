@@ -6,4 +6,3 @@ function focusOnElementbyId(ElementId)
     document.getElementById(ElementId).scrollIntoView(true);
 }
 
-

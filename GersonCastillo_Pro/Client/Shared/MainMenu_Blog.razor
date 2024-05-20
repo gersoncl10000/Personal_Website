@@ -1,0 +1,45 @@
+﻿@inject IJSRuntime JSRuntime
+
+
+
+<nav class="navbar navbar-dark fixed-top navbar-expand-lg bg-black" style="height:80px">
+    <div class="container-md">
+        <!-- Navbar content -->
+
+        <div class="container-fluid">
+            <div class="d-flex d-lg-bock">
+                <div class="d-flex align-items-center flex-grow-1">
+                    <a class="navbar-brand font-Atn-pt-28" href="/">Gerson Castillo</a>
+
+                    <div class="offcanvas offcanvas-end " tabindex="-1" id="offcanvasNavbar" aria-labelledby="offcanvasNavbarLabel">
+                        <div class="offcanvas-header bg-sg-1">
+                            <div class="offcanvas-title" @onclick="@(() => putFocusOn("Intro"))" style="cursor: pointer" data-bs-dismiss="offcanvas" id="offcanvasNavbarLabel">
+                                <div class="d-flex justify-content-center  align-items-center m-0">
+                                    <img src="img/profile.jpg" alt="Avatar" height="40" style="border-radius:50%">
+                                    <div class="d-flex ps-2">
+                                        <div class="text-start text-white font-qs-pt-24">Gerson Castillo</div>
+                                    </div>
+                                </div>
+                            </div>
+                            <button type="button" class="btn-close" data-bs-dismiss="offcanvas" aria-label="Close"></button>
+                        </div>
+                    </div>
+                </div>
+                <button class="navbar-toggler" type="button" data-bs-toggle="offcanvas" data-bs-target="#offcanvasNavbar" aria-controls="offcanvasNavbar">
+                    <span class="navbar-toggler-icon"></span>
+                </button>
+            </div>
+        </div>
+    </div>
+</nav>
+
+
+@code {
+
+
+    public async Task putFocusOn(string ElementId)
+    {
+        await JSRuntime.InvokeVoidAsync("focusOnElementbyId", ElementId);
+    }
+
+}
