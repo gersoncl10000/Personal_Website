@@ -1,6 +1,10 @@
 ﻿[
   {
     "outputFile": "wwwroot/css/bootstrap.custom.css",
-    "inputFile": "wwwroot/css/bootstrap.custom.scss"
+    "inputFile": "wwwroot/css/bootstrap.custom.scss",
+    "navigationFallback": {
+      "rewrite": "/index.html"
+    }
   }
+
 ]

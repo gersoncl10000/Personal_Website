@@ -35,9 +35,6 @@
       "environmentVariables": {
         "ASPNETCORE_ENVIRONMENT": "Development"
       },
-      "navigationFallback": {
-        "rewrite": "/index.html"
-      }
     }
   },
 
