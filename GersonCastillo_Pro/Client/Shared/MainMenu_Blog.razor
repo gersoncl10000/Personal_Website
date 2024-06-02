@@ -11,9 +11,9 @@
                 <div class="d-flex align-items-center flex-grow-1">
                     <a class="navbar-brand font-Atn-pt-28" href="/">Gerson Castillo</a>
 
-                    <div class="offcanvas offcanvas-end " tabindex="-1" id="offcanvasNavbar" aria-labelledby="offcanvasNavbarLabel">
+                    <div class="offcanvas offcanvas-end "  id="offcanvasNavbar" aria-labelledby="offcanvasNavbarLabel">
                         <div class="offcanvas-header bg-sg-1">
-                            <div class="offcanvas-title" @onclick="@(() => putFocusOn("Intro"))" style="cursor: pointer" data-bs-dismiss="offcanvas" id="offcanvasNavbarLabel">
+                            <div class="offcanvas-title"  style="cursor: pointer" data-bs-dismiss="offcanvas" id="offcanvasNavbarLabel">
                                 <div class="d-flex justify-content-center  align-items-center m-0">
                                     <img src="img/profile.jpg" alt="Avatar" height="40" style="border-radius:50%">
                                     <div class="d-flex ps-2">
@@ -34,12 +34,4 @@
 </nav>
 
 
-@code {
 
-
-    public async Task putFocusOn(string ElementId)
-    {
-        await JSRuntime.InvokeVoidAsync("focusOnElementbyId", ElementId);
-    }
-
-}
