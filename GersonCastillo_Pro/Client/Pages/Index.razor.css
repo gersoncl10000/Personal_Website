@@ -1,0 +1,104 @@
+/* Estilos específicos para Index.razor */
+
+::deep .bg-photo-intro {
+    background-image: url('../img/BackgroundGerson.jpg');
+    background-repeat: no-repeat;
+    background-position-x: right;
+    height: 100%;
+}
+
+::deep .margin-top-tittle {
+    margin-top: 25% !important;
+}
+
+::deep .bg-bussines-photo {
+    background-image: url('../img/Skills.jpg');
+    background-repeat: no-repeat;
+    background-position-y: top;
+    background-position-x: center;
+    box-shadow: 0px 0px 10px 10px #0D030B inset;
+    height: 150px;
+}
+
+::deep .bg-repository-photo {
+    background-image: url('../img/repository.png');
+    background-repeat: no-repeat;
+    background-position-x: right;
+    background-position-y: bottom;
+    box-shadow: 0px 0px 10px 10px #ffffff inset;
+    height: 100%;
+}
+
+::deep .icon-hg {
+    height: 40px;
+}
+
+/* Media Queries para Index.razor */
+
+/* `lg` */
+@media (max-width: 991.98px) {
+    ::deep .bg-photo-intro {
+        height: 400px;
+    }
+
+    ::deep .margin-top-tittle {
+        margin-top: 25% !important;
+    }
+
+    ::deep .bg-bussines-photo {
+        background-image: url('../img/bussinessm.jpg');
+        height: 380px;
+    }
+
+    ::deep .bg-repository-photo {
+        height: 350px;
+    }
+}
+
+/* `md` */
+@media (max-width: 767.98px) {
+    ::deep .bg-photo-intro {
+        background-image: url('../img/Background.jpg');
+        height: 400px;
+    }
+
+    ::deep .margin-top-tittle {
+        margin-top: 280px !important;
+    }
+
+    ::deep .bg-bussines-photo {
+        height: 400px;
+    }
+
+    ::deep .bg-repository-photo {
+        background-image: url('../img/repositorycut.png');
+        height: 300px;
+    }
+
+    ::deep .icon-hg {
+        height: 30px;
+    }
+}
+
+/* `sm` */
+@media (max-width: 576px) {
+    ::deep .bg-photo-intro {
+        background-image: url('../img/Background2.jpg');
+        height: 400px;
+    }
+
+    ::deep .margin-top-tittle {
+        margin-top: 270px !important;
+    }
+
+    ::deep .bg-bussines-photo {
+        background-image: url('../img/bussinesxxsm.jpg');
+        height: 200px;
+    }
+
+    ::deep .bg-repository-photo {
+        background-image: url('../img/repositorycut.png');
+        background-position-x: center;
+        height: 500px;
+    }
+}

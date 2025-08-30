@@ -1,0 +1,53 @@
+/* Estilos específicos para Contact.razor */
+
+.bg-contact-photo {
+    height: 450px;
+    background-image: url('../img/photocontact.jpg');
+    background-repeat: no-repeat;
+    background-position-x: left;
+}
+
+.w-contact-photo {
+    width: 80%;
+}
+
+/* Media Queries para Contact.razor */
+
+@media (max-width: 991.98px) {
+    .bg-contact-photo {
+        background-image: url('../img/photocontactlg.jpg');
+    }
+
+    .w-contact-photo {
+        width: 95%;
+    }
+}
+
+@media (max-width: 767.98px) {
+    .bg-contact-photo {
+        background-image: url('../img/photocontactsm.jpg');
+        background-position-x: 20%;
+    }
+
+    .w-contact-photo {
+        width: 95%;
+    }
+}
+
+@media (max-width: 576px) {
+    .bg-contact-photo-tittle {
+        height: 650px;
+        background-image: url('../img/photocontactxsm.jpg');
+        background-repeat: no-repeat;
+        background-position-x: center;
+        background-position-y: top;
+    }
+
+    .w-contact-photo {
+        width: 100%;
+    }
+
+    .p-tittle-photo {
+        padding-top: 250px;
+    }
+}

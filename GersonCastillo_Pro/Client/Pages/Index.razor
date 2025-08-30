@@ -1,4 +1,6 @@
 ﻿@page "/"
+@using GersonCastillo_Pro.Client.Models
+@using GersonCastillo_Pro.Client.Services
 
 <!-- Main -->
 
@@ -10,8 +12,8 @@
         <Content1>
             <div class="d-flex h-lg-100 bg-sg-2">
                 <div class="align-self-center p-3 p-sm-4 p-md-5 p-lg-4 p-xl-5">
-                    <p class="text-black text-center font-st-pt-21">I am a highly qualified professional with extensive experience in business administration, finance, accounting, auditing, financial consolidation, and taxes. Additionally, I have expertise in software development focused on financial automation. Thus, bridging the gap between finance and technology is my specialty.</p>
-                    <p class="text-black text-center font-st-pt-18 fst-italic">"I am able to turn complex problems into creative solutions."</p>
+                    <p class="text-black text-center font-serif text-21">I am a highly qualified professional with extensive experience in business administration, finance, accounting, auditing, financial consolidation, and taxes. Additionally, I have expertise in software development focused on financial automation. Thus, bridging the gap between finance and technology is my specialty.</p>
+                    <p class="text-black text-center font-serif text-18 fst-italic">"I am able to turn complex problems into creative solutions."</p>
                 </div>
             </div>
         </Content1>
@@ -21,8 +23,8 @@
                     <div class="col-1"></div>
                     <div class="col-sm-10 col-md-7 col-lg-6 p-0 margin-top-tittle">
                         <div class="text-center h-100 fade-in-bottom">
-                            <p class="text-white font-qs-pt-24 m-0">Financial consolidation and automation specialist.</p>
-                            <p class="text-white font-qs-pt-16" style="opacity:0.8;">Accountant, Lawyer & Software Developer.</p>
+                            <p class="text-white font-quicksand text-24 m-0">Financial consolidation and automation specialist.</p>
+                            <p class="text-white font-quicksand text-16" style="opacity:0.8;">Accountant, Lawyer & Software Developer.</p>
                         </div>
                     </div>
                     <div class="col-sm-1 col-sm-4 col-lg-5"></div>
@@ -50,7 +52,7 @@
         </Content1>
         <Content2>
             <div class="p-2">
-                <ul class="font-st-pt-18 list-st">
+                <ul class="font-serif text-18 list-st">
                     <li>Professional, intelligent, responsible, and ethical leadership.</li>
                     <li>High capacity for innovation and clever resolution of complex problems.</li>
                     <li>Excellent skills and experience in personnel management.</li>
@@ -62,28 +64,14 @@
         <Content3>
             <div class="h-100 p-4">
 
-                <div class="d-flex flex-column font-st-pt-16">
-
-                    <BussinesSkills Description="Expertise and Advanced Knowledge in Financial Consolidation, Accounting, and Auditing (IFRS, PGC, and NOFCAC)"
-                                    Icon="auditing.svg"></BussinesSkills>
-                    <BussinesSkills Description="Advanced knowledge in financial, investment, and business management."
-                                    Icon="finangrow.svg"></BussinesSkills>
-                    <BussinesSkills Description="Excellent ability for comprehensive risk assessment and development of effective strategies."
-                                    Icon="think.svg"></BussinesSkills>
-                    <BussinesSkills Description="Internal controls process automation."
-                                    Icon="internalcontrol.svg"></BussinesSkills>
-                    <BussinesSkills Description="Financial Reports Automation, ETL & ELT Processes, with Advanced Proficiency in Reporting and Data Modeling Tools such as Power BI and Excel"
-                                    Icon="document.svg"></BussinesSkills>
-                    <BussinesSkills Description="Accounting entries automation."
-                                    Icon="entries.svg"></BussinesSkills>
-
-                    <BussinesSkills Description="Bank reconciliation automation."
-                                    Icon="bank.svg"></BussinesSkills>
-                    <BussinesSkills Description="Payments automation."
-                                    Icon="payments.svg"></BussinesSkills>
-                    <BussinesSkills Description="Data entry Automation."
-                                    Icon="keyboard.svg"></BussinesSkills>
-
+                <div class="d-flex flex-column font-serif text-16">
+                    @if (businessSkills is not null)
+                    {
+                        @foreach (var skill in businessSkills)
+                        {
+                            <BussinesSkills Description="@skill.Description" Icon="@skill.Icon" />
+                        }
+                    }
                 </div>
             </div>
 
@@ -105,9 +93,9 @@
                 <Content1>
                     <div class="d-flex h-100 p-2 bg-black text-white">
                         <div class="d-flex align-self-center">
-                            <ul class="font-SC-pt-16 list-st-cd pe-2">
+                            <ul class="font-code text-16 list-st-cd pe-2">
                                 <li class="fw-bold">C#</li>
-                                <ul class="font-SC-pt-14 list-unstyled">
+                                <ul class="text-14 list-unstyled">
                                     <li>{</li>
                                     <li class="ps-2">Linq;</li>
                                     <li class="ps-2">Razor;</li>
@@ -116,7 +104,7 @@
                                     <li>} </li>
                                 </ul>
                                 <li class="fw-bold">Data</li>
-                                <ul class="font-SC-pt-14 list-unstyled">
+                                <ul class="text-14 list-unstyled">
                                     <li>{</li>
                                     <li class="ps-2">T-SQL;</li>
                                     <li class="ps-2">DAX Funtions;</li>
@@ -124,7 +112,7 @@
                                     <li>} </li>
                                 </ul>
                                 <li class="fw-bold">Javascript</li>
-                                <ul class="font-SC-pt-14 list-unstyled">
+                                <ul class="text-14 list-unstyled">
                                     <li>{</li>
                                     <li class="ps-2">HTML;</li>
                                     <li class="ps-2">CSS;</li>
@@ -150,9 +138,9 @@
                 <Content2>
                     <div class="d-flex h-100 p-2 bg-black text-white">
                         <div class="align-self-center">
-                            <ul class="font-SC-pt-16 list-st-cd pe-2">
+                            <ul class="font-code text-16 list-st-cd pe-2">
                                 <li class="fw-bold">ASP.NET core</li>
-                                <ul class="font-SC-pt-14 list-unstyled">
+                                <ul class="text-14 list-unstyled">
                                     <li>{</li>
                                     <li class="ps-2">Blazor WebAssembly;</li>
                                     <li class="ps-2">Blazor Server;</li>
@@ -160,7 +148,7 @@
                                     <li>} </li>
                                 </ul>
                                 <li class="fw-bold">ASP.NET</li>
-                                <ul class="font-SC-pt-14 list-unstyled">
+                                <ul class="text-14 list-unstyled">
                                     <li>{</li>
                                     <li class="ps-2">ASP.NET MVC;</li>
                                     <li class="ps-2">ASP.NET Web API;</li>
@@ -169,7 +157,7 @@
                                     <li>} </li>
                                 </ul>
                                 <li class="fw-bold">.NET Framework</li>
-                                <ul class="font-SC-pt-14 list-unstyled">
+                                <ul class="text-14 list-unstyled">
                                     <li>{</li>
                                     <li class="ps-2">WPF;</li>
                                     <li class="ps-2">Entity Framework;</li>
@@ -201,10 +189,10 @@
                 <Content4>
                     <div class="d-flex h-100 p-2 bg-black text-white">
                         <div class="align-self-center">
-                            <ul class="font-SC-pt-16 list-st-cd pe-2">
+                            <ul class="font-code text-16 list-st-cd pe-2">
                                 <li class="fw-bold">Sap Business One SDK</li>
                                 <li class="fw-bold">Api Management SDK</li>
-                                <ul class="font-SC-pt-14 list-unstyled">
+                                <ul class="text-14 list-unstyled">
                                     <li>{</li>
                                     <li class="ps-2">PayPal .NET SDK;</li>
                                     <li class="ps-2">Stripe .NET SDK;</li>
@@ -247,56 +235,55 @@
                                    OutsideTittle1="Current"
                                    OutsideTittle3="Background">
                 <Content1>
-                    <div class="px-3">
-                        <div class="mt-2 mb-2 font-Atn-pt-18 text-dark">
-                            <div>Customer Success Manager</div>
-                            <div>(Consolidation specialist)</div>
-                        </div>
-                        <div class="my-1">
-                            <div class="font-st-pt-16">Konsolidator Iberia · Full-Time 2024 - Present</div>
-                            <div class="font-st-pt-16">Madrid, Comunidad de Madrid, Spain · On-Site</div>
-                        </div>
-                        <ul class="font-st-pt-16 list-st">
-                            <li>Expert in Financial Consolidation: Proficient in managing and optimizing financial consolidation processes.</li>
-                            <li>Product Specialist: In-depth knowledge of product functionalities and applications.</li>
-                            <li>Financial Statement Analysis Specialist: Experienced in analyzing and interpreting financial statements for accurate reporting.</li>
-                            <li>Accounting and Auditing Specialist: Expert in PGC, NOFCAC, IFRS, and IAS standards, ensuring compliance and accuracy.</li>
-                            <li>Financial Reporting and Business Intelligence Specialist: Advanced skills in Power BI, Advanced Excel, SQL, and M Language for robust financial reporting and analysis.</li>
-                            <li>Automation Solutions Developer: Proficient in creating automation solutions using REST API, .Net Core, and SQL Server to streamline processes and enhance efficiency.</li>
-                        </ul>
-                    </div>
-                    <div class="px-3">
-                        <div class="d-flex mt-2 mb-2 font-Atn-pt-18 text-dark">
-                            <div>Business owner </div>
-                        </div>
-                        <div class="my-1">
-                            <div class="font-st-pt-16">Redemerca LLC 2019-Present</div>
-                        </div>
-                        <ul class="font-st-pt-16 list-st">
-                            <li>Invesment protafolio's management. (Stock, Options & Futures).</li>
-                            <li>Market and company analysis.</li>
-                            <li>Software development focused on market analysis.</li>
-                        </ul>
-                    </div>
+                    @if (currentJobs is not null)
+                    {
+                        @foreach (var job in currentJobs)
+                        {
+                            <div class="px-3">
+                                <div class="mt-2 mb-2 font-anton text-18 text-dark">
+                                    @foreach (var title in job.Titles)
+                                    {
+                                        <div>@title</div>
+                                    }
+                                </div>
+                                <div class="my-1">
+                                    <div class="font-serif text-16">@job.Period</div>
+                                    <div class="font-serif text-16">@job.Location</div>
+                                </div>
+                                <ul class="font-serif text-16 list-st">
+                                    @foreach (var responsibility in job.Responsibilities)
+                                    {
+                                        <li>@responsibility</li>
+                                    }
+                                </ul>
+                            </div>
+                        }
+                    }
                 </Content1>
                 <Content3>
-                    <div class="px-3">
-                        <div class="d-flex mt-2 mb-2 font-Atn-pt-18 text-dark">
-                            <div>Director of Finance And Administration</div>
-                        </div>
-                        <div class="my-1">
-                            <div class="font-st-pt-16">Marluis Invesments 2006-2022</div>
-                        </div>
-                        <ul class="font-st-pt-16 list-st">
-                            <li>Management of the accounting, auditing, financial, administrative, and human resources areas.</li>
-                            <li>Modeling and preparation of financial statements under IFRS standards.</li>
-                            <li>Development of investment plans and strategies, budgets, and tax planning.</li>
-                            <li>Supervision of administrative and accounting processes, internal auditing, internal control, and personnel management.</li>
-                            <li>Software development and management of financial operations automation processes.</li>
-                            <li>Development of ETL and ELT processes, ASP.NET Core, SQL Server, Power BI, Power Query, DAX.</li>
-                            <li>Financial and accounting integration of internal software developments with the ERP system SAP Business One.</li>
-                        </ul>
-                    </div>
+                    @if (pastJobs is not null)
+                    {
+                        @foreach (var job in pastJobs)
+                        {
+                            <div class="px-3">
+                                <div class="d-flex mt-2 mb-2 font-anton text-18 text-dark">
+                                    @foreach (var title in job.Titles)
+                                    {
+                                        <div>@title</div>
+                                    }
+                                </div>
+                                <div class="my-1">
+                                    <div class="font-serif text-16">@job.Period</div>
+                                </div>
+                                <ul class="font-serif text-16 list-st">
+                                    @foreach (var responsibility in job.Responsibilities)
+                                    {
+                                        <li>@responsibility</li>
+                                    }
+                                </ul>
+                            </div>
+                        }
+                    }
                 </Content3>
             </SegmentContent2Colum1>
 
@@ -304,65 +291,35 @@
         <Content2>
             <div class="d-flex flex-column h-100 text-white bg-black p-3">
                 <div class="fst-italic text-white-50  mt-2 text-center">#PersonalPublicProjects</div>
-                <Project tittle="Presentation of Financial Consolidation Exercise: 2024"
-                         description="I have prepared a comprehensive financial consolidation exercise utilizing Power BI and DAX functions. This exercise aims to demonstrate the main principles of financial consolidation under the IFRS standards, specifically IAS 21. The final financial reports have been embedded into a web page using Power BI Embedded for seamless access and interaction."
-                         action="I developed the whole exercise."
-                         Languages="DAX funtions, Power BI, Power Point, Blazor Razor pages, HTML, CSS.;"
-                         FrameworksLibraries="Bazor WebAssembly, Bootstrap 5;"
-                         link="https://gersoncastillo.dev/consolidacion"
-                         Repository="MS Power BI">
-                </Project>
-                <Project tittle="Personal web page: 2023"
-                         description="Professional web page."
-                         action="I developed the whole project."
-                         Languages="C#, JavaScript, Razor, HTML, CSS, SASS.;"
-                         FrameworksLibraries="Bazor WebAssembly, Bootstrap 5;"
-                         link="https://github.com/gersoncl10000/Personal_Website"
-                         Repository="github">
-                </Project>
-                <Project tittle="7Gplus: 2017"
-                         description="Program to analyze the currency derivatives market."
-                         action="I developed the whole project."
-                         Languages="C#, SQL, LINQ, XAML ;"
-                         FrameworksLibraries="WFP, SQL Server 2017, Entity Framework, FRED API, Eurostat Web Services;"
-                         link="https://github.com/gersoncl10000/7Gplus"
-                         Repository="github">
-                </Project>
+                @if (personalProjects is not null)
+                {
+                    @foreach (var project in personalProjects)
+                    {
+                        <Project tittle="@project.Tittle"
+                                 description="@project.Description"
+                                 action="@project.Action"
+                                 Languages="@project.Languages"
+                                 FrameworksLibraries="@project.FrameworksLibraries"
+                                 link="@project.Link"
+                                 Repository="@project.Repository">
+                        </Project>
+                    }
+                }
                 <div class="fst-italic text-white-50 mt-2 text-center">#EnterprisePrivateProjects</div>
-                <Project tittle="E-Comerce 2.0 Year:  2021"
-                         description="The second version of the groceries eCommerce web app was developed to exploit the potential of the latest technologies from Microsoft ASP.NET Core."
-                         action="I was involved in the five steps of software development of the App's financial, accountant, and administrative components. I also taught programming to our team's newest members."
-                         Languages="C#, JavaScript, SQL, LINQ, Razor, HTML, CSS.;"
-                         FrameworksLibraries="Bazor WebAssembly, Bazor Server, SQL Server 2019, IndexedDB, Entity Framework Core, SAP Business One SDK, Bootstrap 4, Stripe SDK, PayPal .NET SDK and Binance API.;"
-                         link="https://dev.azure.com/Redemerca/Redemerca"
-                         Repository="azure">
-                </Project>
-                <Project tittle="E-Comerce 1.0 Year:  2019"
-                         description="Groceries eCommerce web app fully integrated with the ERP SAP Business One to attend to around 40,000 retail customers."
-                         action="My participation comprehended the App's financial and accounting development."
-                         Languages="C#, JavaScript, SQL, LINQ, Razor, HTML, CSS;"
-                         FrameworksLibraries="ASP.NET MVC 5, SQL Server 2017, Entity Framework, SAP Business One SDK, Bootstrap 3, JQuery, Stripe SDK, PayPal .NET SDK, Binance API.;"
-                         link="https://gcyanir.visualstudio.com/MarluisWEB/_versionControl"
-                         Repository="azure">
-                </Project>
-                <Project tittle="GC Internal Management Software:  2017"
-                         description="Internal software of gestion of logistics and administration process, developed under .NET technology fully integrated with the ERP SAP Business One."
-                         action="I participated in developing the accounting, financial and administrative modules."
-                         Languages="C#, SQL,LINQ, XAML. ;"
-                         FrameworksLibraries="WPF, SQL Server 2017, Entity Framework, SAP Business One SDK.;"
-                         link="https://dev.azure.com/Redemerca/_git/GC"
-                         Repository="azure">
-                </Project>
-                <Project tittle="Banking and Accounting automatized: 2016"
-                         description="Program for automatic management of banking and accounting."
-                         action="I developed the whole project."
-                         Languages="C#, SQL, LINQ, XAML;"
-                         FrameworksLibraries="WPF, SQL Server 2017, Entity Framework, SAP Business One SDK. Gmail API .NET;"
-                         link="https://gersoncl10000.visualstudio.com/BancosAdmin/_git/BancosAdministrativo"
-                         Repository="azure">
-                </Project>
-
-
+                @if (enterpriseProjects is not null)
+                {
+                    @foreach (var project in enterpriseProjects)
+                    {
+                        <Project tittle="@project.Tittle"
+                                 description="@project.Description"
+                                 action="@project.Action"
+                                 Languages="@project.Languages"
+                                 FrameworksLibraries="@project.FrameworksLibraries"
+                                 link="@project.Link"
+                                 Repository="@project.Repository">
+                        </Project>
+                    }
+                }
             </div>
         </Content2>
         <Content3>
@@ -375,81 +332,72 @@
                                    OutsideTittle3="Academic Degrees">
 
                 <Content1>
-                    <div class="px-3 pt-1">
-                        <div class="row text-center mt-2">
-                            <div class="col-12 col-sm-4 p-0">
-                                <img height="40" src="img/icons/Microsoft_logo.svg" />
-                                <div class="">
-                                    <a class="btn btn-link p-0" style="font-size:14px; text-decoration:none;color:black;" target="_blank" href="https://coursera.org/share/797b370403137a06821cc41d2f567946">
-                                        on going...
-                                        <img class="pb-1" height="21" src="img/icons/open_in_new_black_24dp.svg" />
-
-                                    </a>
-                                </div>
-                            </div>
-                            <div class="col-12 col-sm-8 p-0">
-                                <div class="d-flex flex-column">
-                                    <div class="font-st-pt-16 fw-bold">Azure Data Engineer Associate</div>
-                                    <div class="d-felx">
-                                        <div class="font-st-pt-14 me-2">Coursera, on going... 2024</div>
+                    <div class="py-2">
+                        @if (certifications is not null)
+                        {
+                            @foreach (var cert in certifications.Take(1))
+                            {
+                                <div class="px-3 pt-1">
+                                    <div class="row text-center mt-2">
+                                        <div class="col-12 col-sm-4 p-0">
+                                            <img height="40" src="@cert.Logo" />
+                                            <div>
+                                                <a class="btn btn-link p-0" style="font-size:14px; text-decoration:none;color:black;" target="_blank" href="@cert.CredentialLink">
+                                                    @cert.LinkText
+                                                    <img class="pb-1" height="21" src="img/icons/open_in_new_black_24dp.svg" />
+                                                </a>
+                                            </div>
+                                        </div>
+                                        <div class="col-12 col-sm-8 p-0">
+                                            <div class="d-flex flex-column">
+                                                <div class="font-serif text-16 fw-bold">@cert.Name</div>
+                                                <div class="d-felx">
+                                                    <div class="font-serif text-14 me-2">@cert.InstitutionAndDate</div>
+                                                </div>
+                                            </div>
+                                        </div>
                                     </div>
                                 </div>
-                            </div>
-                        </div>
+                            }
+                        }
                     </div>
                 </Content1>
                 <Content3>
                     <div class="m-2">
-                        <div class="row text-center my-2">
-                            <div class="col-6">
-                                <img height="50" src="img/icons/langaracoa.jpg" />
-                                <div class="d-block">
-                                    <div class="font-st-pt-16">Langara College</div>
-                                    <div class="font-st-pt-21 fw-bold">English for Academic Purposes (LEAP)</div>
-                                    <div class="font-st-pt-14">BC,Canada (2023)</div>
-                                </div>
+                        @if (academicDegrees is not null)
+                        {
+                            <div class="row text-center my-2">
+                                @foreach (var degree in academicDegrees.Take(2))
+                                {
+                                    <div class="col-6">
+                                        <img height="50" src="@degree.InstitutionLogo" />
+                                        <div class="d-block">
+                                            <div class="font-serif text-16">@degree.InstitutionName</div>
+                                            <div class="font-serif text-21 fw-bold">@degree.Degree</div>
+                                            <div class="font-serif text-14">@degree.LocationAndYear</div>
+                                        </div>
+                                    </div>
+                                }
                             </div>
-                            <div class="col-6">
-                                <img height="50" src="img/icons/Logo-Ilac.png" />
-                                <div class="d-block">
-                                    <div class="font-st-pt-16">ILAC</div>
-                                    <div class="font-st-pt-21 fw-bold">Business English Certificate</div>
-                                    <div class="font-st-pt-14">BC,Canada (2022)</div>
+                            @foreach (var degree in academicDegrees.Skip(2))
+                            {
+                                <div class="row text-center mt-2">
+                                    <div class="col-12">
+                                        <img height="50" src="@degree.InstitutionLogo" />
+                                        <div class="d-flex flex-column">
+                                            <div class="font-serif text-16">@degree.InstitutionName</div>
+                                            <div class="font-serif text-21 fw-bold">@degree.Degree</div>
+                                            <div class="font-serif text-14">@degree.LocationAndYear</div>
+                                        </div>
+                                    </div>
                                 </div>
-                            </div>
-                        </div>
-                        <div class="row text-center mt-2">
-                            <div class="col-12">
-                                <img height="50" src="img/icons/ugma-logo.png" />
-                                <div class="d-flex flex-column">
-                                    <div class="font-st-pt-16">Universidad Nororiental Gran Mariscal de Ayacucho</div>
-                                    <div class="font-st-pt-21 fw-bold">Attorney</div>
-                                    <div class="font-st-pt-14">BO,Venezuela (2016)</div>
-                                </div>
-                            </div>
-                        </div>
-                        <div class="row text-center mt-2">
-                            <div class="col-12">
-                                <img height="50" src="img/icons/logoucab.png" />
-                                <div class="d-flex flex-column">
-                                    <div class="font-st-pt-16">Andrés Bello Catholic University</div>
-                                    <div class="font-st-pt-21 fw-bold">Bachelor's Degree in Accounting</div>
-                                    <div class="font-st-pt-14">BO,Venezuela (2010)</div>
-                                </div>
-                            </div>
-                        </div>
-
+                            }
+                        }
                     </div>
                 </Content3>
-
-
             </SegmentContent2Colum1>
-
         </Content3>
         <Content4>
-
-
-
             <SegmentContent2Colum1 ActiveDivider1="true"
                                    ActiveDivider2="true"
                                    ActiveTittleDivider1="true"
@@ -469,7 +417,7 @@
                                                 <a class="btn btn-dark" href="https://gersoncl10000.visualstudio.com/">
                                                     <img class="icon-hg" src="img/icons/azurelogo.svg" />
                                                 </a>
-                                                <p class="text-black font-SC-pt-16 mt-2">
+                                                <p class="text-black font-code text-16 mt-2">
                                                     Private Repository
                                                 </p>
                                             </div>
@@ -477,7 +425,7 @@
                                                 <a class="btn btn-dark" href="https://github.com/gersoncl10000">
                                                     <img class="icon-hg" src="img/icons/github.svg" />
                                                 </a>
-                                                <p class="text-black font-SC-pt-16 mt-2">
+                                                <p class="text-black font-code text-16 mt-2">
                                                     Public Repository
                                                 </p>
                                             </div>
@@ -493,169 +441,38 @@
                 </Content1>
                 <Content3>
                     <div class="py-2">
-                        <div class="px-3 pt-1">
-                            <div class="row text-center mt-2">
-                                <div class="col-12 col-sm-4 p-0">
-                                    <img height="40" src="img/icons/INEAF.png" />
-                                    <div class="">
-                                        <a class="btn btn-link p-0" style="font-size:14px; text-decoration:none;color:black;" target="_blank" href="/files/certificate20241013-1848.pdf">
-                                           
-                                            Show credential
-                                            <img class="pb-1" height="21" src="img/icons/open_in_new_black_24dp.svg" />
-
-                                        </a>
-                                    </div>
-                                </div>
-                                <div class="col-12 col-sm-8 p-0">
-                                    <div class="d-flex flex-column">
-                                        <div class="font-st-pt-16 fw-bold">Advanced Course in Accounting and Tax Consolidation</div>
-                                        <div class="d-felx">
-                                            <div class="font-st-pt-14 me-2">INEAF - Business School, October 2024</div>
+                        @if (certifications is not null)
+                        {
+                            @foreach (var cert in certifications.Skip(1))
+                            {
+                                <div class="px-3 pt-1">
+                                    <div class="row text-center mt-2">
+                                        <div class="col-12 col-sm-4 p-0">
+                                            <img height="40" src="@cert.Logo" />
+                                            <div>
+                                                <a class="btn btn-link p-0" style="font-size:14px; text-decoration:none;color:black;" target="_blank" href="@cert.CredentialLink">
+                                                    @cert.LinkText
+                                                    <img class="pb-1" height="21" src="img/icons/open_in_new_black_24dp.svg" />
+                                                </a>
+                                            </div>
+                                        </div>
+                                        <div class="col-12 col-sm-8 p-0">
+                                            <div class="d-flex flex-column">
+                                                <div class="font-serif text-16 fw-bold">@cert.Name</div>
+                                                <div class="d-felx">
+                                                    <div class="font-serif text-14 me-2">@cert.InstitutionAndDate</div>
+                                                </div>
+                                            </div>
                                         </div>
                                     </div>
                                 </div>
-                            </div>
-                            <div class="row text-center mt-2">
-                                <div class="col-12 col-sm-4 p-0">
-                                    <img height="40" src="img/icons/MongoBD.png" />
-                                    <div class="">
-                                        <a class="btn btn-link p-0" style="font-size:14px; text-decoration:none;color:black;" target="_blank" href="https://coursera.org/share/d42dc58e346e2f9b6799ef823eff2456">
-                                            Show credential
-                                            <img class="pb-1" height="21" src="img/icons/open_in_new_black_24dp.svg" />
-
-                                        </a>
-                                    </div>
-                                </div>
-                                <div class="col-12 col-sm-8 p-0">
-                                    <div class="d-flex flex-column">
-                                        <div class="font-st-pt-16 fw-bold">MongoDB</div>
-                                        <div class="d-felx">
-                                            <div class="font-st-pt-14 me-2">MongoDB Inc., October 2024</div>
-                                        </div>
-                                    </div>
-                                </div>
-                            </div>
-                            <div class="row text-center mt-2">
-                                <div class="col-12 col-sm-4 p-0">
-                                    <img height="40" src="img/icons/Udemy-Emblem.png" />
-                                    <div class="">
-                                        <a class="btn btn-link p-0" style="font-size:14px; text-decoration:none;color:black;" target="_blank" href="https://www.udemy.com/certificate/UC-51f6f737-1d7e-47f7-b1d7-61d31a3acfc0/">
-                                            Show credential
-                                            <img class="pb-1" height="21" src="img/icons/open_in_new_black_24dp.svg" />
-
-                                        </a>
-                                    </div>
-                                </div>
-                                <div class="col-12 col-sm-8 p-0">
-                                    <div class="d-flex flex-column">
-                                        <div class="font-st-pt-16 fw-bold">Microsoft Power BI for Financial Reporting</div>
-                                        <div class="d-felx">
-                                            <div class="font-st-pt-14 me-2">Udemy, May 2024</div>
-                                        </div>
-                                    </div>
-                                </div>
-                            </div>
-                            <div class="row text-center mt-2">
-                                <div class="col-12 col-sm-4 p-0">
-                                    <img height="40" src="img/icons/Udemy-Emblem.png" />
-                                    <div class="">
-                                        <a class="btn btn-link p-0" style="font-size:14px; text-decoration:none;color:black;" target="_blank" href="https://www.udemy.com/certificate/UC-28862c0b-fcd6-4561-807a-e379abf737e5/">
-                                            Show credential
-                                            <img class="pb-1" height="21" src="img/icons/open_in_new_black_24dp.svg" />
-
-                                        </a>
-                                    </div>
-                                </div>
-                                <div class="col-12 col-sm-8 p-0">
-                                    <div class="d-flex flex-column">
-                                        <div class="font-st-pt-16 fw-bold">Blazor - ASP.NET Core 7</div>
-                                        <div class="d-felx">
-                                            <div class="font-st-pt-14 me-2">Udemy, April 2024</div>
-                                        </div>
-                                    </div>
-                                </div>
-                            </div>
-                            <div class="row text-center mt-2">
-                                <div class="col-12 col-sm-4 p-0">
-                                    <img height="40" src="img/icons/cursera-logo.png" />
-                                    <div class="">
-                                        <a class="btn btn-link p-0" style="font-size:14px; text-decoration:none;color:black;" target="_blank" href="https://coursera.org/share/797b370403137a06821cc41d2f567946">
-                                            Show credential
-                                            <img class="pb-1" height="21" src="img/icons/open_in_new_black_24dp.svg" />
-
-                                        </a>
-                                    </div>
-                                </div>
-                                <div class="col-12 col-sm-8 p-0">
-                                    <div class="d-flex flex-column">
-                                        <div class="font-st-pt-16 fw-bold">Developing AI Applications with Python and Flask</div>
-                                        <div class="d-felx">
-                                            <div class="font-st-pt-14 me-2">Coursera, April 2024</div>
-                                        </div>
-                                    </div>
-                                </div>
-                            </div>
-                        </div>
-                        <div class="px-3 pt-1">
-                            <div class="row text-center mt-2">
-                                <div class="col-12 col-sm-4 p-0">
-                                    <img height="40" src="img/icons/cursera-logo.png" />
-                                    <div class="">
-                                        <a class="btn btn-link p-0" style="font-size:14px; text-decoration:none;color:black;" target="_blank" href="https://coursera.org/share/836a2adb6de566669e606c0333ac9b63">
-                                            Show credential
-                                            <img class="pb-1" height="21" src="img/icons/open_in_new_black_24dp.svg" />
-
-                                        </a>
-                                    </div>
-                                </div>
-                                <div class="col-12 col-sm-8 p-0">
-                                    <div class="d-flex flex-column">
-                                        <div class="font-st-pt-16 fw-bold">Python for Data Science, AI & Development</div>
-                                        <div class="d-felx">
-                                            <div class="font-st-pt-14 me-2">Coursera, March 2024</div>
-                                        </div>
-                                    </div>
-                                </div>
-                            </div>
-                        </div>
-                        <div class="px-3 pt-1">
-                            <div class="row text-center mt-2">
-                                <div class="col-12 col-sm-4 p-0">
-                                    <img height="40" src="img/icons/cursera-logo.png" />
-                                    <div class="">
-                                        <a class="btn btn-link p-0" style="font-size:14px; text-decoration:none;color:black;" target="_blank" href="https://coursera.org/share/4003bfddad469b0c58757e92e1aeec45">
-                                            Show credential
-                                            <img class="pb-1" height="21" src="img/icons/open_in_new_black_24dp.svg" />
-
-                                        </a>
-                                    </div>
-                                </div>
-                                <div class="col-12 col-sm-8 p-0">
-                                    <div class="d-flex flex-column">
-                                        <div class="font-st-pt-16 fw-bold">Introduction to DevOps</div>
-                                        <div class="d-felx">
-                                            <div class="font-st-pt-14 me-2">Coursera, March 2024</div>
-                                        </div>
-                                    </div>
-                                </div>
-                            </div>
-                        </div>
+                            }
+                        }
                     </div>
                 </Content3>
-
-
             </SegmentContent2Colum1>
-
-
-
-
         </Content4>
     </SegmentContent1Colum2>
 </Segment>
 <Contact></Contact>
 
-@code {
-    //Horizotal divider's Background Color
-
-    private Desing segment_desing = new Desing();
-}

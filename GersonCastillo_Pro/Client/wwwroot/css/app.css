@@ -1,14 +1,28 @@
-
 @import url('https://fonts.googleapis.com/css2?family=PT+Serif&display=swap');
 @import url('https://fonts.googleapis.com/css2?family=Anton&display=swap');
 @import url('https://fonts.googleapis.com/css2?family=Source+Code+Pro&display=swap');
 @import url('https://fonts.googleapis.com/css2?family=Quicksand&display=swap');
 
+:root {
+    /* Familias de Fuentes */
+    --font-family-serif: 'PT Serif', serif;
+    --font-family-anton: 'Anton', sans-serif;
+    --font-family-code: 'Source Code Pro', monospace;
+    --font-family-quicksand: 'Quicksand', sans-serif;
 
+    /* Tamaños de Fuente Base */
+    --fs-28: 28px;
+    --fs-24: 24px;
+    --fs-21: 21px;
+    --fs-18: 18px;
+    --fs-16: 16px;
+    --fs-14: 14px;
+    --fs-12: 12px;
+}
 
+/* --- Clases de Utilidad Globales --- */
 
-
-/*PT  Serif*/
+/* Listas */
 .list-st {
     list-style: url("../img/RedIcon.svg");
 }
@@ -16,518 +30,66 @@
     list-style: url("../img/icons/minus.svg");
 }
 
-/*Break*/
-.font-st-pt-21 {
-    font-family: 'PT Serif', serif;
-    font-size:21px;
-}
+/* Familias de Fuentes */
+.font-serif { font-family: var(--font-family-serif); }
+.font-anton { font-family: var(--font-family-anton); }
+.font-code { font-family: var(--font-family-code); }
+.font-quicksand { font-family: var(--font-family-quicksand); }
 
-.font-st-pt-18 {
-    font-family: 'PT Serif', serif;
-    font-size: 18px;
-}
-
-.font-st-pt-16 {
-    font-family: 'PT Serif', serif;
-    font-size: 16px;
-}
-
-.font-st-pt-14 {
-    font-family: 'PT Serif', serif;
-    font-size: 14px;
-}
-
-.font-st-pt-12 {
-    font-family: 'PT Serif', serif;
-    font-size: 12px;
-}
-
-/*Anton*/
-.font-Atn-pt-28 {
-    font-family: 'Anton', sans-serif;
-    font-size: 28px!important;
-}
-.font-Atn-pt-24 {
-    font-family: 'Anton', sans-serif;
-    font-size: 24px;
-}
-
-.font-Atn-pt-21 {
-    font-family: 'Anton', sans-serif;
-    font-size: 21px;
-}
-
-.font-Atn-pt-18 {
-    font-family: 'Anton', sans-serif;
-    font-size: 18px;
-}
-
-.font-Atn-pt-16 {
-    font-family: 'Anton', sans-serif;
-    font-size: 16px;
-}
-.font-Atn-pt-14 {
-    font-family: 'Anton', sans-serif;
-    font-size: 14px;
-}
-
-/*Source Code*/
-
-.font-SC-pt-16 {
-    font-family: 'Source Code Pro', monospace;
-    font-size: 16px;
-}
-
-.font-SC-pt-14 {
-    font-family: 'Source Code Pro', monospace;
-    font-size: 14px;
-}
+/* Tamaños de Fuentes */
+.text-28 { font-size: var(--fs-28); }
+.text-24 { font-size: var(--fs-24); }
+.text-21 { font-size: var(--fs-21); }
+.text-18 { font-size: var(--fs-18); }
+.text-16 { font-size: var(--fs-16); }
+.text-14 { font-size: var(--fs-14); }
+.text-12 { font-size: var(--fs-12); }
 
 
-/*Quicksand*/
+/* Logos y utilidades generales */
+.md-logo { height: 80px; }
+.lg-logo { height: 120px; }
+.bt-font-size { font-size: var(--fs-16); }
 
-.font-qs-pt-24 {
-    font-family: 'Quicksand', sans-serif;
-    font-size: 24px;
-}
-
-.font-qs-pt-18 {
-    font-family: 'Quicksand', sans-serif;
-    font-size: 18px;
-}
-
-.font-qs-pt-16 {
-    font-family: 'Quicksand', sans-serif;
-    font-size: 16px;
-}
-
-.font-qs-pt-14 {
-    font-family: 'Quicksand', sans-serif;
-    font-size: 14px;
-}
-
-
-/*------------Tittle -------------*/
-
-.bg-photo-intro {
-    background-image: url('../img/BackgroundGerson.jpg');
-    background-repeat: no-repeat;
-    background-position-x: right;
-    height:100%;
-}
-
-.margin-top-tittle {
-    margin-top:25%!important;
-}
-
-/*------------Bussiness Photo -------------*/
-
-.bg-bussines-photo {
-    background-image: url('../img/Skills.jpg');
-    background-repeat: no-repeat;
-    background-position-y: top;
-    background-position-x: center;
-    box-shadow: 0px 0px 10px 10px #0D030B inset;
-    height: 150px;
-}
-
-
-/*------------ Repository Photo -------------*/
-
-.bg-repository-photo {
-    background-image: url('../img/repository.png');
-    background-repeat: no-repeat;
-    background-position-x: right;
-    background-position-y: bottom;
-    box-shadow: 0px 0px 10px 10px #ffffff inset;
-    height: 100%;
-}
-
-.icon-hg {
-    height:40px;
-}
-
-/*------------ Contact Photo -------------*/
-
-.bg-contact-photo {
-    height: 450px;
-    background-image: url('../img/photocontact.jpg');
-    background-repeat: no-repeat;
-    background-position-x: left;
-}
-
-.w-contact-photo {
-    width:80%;
-}
-
-/*Programming Logos*/
-
-.md-logo {
-    height:80px;
-}
-
-.lg-logo {
-    height: 120px;
-}
-
-/*Bottom font size*/
-
-.bt-font-size {
-    font-size:16px;
-}
-
-
-/*-------------------Break points-------------------------*/
-
-
-
-/* `lg` applies to medium devices (tablets, less than 992px) */
-
+/* Media Queries para estilos globales */
 @media (max-width: 991.98px) {
-
-    /*------------Tittle -------------*/
-
-    .bg-photo-intro {
-        background-image: url('../img/BackgroundGerson.jpg');
-        background-repeat: no-repeat;
-        background-position-x: right;
-        height: 400px;
-    }
-
-    .margin-top-tittle {
-        margin-top: 25% !important;
-    }
-
-    /*------------ Fonts -------------*/
-
-
-
-    /*Break*/
-    .font-st-pt-21 {
-        font-family: 'PT Serif', serif;
-        font-size: 20px;
-    }
-
-    .font-st-pt-18 {
-        font-family: 'PT Serif', serif;
-        font-size: 17px;
-    }
-
-    /*------------Bussiness Photo -------------*/
-
-    .bg-bussines-photo {
-        background-image: url('../img/bussinessm.jpg');
-        background-repeat: no-repeat;
-        background-position-y: bottom;
-        background-position-x: center;
-        box-shadow: 0px 0px 10px 10px #0D030B inset;
-        height: 380px;
-    }
-
-    /*------------ Repository Photo -------------*/
-
-    .bg-repository-photo {
-        background-image: url('../img/repository.png');
-        background-repeat: no-repeat;
-        background-position-x: right;
-        background-position-y: bottom;
-        box-shadow: 0px 0px 10px 10px #ffffff inset;
-        height: 350px;
-    }
-
-    .icon-hg {
-        height: 40px;
-    }
-
-    /*------------ Contact Photo -------------*/
-
-    .bg-contact-photo {
-        height: 450px;
-        background-image: url('../img/photocontactlg.jpg');
-        background-repeat: no-repeat;
-        background-position-x: left;
-    }
-
-    .w-contact-photo {
-        width: 95%;
-    }
-
-    /*Programming Logos*/
-
-    .md-logo {
-        height: 80px;
-    }
-
-    .lg-logo {
-        height: 120px;
-    }
-
-    /*Bottom font size*/
-
-    .bt-font-size {
-        font-size: 16px;
-    }
-
+    .text-21 { font-size: 20px; }
+    .text-18 { font-size: 17px; }
 }
 
-/* md applies to small devices (landscape phones, less than 768px) */
 @media (max-width: 767.98px) {
-
-    /*------------Tittle -------------*/
-
-    .bg-photo-intro {
-        background-image: url('../img/Background.jpg');
-        background-repeat: no-repeat;
-        background-position-x: right;
-        height: 400px;
-    }
-
-    .margin-top-tittle {
-        margin-top: 280px !important;
-    }
-
-
-    /*------------ Fonts -------------*/
-
-
-
-    /*Break*/
-    .font-st-pt-21 {
-        font-family: 'PT Serif', serif;
-        font-size: 18px;
-    }
-    .font-st-pt-18 {
-        font-family: 'PT Serif', serif;
-        font-size: 16px;
-    }
-
-    /*------------Bussiness Photo -------------*/
-
-    .bg-bussines-photo {
-        background-image: url('../img/bussinessm.jpg');
-        background-repeat: no-repeat;
-        background-position-y: bottom;
-        background-position-x: center;
-        box-shadow: 0px 0px 10px 10px #0D030B inset;
-        height: 400px;
-    }
-
-    /*------------ Repository Photo -------------*/
-
-    .bg-repository-photo {
-        background-image: url('../img/repositorycut.png');
-        background-repeat: no-repeat;
-        background-position-x: right;
-        background-position-y: bottom;
-        box-shadow: 0px 0px 10px 10px #ffffff inset;
-        height: 300px;
-    }
-
-    .icon-hg {
-        height: 30px;
-    }
-
-
-    /*------------ Contact Photo -------------*/
-
-    .bg-contact-photo {
-        height: 450px;
-        background-image: url('../img/photocontactsm.jpg');
-        background-repeat: no-repeat;
-        background-position-x: 20%;
-    }
-
-    .w-contact-photo {
-        width: 95%;
-    }
-
-    /*Programming Logos*/
-
-    .md-logo {
-        height: 80px;
-    }
-
-    .lg-logo {
-        height: 120px;
-    }
-
-    /*Bottom font size*/
-
-    .bt-font-size {
-        font-size: 16px;
-    }
-
-
+    .text-21 { font-size: 18px; }
+    .text-18 { font-size: 16px; }
 }
 
 @media (max-width: 576px) {
-
-
-    /*------------Tittle -------------*/
-
-    .bg-photo-intro {
-        background-image: url('../img/Background2.jpg');
-        background-repeat: no-repeat;
-        background-position-x: center;
-        height: 400px;
-    }
-
-    .margin-top-tittle {
-        margin-top: 270px !important;
-    }
-
-    /*------------Bussiness Photo -------------*/
-
-    .bg-bussines-photo {
-        background-image: url('../img/bussinesxxsm.jpg');
-        background-repeat: no-repeat;
-        background-position-y: bottom;
-        background-position-x: center;
-        box-shadow: 0px 0px 10px 10px #0D030B inset;
-        height: 200px;
-    }
-
-    /*------------ Repository Photo -------------*/
-
-    .bg-repository-photo {
-        background-image: url('../img/repositorycut.png');
-        background-repeat: no-repeat;
-        background-position-x: center;
-        background-position-y: bottom;
-        box-shadow: 0px 0px 10px 10px #ffffff inset;
-        height: 500px;
-    }
-
-    .icon-hg {
-        height: 30px;
-    }
-
-
-    .bg-contact-photo-tittle {
-        height: 650px;
-        background-image: url('../img/photocontactxsm.jpg');
-        background-repeat: no-repeat;
-        background-position-x:center;
-        background-position-y:top;
-    }
-
-    .w-contact-photo {
-        width: 100%;
-    }
-
-    .p-tittle-photo {
-        padding-top: 250px;
-    }
-
-    /*Programming Logos*/
-
-    .md-logo {
-        height: 55px;
-    }
-
-    .lg-logo {
-        height: 80px;
-    }
-
-    /*Bottom font size*/
-
-    .bt-font-size {
-        font-size: 13px;
-    }
-
-
+    .md-logo { height: 55px; }
+    .lg-logo { height: 80px; }
+    .bt-font-size { font-size: 13px; }
 }
 
-
-
-
-
-/*Project css*/
-/*-------------------Animation-------------------------*/
+/* Animaciones globales */
 .fade-in {
     -webkit-animation: fade-in 2.0s cubic-bezier(0.390, 0.575, 0.565, 1.000) both;
     animation: fade-in 2.0s cubic-bezier(0.390, 0.575, 0.565, 1.000) both;
 }
 
-
-/* ----------------------------------------------
- * Generated by Animista on 2023-8-22 14:55:11
- * Licensed under FreeBSD License.
- * See http://animista.net/license for more info. 
- * w: http://animista.net, t: @cssanimista
- * ---------------------------------------------- */
-
-/**
- * ----------------------------------------
- * animation fade-in
- * ----------------------------------------
- */
-@-webkit-keyframes fade-in {
-    0% {
-        opacity: 0;
-    }
-
-    100% {
-        opacity: 1;
-    }
-}
-
-@keyframes fade-in {
-    0% {
-        opacity: 0;
-    }
-
-    100% {
-        opacity: 1;
-    }
-}
-
-
+@-webkit-keyframes fade-in { 0% { opacity: 0; } 100% { opacity: 1; } }
+@keyframes fade-in { 0% { opacity: 0; } 100% { opacity: 1; } }
 
 .fade-in-bottom {
     -webkit-animation: fade-in-bottom 1.5s cubic-bezier(0.390, 0.575, 0.565, 1.000) 0.5s both;
     animation: fade-in-bottom 1.5s cubic-bezier(0.390, 0.575, 0.565, 1.000) 0.5s both;
 }
 
-
-/* ----------------------------------------------
- * Generated by Animista on 2023-8-22 15:5:8
- * Licensed under FreeBSD License.
- * See http://animista.net/license for more info. 
- * w: http://animista.net, t: @cssanimista
- * ---------------------------------------------- */
-
-/**
- * ----------------------------------------
- * animation fade-in-bottom
- * ----------------------------------------
- */
 @-webkit-keyframes fade-in-bottom {
-    0% {
-        -webkit-transform: translateY(50px);
-        transform: translateY(50px);
-        opacity: 0;
-    }
-
-    100% {
-        -webkit-transform: translateY(0);
-        transform: translateY(0);
-        opacity: 1;
-    }
+    0% { -webkit-transform: translateY(50px); transform: translateY(50px); opacity: 0; }
+    100% { -webkit-transform: translateY(0); transform: translateY(0); opacity: 1; }
 }
 
 @keyframes fade-in-bottom {
-    0% {
-        -webkit-transform: translateY(50px);
-        transform: translateY(50px);
-        opacity: 0;
-    }
-
-    100% {
-        -webkit-transform: translateY(0);
-        transform: translateY(0);
-        opacity: 1;
-    }
+    0% { -webkit-transform: translateY(50px); transform: translateY(50px); opacity: 0; }
+    100% { -webkit-transform: translateY(0); transform: translateY(0); opacity: 1; }
 }
 
 
