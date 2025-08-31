@@ -1,0 +1,21 @@
+@inject IStringLocalizer<Shared> Localizer
+@inject IJSRuntime JSRuntime
+
+@code {
+    protected override async Task OnAfterRenderAsync(bool firstRender)
+    {
+        if (firstRender)
+        {
+            try
+            {
+                await JSRuntime.InvokeVoidAsync("updatePageMeta", 
+                    Localizer["PageTitle"], 
+                    Localizer["PageDescription"]);
+            }
+            catch
+            {
+                // Ignore JS errors during pre-rendering
+            }
+        }
+    }
+}

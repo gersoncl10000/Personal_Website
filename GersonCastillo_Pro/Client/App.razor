@@ -1,12 +1,20 @@
-﻿<Router AppAssembly="@typeof(App).Assembly">
+﻿@inject IStringLocalizer<GersonCastillo_Pro.Client.Resources.Shared> Localizer
+
+<Router AppAssembly="@typeof(App).Assembly">
     <Found Context="routeData">
         <RouteView RouteData="@routeData" DefaultLayout="@typeof(MainLayout)" />
-
     </Found>
     <NotFound>
-        <PageTitle>Not found</PageTitle>
+        <PageTitle>@Localizer["PageNotFound"]</PageTitle>
         <LayoutView Layout="@typeof(MainLayout)">
-            <p role="alert">Sorry, there's nothing at this address.</p>
+            <div class="d-flex justify-content-center align-items-center" style="min-height: 60vh;">
+                <div class="text-center">
+                    <h1 class="font-anton text-48 text-color-div-1 mb-4">404</h1>
+                    <h2 class="font-serif text-24 text-color-div-1 mb-3">@Localizer["PageNotFound"]</h2>
+                    <p role="alert" class="font-serif text-18 text-color-div-1 mb-4">@Localizer["PageNotFoundMessage"]</p>
+                    <a href="/" class="btn btn-dark font-anton text-16">@Localizer["Home"]</a>
+                </div>
+            </div>
         </LayoutView>
     </NotFound>
 </Router>

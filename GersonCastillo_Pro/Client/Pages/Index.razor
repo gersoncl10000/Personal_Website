@@ -1,6 +1,7 @@
 ﻿@page "/"
 @using GersonCastillo_Pro.Client.Models
 @using GersonCastillo_Pro.Client.Services
+@inject IStringLocalizer<Shared> Localizer
 
 <!-- Main -->
 
@@ -12,8 +13,8 @@
         <Content1>
             <div class="d-flex h-lg-100 bg-sg-2">
                 <div class="align-self-center p-3 p-sm-4 p-md-5 p-lg-4 p-xl-5">
-                    <p class="text-black text-center font-serif text-21">I am a highly qualified professional with extensive experience in business administration, finance, accounting, auditing, financial consolidation, and taxes. Additionally, I have expertise in software development focused on financial automation. Thus, bridging the gap between finance and technology is my specialty.</p>
-                    <p class="text-black text-center font-serif text-18 fst-italic">"I am able to turn complex problems into creative solutions."</p>
+                    <p class="text-black text-center font-serif text-18">@Localizer["IntroDescription"]</p>
+                    <p class="text-black text-center font-serif text-16 fst-italic">@Localizer["IntroQuote"]</p>
                 </div>
             </div>
         </Content1>
@@ -21,19 +22,21 @@
             <div class="bg-black h-100">
                 <div class="row m-0 align-items-center p-2 fade-in bg-photo-intro">
                     <div class="col-1"></div>
-                    <div class="col-sm-10 col-md-7 col-lg-6 p-0 margin-top-tittle">
+                    <div class="col-sm-10 col-md-10 col-lg-9 p-0 margin-top-tittle">
                         <div class="text-center h-100 fade-in-bottom">
-                            <p class="text-white font-quicksand text-24 m-0">Financial consolidation and automation specialist.</p>
-                            <p class="text-white font-quicksand text-16" style="opacity:0.8;">Accountant, Lawyer & Software Developer.</p>
+                            <p class="text-white font-quicksand text-24 m-0">@Localizer["IntroTitle"]</p>
+                            <p class="text-white font-quicksand text-16" style="opacity:0.8;">@Localizer["IntroSubtitle"]</p>
                         </div>
                     </div>
-                    <div class="col-sm-1 col-sm-4 col-lg-5"></div>
                 </div>
             </div>
         </Content2>
     </SegmentContent1Colum2>
 </Segment>
-<Segment p_tittle_hz_div_1="Skills" p_hz_dv_1_active="true">
+
+
+
+<Segment p_tittle_hz_div_1="@Localizer["Skills"]" p_hz_dv_1_active="true">
     <SegmentContent1Colum2 ActiveSection2="true"
                            ActiveTittleDivider2="true"
                            BgColorOutsideTittle3="bg-div-1"
@@ -41,8 +44,8 @@
                            orderSmContent4="order-1"
                            orderSmContent1="order-2"
                            orderSmContent3="order-3"
-                           OutsideTittle3="Business"
-                           OutsideTittle4="Software Development">
+                           OutsideTittle3="@Localizer["Business"]"
+                           OutsideTittle4="@Localizer["SoftwareDevelopment"]">
         <Content1>
             <div class="h-100 bg-black">
                 <div class="bg-bussines-photo">
@@ -53,10 +56,10 @@
         <Content2>
             <div class="p-2">
                 <ul class="font-serif text-18 list-st">
-                    <li>Professional, intelligent, responsible, and ethical leadership.</li>
-                    <li>High capacity for innovation and clever resolution of complex problems.</li>
-                    <li>Excellent skills and experience in personnel management.</li>
-                    <li>Strategic thinking and long-term vision.</li>
+                    <li>@Localizer["ProfessionalLeadership"]</li>
+                    <li>@Localizer["InnovationCapacity"]</li>
+                    <li>@Localizer["PersonnelManagement"]</li>
+                    <li>@Localizer["StrategicThinking"]</li>
                 </ul>
             </div>
 
@@ -86,10 +89,10 @@
                                    BgColorOutsideTittle2="bg-black"
                                    BgColorOutsideTittle3="bg-black"
                                    BgColorOutsideTittle4="bg-black"
-                                   OutsideTittle1="Languages"
-                                   OutsideTittle2=".NET Frameworks & Libraries."
-                                   OutsideTittle3="Development tools"
-                                   OutsideTittle4="Other Frameworks & Libraries">
+                                   OutsideTittle1="@Localizer["Languages"]"
+                                   OutsideTittle2="@Localizer["NetFrameworksLibraries"]"
+                                   OutsideTittle3="@Localizer["DevelopmentTools"]"
+                                   OutsideTittle4="@Localizer["OtherFrameworksLibraries"]">
                 <Content1>
                     <div class="d-flex h-100 p-2 bg-black text-white">
                         <div class="d-flex align-self-center">
@@ -216,24 +219,24 @@
 </Segment>
 
 <!-- Work & Projects -->
-<Segment p_tittle_hz_div_1="Work & Projects" p_hz_dv_1_active="true">
+<Segment p_tittle_hz_div_1="@Localizer["WorkAndProjects"]" p_hz_dv_1_active="true">
     <SegmentContent1Colum2 ActiveDivider1="true"
                            ActiveSection2="true"
                            ActiveTittleDivider1="true"
                            ActiveTittleDivider2="true"
                            BgColorOutsideTittle4="bg-black"
-                           OutsideTittle1="Work"
-                           OutsideTittle2="Some projects"
-                           OutsideTittle3="Education"
-                           OutsideTittle4="Repositories">
+                           OutsideTittle1="@Localizer["Work"]"
+                           OutsideTittle2="@Localizer["SomeProjects"]"
+                           OutsideTittle3="@Localizer["Education"]"
+                           OutsideTittle4="@Localizer["Repositories"]">
         <Content1>
             <SegmentContent2Colum1 ActiveDivider1="true"
                                    ActiveDivider2="true"
                                    ActiveTittleDivider1="true"
                                    ActiveTittleDivider2="true"
                                    ActiveSection2="true"
-                                   OutsideTittle1="Current"
-                                   OutsideTittle3="Background">
+                                   OutsideTittle1="@Localizer["Current"]"
+                                   OutsideTittle3="@Localizer["Background"]">
                 <Content1>
                     @if (currentJobs is not null)
                     {
@@ -290,7 +293,7 @@
         </Content1>
         <Content2>
             <div class="d-flex flex-column h-100 text-white bg-black p-3">
-                <div class="fst-italic text-white-50  mt-2 text-center">#PersonalPublicProjects</div>
+                <div class="fst-italic text-white-50  mt-2 text-center">@Localizer["PersonalPublicProjects"]</div>
                 @if (personalProjects is not null)
                 {
                     @foreach (var project in personalProjects)
@@ -305,7 +308,7 @@
                         </Project>
                     }
                 }
-                <div class="fst-italic text-white-50 mt-2 text-center">#EnterprisePrivateProjects</div>
+                <div class="fst-italic text-white-50 mt-2 text-center">@Localizer["EnterprisePrivateProjects"]</div>
                 @if (enterpriseProjects is not null)
                 {
                     @foreach (var project in enterpriseProjects)
@@ -328,8 +331,8 @@
                                    ActiveTittleDivider1="true"
                                    ActiveTittleDivider2="true"
                                    ActiveSection2="true"
-                                   OutsideTittle1="Newest Courses & Certifications"
-                                   OutsideTittle3="Academic Degrees">
+                                   OutsideTittle1="@Localizer["NewestCoursesCertifications"]"
+                                   OutsideTittle3="@Localizer["AcademicDegrees"]">
 
                 <Content1>
                     <div class="py-2">
@@ -403,8 +406,8 @@
                                    ActiveTittleDivider1="true"
                                    ActiveTittleDivider2="true"
                                    ActiveSection2="true"
-                                   OutsideTittle1="Repositories"
-                                   OutsideTittle3="Courses & Certifications">
+                                   OutsideTittle1="@Localizer["Repositories"]"
+                                   OutsideTittle3="@Localizer["CoursesCertifications"]">
 
                 <Content1>
                     <div class="h-100" style="min-height: 300px;">
@@ -418,7 +421,7 @@
                                                     <img class="icon-hg" src="img/icons/azurelogo.svg" />
                                                 </a>
                                                 <p class="text-black font-code text-16 mt-2">
-                                                    Private Repository
+                                                    @Localizer["PrivateRepository"]
                                                 </p>
                                             </div>
                                             <div class="my-3">
@@ -426,7 +429,7 @@
                                                     <img class="icon-hg" src="img/icons/github.svg" />
                                                 </a>
                                                 <p class="text-black font-code text-16 mt-2">
-                                                    Public Repository
+                                                    @Localizer["PublicRepository"]
                                                 </p>
                                             </div>
                                         </div>

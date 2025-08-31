@@ -1,23 +1,25 @@
-﻿<div class="font-code text-14 mt-2">
+﻿@inject IStringLocalizer<Shared> Localizer
+
+<div class="font-code text-14 mt-2">
     <div class="d-flex mb-1  align-items-center">
         <div class="font-SC-pt-16">@tittle</div>
         <div class="ms-2">
             @if (Repository == "azure")
             {
-                <a class="btn btn-dark p-1" href="@link">
-                    <img height="20" src="img/icons/azurelogo.svg" />
+                <a class="btn btn-dark p-1" href="@link" target="_blank" rel="noopener noreferrer">
+                    <img height="20" src="img/icons/azurelogo.svg" alt="Azure DevOps" />
                 </a>
             }
             @if (Repository == "github")
             {
-                <a class="btn btn-dark  p-1" href="@link">
-                    <img height="20" src="img/icons/github.svg" />
+                <a class="btn btn-dark  p-1" href="@link" target="_blank" rel="noopener noreferrer">
+                    <img height="20" src="img/icons/github.svg" alt="GitHub" />
                 </a>
             }
             @if (Repository == "MS Power BI")
             {
-                <a class="btn btn-dark  p-1 d-flex align-items-center" href="@link">
-                    <nobr> <span>Power BI </span><img height="22" src="img/icons/Power_bi_logo_black.svg" /></nobr>
+                <a class="btn btn-dark  p-1 d-flex align-items-center" href="@link" target="_blank" rel="noopener noreferrer">
+                    <nobr> <span>Power BI </span><img height="22" src="img/icons/Power_bi_logo_black.svg" alt="Power BI" /></nobr>
                 </a>
             }
         </div>
@@ -26,15 +28,15 @@
     <p class="text-color-cd-green ps-2 mb-1"><span class="me-2">/*</span> <span>@description</span><span class="ms-2">*/</span> </p>
      
     <div class="d-flex">
-        <div class="text-color-cd-blue" style="min-width:80px;">@@action <span class="ms-1 text-white">=</span></div>
+        <div class="text-color-cd-blue" style="min-width:80px;">@Localizer["ActionLabel"] <span class="ms-1 text-white">=</span></div>
         <div class="text-color-cd-orange ms-1"><span class="me-1">"</span>@action<span class="me-1">"</span></div>
     </div>
     <div class="d-flex">
-        <div class="text-color-cd-darkblue" style="min-width:60px;">@@using</div>
+        <div class="text-color-cd-darkblue" style="min-width:60px;">@Localizer["UsingLabel"]</div>
         <div class="text-white-50 ms-1">@Languages</div>
     </div>
     <div class="d-flex">
-        <div class="text-color-cd-purple" style="min-width:60px;">@@import</div>
+        <div class="text-color-cd-purple" style="min-width:60px;">@Localizer["ImportLabel"]</div>
         <div class="text-white-50 ms-1">@FrameworksLibraries</div>
     </div>
 
@@ -55,5 +57,4 @@
     public string Repository { get; set; } = "";
     [Parameter]
     public string link { get; set; } = "";
-
 }

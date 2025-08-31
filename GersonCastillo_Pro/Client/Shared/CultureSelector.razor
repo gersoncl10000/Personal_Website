@@ -1,0 +1,30 @@
+@inject IJSRuntime JSRuntime
+@inject NavigationManager NavigationManager
+@inherits CultureSelectorBase
+
+<div class="d-flex align-items-center gap-3">
+    @foreach (var culture in SupportedCultures)
+    {
+        <button type="button" 
+                class="flag-btn @GetActiveClass(culture.Name)"
+                @onclick="() => ChangeCultureAsync(culture.Name)"
+                data-bs-toggle="tooltip" 
+                data-bs-placement="bottom" 
+                data-bs-title="@GetCultureDisplayName(culture)"
+                disabled="@IsChangingCulture">
+            <div class="flag-container">
+                <img src="@GetFlagImagePath(culture.Name)"
+                     alt="@GetCultureDisplayName(culture)"
+                     class="flag-image" />
+                @if (IsChangingCulture && SelectedCulture == culture.Name)
+                {
+                    <div class="loading-overlay">
+                        <div class="spinner-border spinner-border-sm text-light" role="status">
+                            <span class="visually-hidden">Loading...</span>
+                        </div>
+                    </div>
+                }
+            </div>
+        </button>
+    }
+</div>

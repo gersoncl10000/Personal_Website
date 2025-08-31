@@ -1,0 +1,25 @@
+<svg width="32" height="24" viewBox="0 0 32 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+  <defs>
+    <clipPath id="clip-uk">
+      <rect width="32" height="24" rx="2"/>
+    </clipPath>
+  </defs>
+  <g clip-path="url(#clip-uk)">
+    <!-- Background -->
+    <rect width="32" height="24" fill="#012169"/>
+    
+    <!-- White diagonals -->
+    <path d="M0,0 L32,24 M32,0 L0,24" stroke="white" stroke-width="4"/>
+    
+    <!-- Red diagonals (thinner) -->
+    <path d="M0,0 L32,24 M32,0 L0,24" stroke="#C8102E" stroke-width="2.67"/>
+    
+    <!-- White cross -->
+    <rect x="12.8" y="0" width="6.4" height="24" fill="white"/>
+    <rect x="0" y="9.6" width="32" height="4.8" fill="white"/>
+    
+    <!-- Red cross (thinner) -->
+    <rect x="14.4" y="0" width="3.2" height="24" fill="#C8102E"/>
+    <rect x="0" y="10.9" width="32" height="2.2" fill="#C8102E"/>
+  </g>
+</svg>

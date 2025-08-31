@@ -1,14 +1,10 @@
 ﻿@inject IJSRuntime JS
+@inject IStringLocalizer<Shared> Localizer
 @layout MainLayout_Blog
 @page "/consolidacion"
 
-
-
-
 @using Microsoft.AspNetCore.Components
 @using System.Net.Http
-
-
 
 <div class="container pt-4" style="margin-top:150px">
     <h1 class="text-center mb-4 font-anton text-24 text-color-div-1">Ejercicio de Consolidación Financiera</h1>
@@ -39,30 +35,24 @@
         </ul>
     </div>
 
-
-
     <div class="d-flex justify-content-center">
         <figure class="figure">
             <img src="/img/blog/Power_BI_ConsolidatioProcess.jpg" class="figure-img img-fluid rounded" style="max-height:600px;">
             <figcaption class="figure-caption">Imagen descriptiva del mapa de procesos y flujo de datos aplicados en el presente ejercicio.</figcaption>
         </figure>
-
     </div>
     
-    <h3 class="font-anton text-16 text-color-sg-1">Archivos</h3>
- 
-
+    <h3 class="font-anton text-16 text-color-sg-1">@Localizer["Files"]</h3>
 
     <ul class="font-code text-14" style="list-style: none;">
         <li>
-            Presentación:
+            @Localizer["Presentation"]:
             <ul style="list-style: none;">
-                
                 <li>
                     <a class="ms-2" href="/files/Ejercicio de Consolidacion Finaciera Publico.pptx">
                         <div class="d-flex  align-items-center" >
                             <img src="/img/icons/powerpoint_icon.png" style="height:30px;width:30px;" />
-                            <span class="align-self-center ms-2">Descargar presentación PowerPoint</span>
+                            <span class="align-self-center ms-2">@Localizer["DownloadPowerPoint"]</span>
                         </div>
                     </a>
                 </li>
@@ -70,11 +60,10 @@
         </li>
     </ul>
     
-
     <div class="flex-column">
         <div class="my-5">
             <div class="comments-section p-4 border rounded bg-light">
-                <h3 class="font-anton text-16 text-color-sg-1">Comentarios</h3>
+                <h3 class="font-anton text-16 text-color-sg-1">@Localizer["Comments"]</h3>
                 <p class="font-serif text-16 text-color-div-1">@currentReport.Comments</p>
             </div>
         </div>
@@ -100,19 +89,17 @@
     </div>
 
     <div class="d-flex justify-content-between mt-4">
-        <button class="btn btn-dark" @onclick="PreviousReport" disabled="@IsFirstReport">Anterior</button>
-        <button class="btn btn-dark" @onclick="NextReport" disabled="@IsLastReport">Siguiente</button>
+        <button class="btn btn-dark" @onclick="PreviousReport" disabled="@IsFirstReport">@Localizer["Previous"]</button>
+        <button class="btn btn-dark" @onclick="NextReport" disabled="@IsLastReport">@Localizer["Next"]</button>
     </div>
 </div>
 <div style="margin-top:150px">
-
-<Contact></Contact>
+    <Contact></Contact>
 </div>
 
 @code {
     private List<Report> reports = new List<Report>
     {
-      
         new Report
         {
             Title = "Balance General Consolidado al Cierre del Año 2023 - Casa Matriz, S.A.",
@@ -139,13 +126,10 @@
             Url = "https://app.powerbi.com/view?r=eyJrIjoiNmZkZGFmOTUtYTljOS00ZjZiLWJjZjgtN2EwYmY4ZmIyNjVmIiwidCI6ImJkOGZmYzQ0LTNmZjQtNDIwOC1hZDZlLThjMmEyMTg3MmEyNSIsImMiOjl9&pageName=ReportSectionf515442d4bcde9b7c70b",
             Icon = "fas fa-chart-line"
         },
-
     };
 
     private int currentReportIndex = 0;
-
     private Report currentReport => reports[currentReportIndex];
-
     private bool IsFirstReport => currentReportIndex == 0;
     private bool IsLastReport => currentReportIndex == reports.Count - 1;
 
@@ -165,9 +149,6 @@
         }
     }
 
-
-
-
     private class Report
     {
         public string Title { get; set; }
@@ -177,10 +158,6 @@
         public string ImageUrl { get; set; }
         public string Icon { get; set; }
     }
-
- 
-
-
 }
 
 

@@ -1,0 +1,498 @@
+<?xml version="1.0" encoding="utf-8"?>
+<root>
+  <!-- 
+    Microsoft ResX Schema 
+    
+    Version 2.0
+    
+    The primary goals of this format is to allow a simple XML format 
+    that is mostly human readable. The generation and parsing of the 
+    various data types are done through the TypeConverter classes 
+    associated with the data types.
+    
+    Example:
+    
+    ... ado.net/XML headers & schema ...
+    <resheader name="resmimetype">text/microsoft-resx</resheader>
+    <resheader name="version">2.0</resheader>
+    <resheader name="reader">System.Resources.ResXResourceReader, System.Windows.Forms, ...</resheader>
+    <resheader name="writer">System.Resources.ResXResourceWriter, System.Windows.Forms, ...</resheader>
+    <data name="Name1"><value>this is my long string</value><comment>this is a comment</comment></data>
+    <data name="Color1" type="System.Drawing.Color, System.Drawing">Blue</data>
+    <data name="Bitmap1" mimetype="application/x-microsoft.net.object.binary.base64">
+        <value>[base64 mime encoded serialized .NET Framework object]</value>
+    </data>
+    <data name="Icon1" type="System.Drawing.Icon, System.Drawing" mimetype="application/x-microsoft.net.object.bytearray.base64">
+        <value>[base64 mime encoded string representing a byte array form of the .NET Framework object]</value>
+        <comment>This is a comment</comment>
+    </data>
+                
+    There are any number of "resheader" rows that contain simple 
+    name/value pairs.
+    
+    Each data row contains a name, and value. The row also contains a 
+    type or mimetype. Type corresponds to a .NET class that support 
+    text/value conversion through the TypeConverter architecture. 
+    Classes that don't support this are serialized and stored with the 
+    mimetype set.
+    
+    The mimetype is used for serialized objects, and tells the 
+    ResXResourceReader how to depersist the object. This is currently not 
+    extensible. For a given mimetype the value must be set accordingly:
+    
+    Note - application/x-microsoft.net.object.binary.base64 is the format 
+    that the ResXResourceWriter will generate, however the reader can 
+    read any of the formats listed below.
+    
+    mimetype: application/x-microsoft.net.object.binary.base64
+    value   : The object must be serialized with 
+            : System.Runtime.Serialization.Formatters.Binary.BinaryFormatter
+            : and then encoded with base64 encoding.
+    
+    mimetype: application/x-microsoft.net.object.soap.base64
+    value   : The object must be serialized with 
+            : System.Runtime.Serialization.Formatters.Soap.SoapFormatter
+            : and then encoded with base64 encoding.
+
+    mimetype: application/x-microsoft.net.object.bytearray.base64
+    value   : The object must be serialized into a byte array 
+            : using a System.ComponentModel.TypeConverter
+            : and then encoded with base64 encoding.
+    -->
+  <xsd:schema id="root" xmlns="" xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlns:msdata="urn:schemas-microsoft-com:xml-msdata">
+    <xsd:import namespace="http://www.w3.org/XML/1998/namespace" />
+    <xsd:element name="root" msdata:IsDataSet="true">
+      <xsd:complexType>
+        <xsd:choice maxOccurs="unbounded">
+          <xsd:element name="metadata">
+            <xsd:complexType>
+              <xsd:sequence>
+                <xsd:element name="value" type="xsd:string" minOccurs="0" />
+              </xsd:sequence>
+              <xsd:attribute name="name" use="required" type="xsd:string" />
+              <xsd:attribute name="type" type="xsd:string" />
+              <xsd:attribute name="mimetype" type="xsd:string" />
+              <xsd:attribute ref="xml:space" />
+            </xsd:complexType>
+          </xsd:element>
+          <xsd:element name="assembly">
+            <xsd:complexType>
+              <xsd:attribute name="alias" type="xsd:string" />
+              <xsd:attribute name="name" type="xsd:string" />
+            </xsd:complexType>
+          </xsd:element>
+          <xsd:element name="data">
+            <xsd:complexType>
+              <xsd:sequence>
+                <xsd:element name="value" type="xsd:string" minOccurs="0" msdata:Ordinal="1" />
+                <xsd:element name="comment" type="xsd:string" minOccurs="0" msdata:Ordinal="2" />
+              </xsd:sequence>
+              <xsd:attribute name="name" type="xsd:string" use="required" msdata:Ordinal="1" />
+              <xsd:attribute name="type" type="xsd:string" msdata:Ordinal="3" />
+              <xsd:attribute name="mimetype" type="xsd:string" msdata:Ordinal="4" />
+              <xsd:attribute ref="xml:space" />
+            </xsd:complexType>
+          </xsd:element>
+          <xsd:element name="resheader">
+            <xsd:complexType>
+              <xsd:sequence>
+                <xsd:element name="value" type="xsd:string" minOccurs="0" msdata:Ordinal="1" />
+              </xsd:sequence>
+              <xsd:attribute name="name" type="xsd:string" use="required" />
+            </xsd:complexType>
+          </xsd:element>
+        </xsd:choice>
+      </xsd:complexType>
+    </xsd:element>
+  </xsd:schema>
+  <resheader name="resmimetype">
+    <value>text/microsoft-resx</value>
+  </resheader>
+  <resheader name="version">
+    <value>2.0</value>
+  </resheader>
+  <resheader name="reader">
+    <value>System.Resources.ResXResourceReader, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </resheader>
+  <resheader name="writer">
+    <value>System.Resources.ResXResourceWriter, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </resheader>
+  <data name="Skills" xml:space="preserve">
+    <value>Competencias &amp; Tecnologías</value>
+  </data>
+  <data name="WorkProjects" xml:space="preserve">
+    <value>Proyectos de Trabajo</value>
+  </data>
+  <data name="Contact" xml:space="preserve">
+    <value>Contacto</value>
+  </data>
+  <data name="Home" xml:space="preserve">
+    <value>Inicio</value>
+  </data>
+  <data name="About" xml:space="preserve">
+    <value>Acerca de</value>
+  </data>
+  <data name="Introduction" xml:space="preserve">
+    <value>Introducción</value>
+  </data>
+  <data name="Experience" xml:space="preserve">
+    <value>Experiencia</value>
+  </data>
+  <data name="Education" xml:space="preserve">
+    <value>Educación</value>
+  </data>
+  <data name="Portfolio" xml:space="preserve">
+    <value>Portafolio</value>
+  </data>
+  <data name="Language" xml:space="preserve">
+    <value>Idioma</value>
+  </data>
+  <data name="English" xml:space="preserve">
+    <value>Inglés</value>
+  </data>
+  <data name="Spanish" xml:space="preserve">
+    <value>Español</value>
+  </data>
+  <data name="Loading" xml:space="preserve">
+    <value>Cargando...</value>
+  </data>
+  <data name="Close" xml:space="preserve">
+    <value>Cerrar</value>
+  </data>
+  <data name="TechnicalSkills" xml:space="preserve">
+    <value>Habilidades Técnicas</value>
+  </data>
+  <data name="BusinessSkills" xml:space="preserve">
+    <value>Habilidades Empresariales</value>
+  </data>
+  <data name="SoftwareLanguages" xml:space="preserve">
+    <value>Lenguajes de Programación</value>
+  </data>
+  <data name="Frameworks" xml:space="preserve">
+    <value>Frameworks</value>
+  </data>
+  <data name="DevelopmentTools" xml:space="preserve">
+    <value>Herramientas de Desarrollo</value>
+  </data>
+  <data name="IntroTitle" xml:space="preserve">
+    <value>Financial Digital Transformation Leader </value>
+  </data>
+  <data name="IntroSubtitle" xml:space="preserve">
+    <value>AI Strategist | AI/GenAI Engineer &amp; Solutions Architect</value>
+  </data>
+  <data name="IntroDescription" xml:space="preserve">
+    <value>Líder tecnológico senior con más de 15 años de experiencia probada en la dirección de equipos multidisciplinarios (+50 personas), estrategia financiera y desarrollo de software end-to-end. Mi carrera se define por mi capacidad para traducir complejos desafíos de negocio en soluciones tecnológicas robustas, escalables y con un impacto directo en la cuenta de resultados.</value>
+  </data>
+  <data name="IntroQuote" xml:space="preserve">
+    <value>"Transformo desafíos empresariales complejos en soluciones tecnológicas escalables."</value>
+  </data>
+  <data name="Business" xml:space="preserve">
+    <value>Negocios</value>
+  </data>
+  <data name="SoftwareDevelopment" xml:space="preserve">
+    <value>Desarrollo de Software</value>
+  </data>
+  <data name="Languages" xml:space="preserve">
+    <value>Lenguajes</value>
+  </data>
+  <data name="NetFrameworksLibraries" xml:space="preserve">
+    <value>Frameworks y Librerías .NET</value>
+  </data>
+  <data name="OtherFrameworksLibraries" xml:space="preserve">
+    <value>Otros Frameworks y Librerías</value>
+  </data>
+  <data name="Work" xml:space="preserve">
+    <value>Trabajo</value>
+  </data>
+  <data name="SomeProjects" xml:space="preserve">
+    <value>Algunos proyectos</value>
+  </data>
+  <data name="Repositories" xml:space="preserve">
+    <value>Repositorios</value>
+  </data>
+  <data name="Current" xml:space="preserve">
+    <value>Actual</value>
+  </data>
+  <data name="Background" xml:space="preserve">
+    <value>Experiencia</value>
+  </data>
+  <data name="NewestCoursesCertifications" xml:space="preserve">
+    <value>Últimos Cursos y Certificaciones</value>
+  </data>
+  <data name="AcademicDegrees" xml:space="preserve">
+    <value>Títulos Académicos</value>
+  </data>
+  <data name="CoursesCertifications" xml:space="preserve">
+    <value>Cursos y Certificaciones</value>
+  </data>
+  <data name="PrivateRepository" xml:space="preserve">
+    <value>Repositorio Privado</value>
+  </data>
+  <data name="PublicRepository" xml:space="preserve">
+    <value>Repositorio Público</value>
+  </data>
+  <data name="WebAppLoading" xml:space="preserve">
+    <value>Cargando aplicación web...</value>
+  </data>
+  <data name="FromAspNetCore" xml:space="preserve">
+    <value>from ASP.NET Core.</value>
+  </data>
+  <data name="ContactTitle" xml:space="preserve">
+    <value>Ponte en contacto conmigo</value>
+  </data>
+  <data name="ContactSubtitle" xml:space="preserve">
+    <value>Contáctame a través de mis redes sociales o correo electrónico.</value>
+  </data>
+  <data name="Email" xml:space="preserve">
+    <value>Correo</value>
+  </data>
+  <data name="Instagram" xml:space="preserve">
+    <value>Instagram</value>
+  </data>
+  <data name="LinkedIn" xml:space="preserve">
+    <value>LinkedIn</value>
+  </data>
+  <data name="FooterText" xml:space="preserve">
+    <value>Este sitio web ha sido desarrollado por Gerson Castillo ©{0} Copyright; usando</value>
+  </data>
+  <data name="FooterTechStack" xml:space="preserve">
+    <value>de ASP.NET Core.</value>
+  </data>
+  <data name="AppLoading" xml:space="preserve">
+    <value>Cargando aplicación web...</value>
+  </data>
+  <data name="Previous" xml:space="preserve">
+    <value>Anterior</value>
+  </data>
+  <data name="Next" xml:space="preserve">
+    <value>Siguiente</value>
+  </data>
+  <data name="Comments" xml:space="preserve">
+    <value>Comentarios</value>
+  </data>
+  <data name="Files" xml:space="preserve">
+    <value>Archivos</value>
+  </data>
+  <data name="Presentation" xml:space="preserve">
+    <value>Presentación</value>
+  </data>
+  <data name="DownloadPowerPoint" xml:space="preserve">
+    <value>Descargar presentación PowerPoint</value>
+  </data>
+  <data name="ProfessionalTitle" xml:space="preserve">
+    <value>Gerson Castillo</value>
+  </data>
+  <data name="PageNotFound" xml:space="preserve">
+    <value>No encontrado</value>
+  </data>
+  <data name="PageNotFoundMessage" xml:space="preserve">
+    <value>Lo sentimos, no hay nada en esta dirección.</value>
+  </data>
+  <data name="UsingLabel" xml:space="preserve">
+    <value>@using</value>
+  </data>
+  <data name="ImportLabel" xml:space="preserve">
+    <value>@import</value>
+  </data>
+  <data name="ActionLabel" xml:space="preserve">
+    <value>@action</value>
+  </data>
+  <data name="PageTitle" xml:space="preserve">
+    <value>Gerson Castillo - Especialista en Consolidación Financiera y Automatización</value>
+  </data>
+  <data name="PageDescription" xml:space="preserve">
+    <value>Portafolio profesional de Gerson Castillo, especialista en consolidación financiera, automatización y desarrollo de software.</value>
+  </data>
+  <data name="ProfileImageAlt" xml:space="preserve">
+    <value>Foto de perfil de Gerson Castillo</value>
+  </data>
+  <data name="FlagImageAlt" xml:space="preserve">
+    <value>Bandera de selección de idioma</value>
+  </data>
+  <data name="LanguageSelector" xml:space="preserve">
+    <value>Selector de Idioma</value>
+  </data>
+  <data name="MainNavigation" xml:space="preserve">
+    <value>Navegación Principal</value>
+  </data>
+  <data name="SkipToContent" xml:space="preserve">
+    <value>Saltar al contenido principal</value>
+  </data>
+  <data name="BusinessSkillsIntro" xml:space="preserve">
+    <value>Competencias empresariales clave y cualidades de liderazgo</value>
+  </data>
+  <data name="BusinessSkill1" xml:space="preserve">
+    <value>Especialización y Conocimiento Avanzado en Consolidación Financiera, Contabilidad y Auditoría (NIIF, PGC y NOFCAC)</value>
+  </data>
+  <data name="BusinessSkill2" xml:space="preserve">
+    <value>Conocimiento avanzado en gestión financiera, de inversiones y empresarial.</value>
+  </data>
+  <data name="BusinessSkill3" xml:space="preserve">
+    <value>Excelente capacidad para la evaluación integral de riesgos y desarrollo de estrategias efectivas.</value>
+  </data>
+  <data name="BusinessSkill4" xml:space="preserve">
+    <value>Automatización de procesos de controles internos.</value>
+  </data>
+  <data name="BusinessSkill5" xml:space="preserve">
+    <value>Automatización de Reportes Financieros, Procesos ETL y ELT, con Competencia Avanzada en Herramientas de Reporting y Modelado de Datos como Power BI y Excel</value>
+  </data>
+  <data name="BusinessSkill6" xml:space="preserve">
+    <value>Automatización de asientos contables.</value>
+  </data>
+  <data name="BusinessSkill7" xml:space="preserve">
+    <value>Automatización de conciliaciones bancarias.</value>
+  </data>
+  <data name="BusinessSkill8" xml:space="preserve">
+    <value>Automatización de pagos.</value>
+  </data>
+  <data name="BusinessSkill9" xml:space="preserve">
+    <value>Automatización de entrada de datos.</value>
+  </data>
+  <data name="PersonalProject1Title" xml:space="preserve">
+    <value>Presentación de Ejercicio de Consolidación Financiera: 2024</value>
+  </data>
+  <data name="PersonalProject1Description" xml:space="preserve">
+    <value>He preparado un ejercicio integral de consolidación financiera utilizando Power BI y funciones DAX. Este ejercicio tiene como objetivo demostrar los principales principios de consolidación financiera bajo las normas NIIF, específicamente la NIC 21. Los reportes financieros finales han sido integrados en una página web usando Power BI Embedded para acceso e interacción sin problemas.</value>
+  </data>
+  <data name="PersonalProject1Action" xml:space="preserve">
+    <value>Desarrollé todo el ejercicio.</value>
+  </data>
+  <data name="PersonalProject2Title" xml:space="preserve">
+    <value>Página web personal: 2023</value>
+  </data>
+  <data name="PersonalProject2Description" xml:space="preserve">
+    <value>Página web profesional.</value>
+  </data>
+  <data name="PersonalProject2Action" xml:space="preserve">
+    <value>Desarrollé todo el proyecto.</value>
+  </data>
+  <data name="PersonalProject3Title" xml:space="preserve">
+    <value>7Gplus: 2017</value>
+  </data>
+  <data name="PersonalProject3Description" xml:space="preserve">
+    <value>Programa para analizar el mercado de derivados de divisas.</value>
+  </data>
+  <data name="PersonalProject3Action" xml:space="preserve">
+    <value>Desarrollé todo el proyecto.</value>
+  </data>
+  <data name="EnterpriseProject1Title" xml:space="preserve">
+    <value>E-Commerce 2.0 Año: 2021</value>
+  </data>
+  <data name="EnterpriseProject1Description" xml:space="preserve">
+    <value>La segunda versión de la aplicación web de eCommerce de comestibles fue desarrollada para aprovechar el potencial de las últimas tecnologías de Microsoft ASP.NET Core.</value>
+  </data>
+  <data name="EnterpriseProject1Action" xml:space="preserve">
+    <value>Participé en los cinco pasos del desarrollo de software de los componentes financieros, contables y administrativos de la App. También enseñé programación a los miembros más nuevos de nuestro equipo.</value>
+  </data>
+  <data name="EnterpriseProject2Title" xml:space="preserve">
+    <value>E-Commerce 1.0 Año: 2019</value>
+  </data>
+  <data name="EnterpriseProject2Description" xml:space="preserve">
+    <value>Aplicación web de eCommerce de comestibles totalmente integrada con el ERP SAP Business One para atender a alrededor de 40,000 clientes minoristas.</value>
+  </data>
+  <data name="EnterpriseProject2Action" xml:space="preserve">
+    <value>Mi participación comprendió el desarrollo financiero y contable de la App.</value>
+  </data>
+  <data name="EnterpriseProject3Title" xml:space="preserve">
+    <value>Software de Gestión Interna GC: 2017</value>
+  </data>
+  <data name="EnterpriseProject3Description" xml:space="preserve">
+    <value>Software interno de gestión de procesos logísticos y administrativos, desarrollado bajo tecnología .NET totalmente integrado con el ERP SAP Business One.</value>
+  </data>
+  <data name="EnterpriseProject3Action" xml:space="preserve">
+    <value>Participé en el desarrollo de los módulos contables, financieros y administrativos.</value>
+  </data>
+  <data name="EnterpriseProject4Title" xml:space="preserve">
+    <value>Automatización Bancaria y Contable: 2016</value>
+  </data>
+  <data name="EnterpriseProject4Description" xml:space="preserve">
+    <value>Programa para la gestión automática de operaciones bancarias y contables.</value>
+  </data>
+  <data name="EnterpriseProject4Action" xml:space="preserve">
+    <value>Desarrollé todo el proyecto.</value>
+  </data>
+  <data name="CurrentJob1Title1" xml:space="preserve">
+    <value>Gerente de Éxito del Cliente</value>
+  </data>
+  <data name="CurrentJob1Title2" xml:space="preserve">
+    <value>(Especialista en Consolidación)</value>
+  </data>
+  <data name="CurrentJob1Period" xml:space="preserve">
+    <value>Konsolidator Iberia · Tiempo Completo 2024 - Presente</value>
+  </data>
+  <data name="CurrentJob1Location" xml:space="preserve">
+    <value>Madrid, Comunidad de Madrid, España · Presencial</value>
+  </data>
+  <data name="CurrentJob1Responsibility1" xml:space="preserve">
+    <value>Experto en Consolidación Financiera: Competente en la gestión y optimización de procesos de consolidación financiera.</value>
+  </data>
+  <data name="CurrentJob1Responsibility2" xml:space="preserve">
+    <value>Especialista en Producto: Conocimiento profundo de funcionalidades y aplicaciones del producto.</value>
+  </data>
+  <data name="CurrentJob1Responsibility3" xml:space="preserve">
+    <value>Especialista en Análisis de Estados Financieros: Experimentado en analizar e interpretar estados financieros para reportes precisos.</value>
+  </data>
+  <data name="CurrentJob1Responsibility4" xml:space="preserve">
+    <value>Especialista en Contabilidad y Auditoría: Experto en estándares PGC, NOFCAC, NIIF e NIC, asegurando cumplimiento y precisión.</value>
+  </data>
+  <data name="CurrentJob1Responsibility5" xml:space="preserve">
+    <value>Especialista en Reportes Financieros e Inteligencia de Negocios: Habilidades avanzadas en Power BI, Excel Avanzado, SQL y Lenguaje M para reportes financieros y análisis robustos.</value>
+  </data>
+  <data name="CurrentJob1Responsibility6" xml:space="preserve">
+    <value>Desarrollador de Soluciones de Automatización: Competente en crear soluciones de automatización usando REST API, .Net Core y SQL Server para optimizar procesos y mejorar la eficiencia.</value>
+  </data>
+  <data name="CurrentJob2Title1" xml:space="preserve">
+    <value>Propietario de negocio</value>
+  </data>
+  <data name="CurrentJob2Period" xml:space="preserve">
+    <value>Redemerca LLC 2019-Presente</value>
+  </data>
+  <data name="CurrentJob2Responsibility1" xml:space="preserve">
+    <value>Gestión de portafolio de inversiones. (Acciones, Opciones y Futuros).</value>
+  </data>
+  <data name="CurrentJob2Responsibility2" xml:space="preserve">
+    <value>Análisis de mercado y empresas.</value>
+  </data>
+  <data name="CurrentJob2Responsibility3" xml:space="preserve">
+    <value>Desarrollo de software enfocado en análisis de mercado.</value>
+  </data>
+  <data name="PastJob1Title1" xml:space="preserve">
+    <value>Director de Finanzas y Administración</value>
+  </data>
+  <data name="PastJob1Period" xml:space="preserve">
+    <value>Marluis Inversiones 2006-2022</value>
+  </data>
+  <data name="PastJob1Responsibility1" xml:space="preserve">
+    <value>Gestión de las áreas contable, auditoría, financiera, administrativa y de recursos humanos.</value>
+  </data>
+  <data name="PastJob1Responsibility2" xml:space="preserve">
+    <value>Modelado y preparación de estados financieros bajo estándares NIIF.</value>
+  </data>
+  <data name="PastJob1Responsibility3" xml:space="preserve">
+    <value>Desarrollo de planes y estrategias de inversión, presupuestos y planificación fiscal.</value>
+  </data>
+  <data name="PastJob1Responsibility4" xml:space="preserve">
+    <value>Supervisión de procesos administrativos y contables, auditoría interna, control interno y gestión de personal.</value>
+  </data>
+  <data name="PastJob1Responsibility5" xml:space="preserve">
+    <value>Desarrollo de software y gestión de procesos de automatización de operaciones financieras.</value>
+  </data>
+  <data name="PastJob1Responsibility6" xml:space="preserve">
+    <value>Desarrollo de procesos ETL y ELT, ASP.NET Core, SQL Server, Power BI, Power Query, DAX.</value>
+  </data>
+  <data name="PastJob1Responsibility7" xml:space="preserve">
+    <value>Integración financiera y contable de desarrollos de software internos con el sistema ERP SAP Business One.</value>
+  </data>
+  <data name="AcademicDegree1" xml:space="preserve">
+    <value>Inglés para Propósitos Académicos (LEAP)</value>
+  </data>
+  <data name="AcademicDegree2" xml:space="preserve">
+    <value>Certificado de Inglés Empresarial</value>
+  </data>
+  <data name="AcademicDegree3" xml:space="preserve">
+    <value>Abogado</value>
+  </data>
+  <data name="AcademicDegree4" xml:space="preserve">
+    <value>Licenciatura en Contaduría Pública</value>
+  </data>
+</root>
