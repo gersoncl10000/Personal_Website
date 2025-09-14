@@ -129,9 +129,6 @@
   <data name="Home" xml:space="preserve">
     <value>Home</value>
   </data>
-  <data name="About" xml:space="preserve">
-    <value>About</value>
-  </data>
   <data name="Introduction" xml:space="preserve">
     <value>Introduction</value>
   </data>
@@ -500,5 +497,8 @@
   </data>
   <data name="AcademicDegree4" xml:space="preserve">
     <value>Bachelor's Degree in Accounting</value>
+  </data>
+  <data name="AIDataScience" xml:space="preserve">
+    <value>Artificial Intelligence and Data Science</value>
   </data>
 </root>

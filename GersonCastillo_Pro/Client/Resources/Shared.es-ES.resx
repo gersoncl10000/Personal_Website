@@ -129,9 +129,6 @@
   <data name="Home" xml:space="preserve">
     <value>Inicio</value>
   </data>
-  <data name="About" xml:space="preserve">
-    <value>Acerca de</value>
-  </data>
   <data name="Introduction" xml:space="preserve">
     <value>Introducción</value>
   </data>
@@ -233,6 +230,12 @@
   </data>
   <data name="WebAppLoading" xml:space="preserve">
     <value>Cargando aplicación web...</value>
+  </data>
+  <data name="FooterCopyright" xml:space="preserve">
+    <value>Este sitio web fue desarrollado por Gerson Castillo © {0} Copyright, usando</value>
+  </data>
+  <data name="BlazorWebAssembly" xml:space="preserve">
+    <value>Blazor WebAssembly</value>
   </data>
   <data name="FromAspNetCore" xml:space="preserve">
     <value>from ASP.NET Core.</value>
@@ -494,5 +497,8 @@
   </data>
   <data name="AcademicDegree4" xml:space="preserve">
     <value>Licenciatura en Contaduría Pública</value>
+  </data>
+  <data name="AIDataScience" xml:space="preserve">
+    <value>Inteligencia Artificial y Ciencia de Datos</value>
   </data>
 </root>
