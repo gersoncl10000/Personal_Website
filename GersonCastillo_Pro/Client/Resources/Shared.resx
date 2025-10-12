@@ -501,4 +501,67 @@
   <data name="AIDataScience" xml:space="preserve">
     <value>Artificial Intelligence and Data Science</value>
   </data>
+  <data name="Leadership_Item10_Text" xml:space="preserve">
+    <value>I take end-to-end ownership of projects with initiative, commitment, and execution focus.</value>
+  </data>
+  <data name="Leadership_Item10_Title" xml:space="preserve">
+    <value>Entrepreneurial mindset</value>
+  </data>
+  <data name="Leadership_Item1_Text" xml:space="preserve">
+    <value>Ability to set a clear vision, align objectives, and turn strategy into tangible results.</value>
+  </data>
+  <data name="Leadership_Item1_Title" xml:space="preserve">
+    <value>Strategic leadership</value>
+  </data>
+  <data name="Leadership_Item2_Text" xml:space="preserve">
+    <value>Experience leading diverse roles, fostering collaboration and high performance.</value>
+  </data>
+  <data name="Leadership_Item2_Title" xml:space="preserve">
+    <value>Multidisciplinary team management</value>
+  </data>
+  <data name="Leadership_Item3_Text" xml:space="preserve">
+    <value>I connect finance, technology, and data to deliver complete and sustainable solutions.</value>
+  </data>
+  <data name="Leadership_Item3_Title" xml:space="preserve">
+    <value>Tech–functional mindset</value>
+  </data>
+  <data name="Leadership_Item4_Text" xml:space="preserve">
+    <value>I drive operational efficiency and continuous improvement, measuring impact rigorously.</value>
+  </data>
+  <data name="Leadership_Item4_Title" xml:space="preserve">
+    <value>Results orientation</value>
+  </data>
+  <data name="Leadership_Item5_Text" xml:space="preserve">
+    <value>I promote digital transformation and the adoption of new technologies across processes.</value>
+  </data>
+  <data name="Leadership_Item5_Title" xml:space="preserve">
+    <value>Innovation driver</value>
+  </data>
+  <data name="Leadership_Item6_Text" xml:space="preserve">
+    <value>I inspire, mentor, and upskill teams to grow their autonomy and impact.</value>
+  </data>
+  <data name="Leadership_Item6_Title" xml:space="preserve">
+    <value>Talent development</value>
+  </data>
+  <data name="Leadership_Item7_Text" xml:space="preserve">
+    <value>I rely on trustworthy analytics and information for planning and management.</value>
+  </data>
+  <data name="Leadership_Item7_Title" xml:space="preserve">
+    <value>Data-driven decisions</value>
+  </data>
+  <data name="Leadership_Item8_Text" xml:space="preserve">
+    <value>I bridge leadership, technical teams, and clients to ensure alignment and clarity.</value>
+  </data>
+  <data name="Leadership_Item8_Title" xml:space="preserve">
+    <value>Effective communication</value>
+  </data>
+  <data name="Leadership_Item9_Text" xml:space="preserve">
+    <value>I act responsibly, ensuring transparency, internal control, and regulatory compliance.</value>
+  </data>
+  <data name="Leadership_Item9_Title" xml:space="preserve">
+    <value>Integrity and compliance</value>
+  </data>
+  <data name="Leadership_Title" xml:space="preserve">
+    <value>Leadership Qualities</value>
+  </data>
 </root>

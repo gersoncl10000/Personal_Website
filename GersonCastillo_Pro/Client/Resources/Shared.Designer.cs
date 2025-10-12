@@ -781,6 +781,195 @@ namespace GersonCastillo_Pro.Client.Resources {
         }
         
         /// <summary>
+        ///   Busca una cadena traducida similar a Ability to set a clear vision, align objectives, and turn strategy into tangible results..
+        /// </summary>
+        public static string Leadership_Item1_Text {
+            get {
+                return ResourceManager.GetString("Leadership_Item1_Text", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Busca una cadena traducida similar a Strategic leadership.
+        /// </summary>
+        public static string Leadership_Item1_Title {
+            get {
+                return ResourceManager.GetString("Leadership_Item1_Title", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Busca una cadena traducida similar a I take end-to-end ownership of projects with initiative, commitment, and execution focus..
+        /// </summary>
+        public static string Leadership_Item10_Text {
+            get {
+                return ResourceManager.GetString("Leadership_Item10_Text", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Busca una cadena traducida similar a Entrepreneurial mindset.
+        /// </summary>
+        public static string Leadership_Item10_Title {
+            get {
+                return ResourceManager.GetString("Leadership_Item10_Title", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Busca una cadena traducida similar a Experience leading diverse roles, fostering collaboration and high performance..
+        /// </summary>
+        public static string Leadership_Item2_Text {
+            get {
+                return ResourceManager.GetString("Leadership_Item2_Text", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Busca una cadena traducida similar a Multidisciplinary team management.
+        /// </summary>
+        public static string Leadership_Item2_Title {
+            get {
+                return ResourceManager.GetString("Leadership_Item2_Title", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Busca una cadena traducida similar a I connect finance, technology, and data to deliver complete and sustainable solutions..
+        /// </summary>
+        public static string Leadership_Item3_Text {
+            get {
+                return ResourceManager.GetString("Leadership_Item3_Text", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Busca una cadena traducida similar a Tech–functional mindset.
+        /// </summary>
+        public static string Leadership_Item3_Title {
+            get {
+                return ResourceManager.GetString("Leadership_Item3_Title", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Busca una cadena traducida similar a I drive operational efficiency and continuous improvement, measuring impact rigorously..
+        /// </summary>
+        public static string Leadership_Item4_Text {
+            get {
+                return ResourceManager.GetString("Leadership_Item4_Text", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Busca una cadena traducida similar a Results orientation.
+        /// </summary>
+        public static string Leadership_Item4_Title {
+            get {
+                return ResourceManager.GetString("Leadership_Item4_Title", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Busca una cadena traducida similar a I promote digital transformation and the adoption of new technologies across processes..
+        /// </summary>
+        public static string Leadership_Item5_Text {
+            get {
+                return ResourceManager.GetString("Leadership_Item5_Text", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Busca una cadena traducida similar a Innovation driver.
+        /// </summary>
+        public static string Leadership_Item5_Title {
+            get {
+                return ResourceManager.GetString("Leadership_Item5_Title", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Busca una cadena traducida similar a I inspire, mentor, and upskill teams to grow their autonomy and impact..
+        /// </summary>
+        public static string Leadership_Item6_Text {
+            get {
+                return ResourceManager.GetString("Leadership_Item6_Text", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Busca una cadena traducida similar a Talent development.
+        /// </summary>
+        public static string Leadership_Item6_Title {
+            get {
+                return ResourceManager.GetString("Leadership_Item6_Title", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Busca una cadena traducida similar a I rely on trustworthy analytics and information for planning and management..
+        /// </summary>
+        public static string Leadership_Item7_Text {
+            get {
+                return ResourceManager.GetString("Leadership_Item7_Text", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Busca una cadena traducida similar a Data-driven decisions.
+        /// </summary>
+        public static string Leadership_Item7_Title {
+            get {
+                return ResourceManager.GetString("Leadership_Item7_Title", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Busca una cadena traducida similar a I bridge leadership, technical teams, and clients to ensure alignment and clarity..
+        /// </summary>
+        public static string Leadership_Item8_Text {
+            get {
+                return ResourceManager.GetString("Leadership_Item8_Text", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Busca una cadena traducida similar a Effective communication.
+        /// </summary>
+        public static string Leadership_Item8_Title {
+            get {
+                return ResourceManager.GetString("Leadership_Item8_Title", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Busca una cadena traducida similar a I act responsibly, ensuring transparency, internal control, and regulatory compliance..
+        /// </summary>
+        public static string Leadership_Item9_Text {
+            get {
+                return ResourceManager.GetString("Leadership_Item9_Text", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Busca una cadena traducida similar a Integrity and compliance.
+        /// </summary>
+        public static string Leadership_Item9_Title {
+            get {
+                return ResourceManager.GetString("Leadership_Item9_Title", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Busca una cadena traducida similar a Leadership Qualities.
+        /// </summary>
+        public static string Leadership_Title {
+            get {
+                return ResourceManager.GetString("Leadership_Title", resourceCulture);
+            }
+        }
+        
+        /// <summary>
         ///   Busca una cadena traducida similar a LinkedIn.
         /// </summary>
         public static string LinkedIn {

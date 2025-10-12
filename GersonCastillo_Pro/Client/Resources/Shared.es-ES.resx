@@ -501,4 +501,67 @@
   <data name="AIDataScience" xml:space="preserve">
     <value>Inteligencia Artificial y Ciencia de Datos</value>
   </data>
+  <data name="Leadership_Item10_Text" xml:space="preserve">
+    <value>Asumo la propiedad de los proyectos con iniciativa, compromiso y foco en la ejecución.</value>
+  </data>
+  <data name="Leadership_Item10_Title" xml:space="preserve">
+    <value>Mentalidad emprendedora</value>
+  </data>
+  <data name="Leadership_Item1_Text" xml:space="preserve">
+    <value>Capacidad para definir una visión clara, alinear objetivos y convertir la estrategia en resultados concretos.</value>
+  </data>
+  <data name="Leadership_Item1_Title" xml:space="preserve">
+    <value>Liderazgo estratégico</value>
+  </data>
+  <data name="Leadership_Item2_Text" xml:space="preserve">
+    <value>Experiencia liderando personas con distintos perfiles, fomentando colaboración y alto desempeño.</value>
+  </data>
+  <data name="Leadership_Item2_Title" xml:space="preserve">
+    <value>Gestión de equipos multidisciplinarios</value>
+  </data>
+  <data name="Leadership_Item3_Text" xml:space="preserve">
+    <value>Integro finanzas, tecnología y datos para generar soluciones completas y sostenibles.</value>
+  </data>
+  <data name="Leadership_Item3_Title" xml:space="preserve">
+    <value>Enfoque técnico-funcional</value>
+  </data>
+  <data name="Leadership_Item4_Text" xml:space="preserve">
+    <value>Busco eficiencia operativa y mejora continua, midiendo el impacto de cada decisión.</value>
+  </data>
+  <data name="Leadership_Item4_Title" xml:space="preserve">
+    <value>Orientación a resultados</value>
+  </data>
+  <data name="Leadership_Item5_Text" xml:space="preserve">
+    <value>Promuevo la transformación digital y la adopción de nuevas tecnologías en cada proceso.</value>
+  </data>
+  <data name="Leadership_Item5_Title" xml:space="preserve">
+    <value>Impulso a la innovación</value>
+  </data>
+  <data name="Leadership_Item6_Text" xml:space="preserve">
+    <value>Inspiro, guío y formo a los equipos para potenciar su crecimiento y autonomía.</value>
+  </data>
+  <data name="Leadership_Item6_Title" xml:space="preserve">
+    <value>Desarrollo de talento</value>
+  </data>
+  <data name="Leadership_Item7_Text" xml:space="preserve">
+    <value>Utilizo analítica e información confiable como base para la planificación y la gestión.</value>
+  </data>
+  <data name="Leadership_Item7_Title" xml:space="preserve">
+    <value>Decisiones basadas en datos</value>
+  </data>
+  <data name="Leadership_Item8_Text" xml:space="preserve">
+    <value>Conecto dirección, equipos técnicos y clientes para asegurar alineación y claridad.</value>
+  </data>
+  <data name="Leadership_Item8_Title" xml:space="preserve">
+    <value>Comunicación efectiva</value>
+  </data>
+  <data name="Leadership_Item9_Text" xml:space="preserve">
+    <value>Actúo con responsabilidad, garantizando transparencia, control interno y cumplimiento normativo.</value>
+  </data>
+  <data name="Leadership_Item9_Title" xml:space="preserve">
+    <value>Integridad y cumplimiento</value>
+  </data>
+  <data name="Leadership_Title" xml:space="preserve">
+    <value>Cualidades de Liderazgo</value>
+  </data>
 </root>
