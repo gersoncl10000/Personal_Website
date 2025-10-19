@@ -592,6 +592,15 @@ namespace GersonCastillo_Pro.Client.Resources {
         }
         
         /// <summary>
+        ///   Busca una cadena traducida similar a Enterprise private projects.
+        /// </summary>
+        public static string EnterprisePrivateProjects {
+            get {
+                return ResourceManager.GetString("EnterprisePrivateProjects", resourceCulture);
+            }
+        }
+        
+        /// <summary>
         ///   Busca una cadena traducida similar a I was involved in the five steps of software development of the App&apos;s financial, accountant, and administrative components. I also taught programming to our team&apos;s newest members..
         /// </summary>
         public static string EnterpriseProject1Action {
@@ -853,7 +862,7 @@ namespace GersonCastillo_Pro.Client.Resources {
         }
         
         /// <summary>
-        ///   Busca una cadena traducida similar a AI Strategist | AI/GenAI Engineer &amp; Solutions Architect .
+        ///   Busca una cadena traducida similar a AI Strategist | AI/GenAI Engineer &amp; Solutions Architect.
         /// </summary>
         public static string IntroSubtitle {
             get {
@@ -862,7 +871,7 @@ namespace GersonCastillo_Pro.Client.Resources {
         }
         
         /// <summary>
-        ///   Busca una cadena traducida similar a Financial Digital Transformation Leader .
+        ///   Busca una cadena traducida similar a Financial Digital Transformation Leader.
         /// </summary>
         public static string IntroTitle {
             get {
@@ -1375,6 +1384,15 @@ namespace GersonCastillo_Pro.Client.Resources {
         }
         
         /// <summary>
+        ///   Busca una cadena traducida similar a Personal public projects.
+        /// </summary>
+        public static string PersonalPublicProjects {
+            get {
+                return ResourceManager.GetString("PersonalPublicProjects", resourceCulture);
+            }
+        }
+        
+        /// <summary>
         ///   Busca una cadena traducida similar a Portfolio.
         /// </summary>
         public static string Portfolio {
@@ -1452,6 +1470,375 @@ namespace GersonCastillo_Pro.Client.Resources {
         public static string Skills {
             get {
                 return ResourceManager.GetString("Skills", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Busca una cadena traducida similar a Inferential Statistics;.
+        /// </summary>
+        public static string Skills_AppliedStatistics_Item1 {
+            get {
+                return ResourceManager.GetString("Skills_AppliedStatistics_Item1", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Busca una cadena traducida similar a Hypothesis Testing;.
+        /// </summary>
+        public static string Skills_AppliedStatistics_Item2 {
+            get {
+                return ResourceManager.GetString("Skills_AppliedStatistics_Item2", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Busca una cadena traducida similar a Applied Statistics.
+        /// </summary>
+        public static string Skills_AppliedStatistics_Title {
+            get {
+                return ResourceManager.GetString("Skills_AppliedStatistics_Title", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Busca una cadena traducida similar a Apache Spark (PySpark);.
+        /// </summary>
+        public static string Skills_BigData_Item1 {
+            get {
+                return ResourceManager.GetString("Skills_BigData_Item1", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Busca una cadena traducida similar a Streaming (Kafka);.
+        /// </summary>
+        public static string Skills_BigData_Item2 {
+            get {
+                return ResourceManager.GetString("Skills_BigData_Item2", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Busca una cadena traducida similar a Data lakes &amp; pipelines;.
+        /// </summary>
+        public static string Skills_BigData_Item3 {
+            get {
+                return ResourceManager.GetString("Skills_BigData_Item3", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Busca una cadena traducida similar a Big Data.
+        /// </summary>
+        public static string Skills_BigData_Title {
+            get {
+                return ResourceManager.GetString("Skills_BigData_Title", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Busca una cadena traducida similar a Databricks;.
+        /// </summary>
+        public static string Skills_CloudPlatforms_Item1 {
+            get {
+                return ResourceManager.GetString("Skills_CloudPlatforms_Item1", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Busca una cadena traducida similar a Azure;.
+        /// </summary>
+        public static string Skills_CloudPlatforms_Item2 {
+            get {
+                return ResourceManager.GetString("Skills_CloudPlatforms_Item2", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Busca una cadena traducida similar a Deployment.
+        /// </summary>
+        public static string Skills_CloudPlatforms_Item3 {
+            get {
+                return ResourceManager.GetString("Skills_CloudPlatforms_Item3", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Busca una cadena traducida similar a Cost optimization.
+        /// </summary>
+        public static string Skills_CloudPlatforms_Item4 {
+            get {
+                return ResourceManager.GetString("Skills_CloudPlatforms_Item4", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Busca una cadena traducida similar a Cloud Platforms.
+        /// </summary>
+        public static string Skills_CloudPlatforms_Title {
+            get {
+                return ResourceManager.GetString("Skills_CloudPlatforms_Title", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Busca una cadena traducida similar a SQL;.
+        /// </summary>
+        public static string Skills_DatabaseManagement_Item1 {
+            get {
+                return ResourceManager.GetString("Skills_DatabaseManagement_Item1", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Busca una cadena traducida similar a NoSQL (MongoDB);.
+        /// </summary>
+        public static string Skills_DatabaseManagement_Item2 {
+            get {
+                return ResourceManager.GetString("Skills_DatabaseManagement_Item2", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Busca una cadena traducida similar a Database Management.
+        /// </summary>
+        public static string Skills_DatabaseManagement_Title {
+            get {
+                return ResourceManager.GetString("Skills_DatabaseManagement_Title", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Busca una cadena traducida similar a Python (Pandas, NumPy);.
+        /// </summary>
+        public static string Skills_DataProgramming_Item1 {
+            get {
+                return ResourceManager.GetString("Skills_DataProgramming_Item1", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Busca una cadena traducida similar a Visualization (Matplotlib);.
+        /// </summary>
+        public static string Skills_DataProgramming_Item2 {
+            get {
+                return ResourceManager.GetString("Skills_DataProgramming_Item2", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Busca una cadena traducida similar a Data Programming.
+        /// </summary>
+        public static string Skills_DataProgramming_Title {
+            get {
+                return ResourceManager.GetString("Skills_DataProgramming_Title", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Busca una cadena traducida similar a TensorFlow, Keras, PyTorch;.
+        /// </summary>
+        public static string Skills_DeepLearning_Item1 {
+            get {
+                return ResourceManager.GetString("Skills_DeepLearning_Item1", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Busca una cadena traducida similar a Computer Vision (CNNs, Transfer Learning);.
+        /// </summary>
+        public static string Skills_DeepLearning_Item2 {
+            get {
+                return ResourceManager.GetString("Skills_DeepLearning_Item2", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Busca una cadena traducida similar a Sequences (RNNs, LSTM, Transformers);.
+        /// </summary>
+        public static string Skills_DeepLearning_Item3 {
+            get {
+                return ResourceManager.GetString("Skills_DeepLearning_Item3", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Busca una cadena traducida similar a Generative (GANs, VAEs, Diffusion);.
+        /// </summary>
+        public static string Skills_DeepLearning_Item4 {
+            get {
+                return ResourceManager.GetString("Skills_DeepLearning_Item4", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Busca una cadena traducida similar a Deep Learning.
+        /// </summary>
+        public static string Skills_DeepLearning_Title {
+            get {
+                return ResourceManager.GetString("Skills_DeepLearning_Title", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Busca una cadena traducida similar a LLMs (GPT-4, Llama, Gemini);.
+        /// </summary>
+        public static string Skills_GenAI_Item1 {
+            get {
+                return ResourceManager.GetString("Skills_GenAI_Item1", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Busca una cadena traducida similar a LangChain &amp; Hugging Face;.
+        /// </summary>
+        public static string Skills_GenAI_Item2 {
+            get {
+                return ResourceManager.GetString("Skills_GenAI_Item2", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Busca una cadena traducida similar a RAG Architectures;.
+        /// </summary>
+        public static string Skills_GenAI_Item3 {
+            get {
+                return ResourceManager.GetString("Skills_GenAI_Item3", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Busca una cadena traducida similar a Fine-Tuning;.
+        /// </summary>
+        public static string Skills_GenAI_Item4 {
+            get {
+                return ResourceManager.GetString("Skills_GenAI_Item4", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Busca una cadena traducida similar a Transfer Learning;.
+        /// </summary>
+        public static string Skills_GenAI_Item5 {
+            get {
+                return ResourceManager.GetString("Skills_GenAI_Item5", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Busca una cadena traducida similar a Prompt Engineering;.
+        /// </summary>
+        public static string Skills_GenAI_Item6 {
+            get {
+                return ResourceManager.GetString("Skills_GenAI_Item6", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Busca una cadena traducida similar a GenAI Engineering.
+        /// </summary>
+        public static string Skills_GenAI_Title {
+            get {
+                return ResourceManager.GetString("Skills_GenAI_Title", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Busca una cadena traducida similar a CI/CD Pipelines;.
+        /// </summary>
+        public static string Skills_MLOps_Item1 {
+            get {
+                return ResourceManager.GetString("Skills_MLOps_Item1", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Busca una cadena traducida similar a Versioning;.
+        /// </summary>
+        public static string Skills_MLOps_Item2 {
+            get {
+                return ResourceManager.GetString("Skills_MLOps_Item2", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Busca una cadena traducida similar a MLOps.
+        /// </summary>
+        public static string Skills_MLOps_Title {
+            get {
+                return ResourceManager.GetString("Skills_MLOps_Title", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Busca una cadena traducida similar a Supervised;.
+        /// </summary>
+        public static string Skills_PredictiveModeling_Item1 {
+            get {
+                return ResourceManager.GetString("Skills_PredictiveModeling_Item1", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Busca una cadena traducida similar a Unsupervised;.
+        /// </summary>
+        public static string Skills_PredictiveModeling_Item2 {
+            get {
+                return ResourceManager.GetString("Skills_PredictiveModeling_Item2", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Busca una cadena traducida similar a Scikit-learn pipelines;.
+        /// </summary>
+        public static string Skills_PredictiveModeling_Item3 {
+            get {
+                return ResourceManager.GetString("Skills_PredictiveModeling_Item3", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Busca una cadena traducida similar a Ensemble methods (Random Forest, XGBoost, LightGBM);.
+        /// </summary>
+        public static string Skills_PredictiveModeling_Item4 {
+            get {
+                return ResourceManager.GetString("Skills_PredictiveModeling_Item4", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Busca una cadena traducida similar a Predictive Modeling.
+        /// </summary>
+        public static string Skills_PredictiveModeling_Title {
+            get {
+                return ResourceManager.GetString("Skills_PredictiveModeling_Title", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Busca una cadena traducida similar a APIs (FastAPI, .NET);.
+        /// </summary>
+        public static string Skills_SWEforAI_Item1 {
+            get {
+                return ResourceManager.GetString("Skills_SWEforAI_Item1", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Busca una cadena traducida similar a Docker;.
+        /// </summary>
+        public static string Skills_SWEforAI_Item2 {
+            get {
+                return ResourceManager.GetString("Skills_SWEforAI_Item2", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Busca una cadena traducida similar a Software Engineering for AI.
+        /// </summary>
+        public static string Skills_SWEforAI_Title {
+            get {
+                return ResourceManager.GetString("Skills_SWEforAI_Title", resourceCulture);
             }
         }
         

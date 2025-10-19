@@ -172,10 +172,10 @@
     <value>Development Tools</value>
   </data>
   <data name="IntroTitle" xml:space="preserve">
-    <value>Financial Digital Transformation Leader </value>
+    <value>Financial Digital Transformation Leader</value>
   </data>
   <data name="IntroSubtitle" xml:space="preserve">
-    <value>AI Strategist | AI/GenAI Engineer &amp; Solutions Architect </value>
+    <value>AI Strategist | AI/GenAI Engineer &amp; Solutions Architect</value>
   </data>
   <data name="IntroDescription" xml:space="preserve">
     <value>Senior Technology Leader with more than 15 years of proven experience in directing multidisciplinary teams (50+ members), financial strategy, and end-to-end software development. My career is distinguished by the ability to transform complex business challenges into robust, scalable technological solutions with a direct impact on financial performance.</value>
@@ -611,5 +611,135 @@
   </data>
   <data name="AcademicDegree5" xml:space="preserve">
     <value>Master’s Degree in Big Data, Data Science &amp; Artificial Intelligence</value>
+  </data>
+  <data name="PersonalPublicProjects" xml:space="preserve">
+    <value>Personal public projects</value>
+  </data>
+  <data name="EnterprisePrivateProjects" xml:space="preserve">
+    <value>Enterprise private projects</value>
+  </data>
+  <!-- Skills section (EN) -->
+  <data name="Skills_DataProgramming_Title" xml:space="preserve">
+    <value>Data Programming</value>
+  </data>
+  <data name="Skills_DataProgramming_Item1" xml:space="preserve">
+    <value>Python (Pandas, NumPy);</value>
+  </data>
+  <data name="Skills_DataProgramming_Item2" xml:space="preserve">
+    <value>Visualization (Matplotlib);</value>
+  </data>
+  <data name="Skills_DatabaseManagement_Title" xml:space="preserve">
+    <value>Database Management</value>
+  </data>
+  <data name="Skills_DatabaseManagement_Item1" xml:space="preserve">
+    <value>SQL;</value>
+  </data>
+  <data name="Skills_DatabaseManagement_Item2" xml:space="preserve">
+    <value>NoSQL (MongoDB);</value>
+  </data>
+  <data name="Skills_AppliedStatistics_Title" xml:space="preserve">
+    <value>Applied Statistics</value>
+  </data>
+  <data name="Skills_AppliedStatistics_Item1" xml:space="preserve">
+    <value>Inferential Statistics;</value>
+  </data>
+  <data name="Skills_AppliedStatistics_Item2" xml:space="preserve">
+    <value>Hypothesis Testing;</value>
+  </data>
+  <data name="Skills_PredictiveModeling_Title" xml:space="preserve">
+    <value>Predictive Modeling</value>
+  </data>
+  <data name="Skills_PredictiveModeling_Item1" xml:space="preserve">
+    <value>Supervised;</value>
+  </data>
+  <data name="Skills_PredictiveModeling_Item2" xml:space="preserve">
+    <value>Unsupervised;</value>
+  </data>
+  <data name="Skills_PredictiveModeling_Item3" xml:space="preserve">
+    <value>Scikit-learn pipelines;</value>
+  </data>
+  <data name="Skills_PredictiveModeling_Item4" xml:space="preserve">
+    <value>Ensemble methods (Random Forest, XGBoost, LightGBM);</value>
+  </data>
+  <data name="Skills_DeepLearning_Title" xml:space="preserve">
+    <value>Deep Learning</value>
+  </data>
+  <data name="Skills_DeepLearning_Item1" xml:space="preserve">
+    <value>TensorFlow, Keras, PyTorch;</value>
+  </data>
+  <data name="Skills_DeepLearning_Item2" xml:space="preserve">
+    <value>Computer Vision (CNNs, Transfer Learning);</value>
+  </data>
+  <data name="Skills_DeepLearning_Item3" xml:space="preserve">
+    <value>Sequences (RNNs, LSTM, Transformers);</value>
+  </data>
+  <data name="Skills_DeepLearning_Item4" xml:space="preserve">
+    <value>Generative (GANs, VAEs, Diffusion);</value>
+  </data>
+  <data name="Skills_MLOps_Title" xml:space="preserve">
+    <value>MLOps</value>
+  </data>
+  <data name="Skills_MLOps_Item1" xml:space="preserve">
+    <value>CI/CD Pipelines;</value>
+  </data>
+  <data name="Skills_MLOps_Item2" xml:space="preserve">
+    <value>Versioning;</value>
+  </data>
+  <data name="Skills_BigData_Title" xml:space="preserve">
+    <value>Big Data</value>
+  </data>
+  <data name="Skills_BigData_Item1" xml:space="preserve">
+    <value>Apache Spark (PySpark);</value>
+  </data>
+  <data name="Skills_BigData_Item2" xml:space="preserve">
+    <value>Streaming (Kafka);</value>
+  </data>
+  <data name="Skills_BigData_Item3" xml:space="preserve">
+    <value>Data lakes &amp; pipelines;</value>
+  </data>
+  <data name="Skills_CloudPlatforms_Title" xml:space="preserve">
+    <value>Cloud Platforms</value>
+  </data>
+  <data name="Skills_CloudPlatforms_Item1" xml:space="preserve">
+    <value>Databricks;</value>
+  </data>
+  <data name="Skills_CloudPlatforms_Item2" xml:space="preserve">
+    <value>Azure;</value>
+  </data>
+  <data name="Skills_CloudPlatforms_Item3" xml:space="preserve">
+    <value>Deployment</value>
+  </data>
+  <data name="Skills_CloudPlatforms_Item4" xml:space="preserve">
+    <value>Cost optimization</value>
+  </data>
+  <data name="Skills_GenAI_Title" xml:space="preserve">
+    <value>GenAI Engineering</value>
+  </data>
+  <data name="Skills_GenAI_Item1" xml:space="preserve">
+    <value>LLMs (GPT-4, Llama, Gemini);</value>
+  </data>
+  <data name="Skills_GenAI_Item2" xml:space="preserve">
+    <value>LangChain &amp; Hugging Face;</value>
+  </data>
+  <data name="Skills_GenAI_Item3" xml:space="preserve">
+    <value>RAG Architectures;</value>
+  </data>
+  <data name="Skills_GenAI_Item4" xml:space="preserve">
+    <value>Fine-Tuning;</value>
+  </data>
+  <data name="Skills_GenAI_Item5" xml:space="preserve">
+    <value>Transfer Learning;</value>
+  </data>
+  <data name="Skills_GenAI_Item6" xml:space="preserve">
+    <value>Prompt Engineering;</value>
+  </data>
+  <data name="Skills_SWEforAI_Title" xml:space="preserve">
+    <value>Software Engineering for AI</value>
+  </data>
+  <data name="Skills_SWEforAI_Item1" xml:space="preserve">
+    <value>APIs (FastAPI, .NET);</value>
+  </data>
+  <data name="Skills_SWEforAI_Item2" xml:space="preserve">
+    <value>Docker;</value>
   </data>
 </root>

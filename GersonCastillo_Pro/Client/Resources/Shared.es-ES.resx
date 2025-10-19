@@ -238,7 +238,7 @@
     <value>Blazor WebAssembly</value>
   </data>
   <data name="FromAspNetCore" xml:space="preserve">
-    <value>from ASP.NET Core.</value>
+    <value>de ASP.NET Core.</value>
   </data>
   <data name="ContactTitle" xml:space="preserve">
     <value>Ponte en contacto conmigo</value>
@@ -611,5 +611,134 @@
   </data>
   <data name="AcademicDegree5" xml:space="preserve">
     <value>Máster en Big Data, Data Science e Inteligencia Artificial</value>
+  </data>
+  <data name="PersonalPublicProjects" xml:space="preserve">
+    <value>Proyectos personales &amp; públicos</value>
+  </data>
+  <data name="EnterprisePrivateProjects" xml:space="preserve">
+    <value>Proyectos empresariales &amp; privados</value>
+  </data>
+  <data name="Skills_DataProgramming_Title" xml:space="preserve">
+    <value>Programación</value>
+  </data>
+  <data name="Skills_DataProgramming_Item1" xml:space="preserve">
+    <value>Python (Pandas, NumPy);</value>
+  </data>
+  <data name="Skills_DataProgramming_Item2" xml:space="preserve">
+    <value>Visualización de datos (Matplotlib);</value>
+  </data>
+  <data name="Skills_DatabaseManagement_Title" xml:space="preserve">
+    <value>Gestión de bases de datos</value>
+  </data>
+  <data name="Skills_DatabaseManagement_Item1" xml:space="preserve">
+    <value>SQL;</value>
+  </data>
+  <data name="Skills_DatabaseManagement_Item2" xml:space="preserve">
+    <value>NoSQL (MongoDB);</value>
+  </data>
+  <data name="Skills_AppliedStatistics_Title" xml:space="preserve">
+    <value>Estadística aplicada</value>
+  </data>
+  <data name="Skills_AppliedStatistics_Item1" xml:space="preserve">
+    <value>Estadística inferencial;</value>
+  </data>
+  <data name="Skills_AppliedStatistics_Item2" xml:space="preserve">
+    <value>Pruebas de hipótesis;</value>
+  </data>
+  <data name="Skills_PredictiveModeling_Title" xml:space="preserve">
+    <value>Modelado predictivo</value>
+  </data>
+  <data name="Skills_PredictiveModeling_Item1" xml:space="preserve">
+    <value>Supervisado;</value>
+  </data>
+  <data name="Skills_PredictiveModeling_Item2" xml:space="preserve">
+    <value>No supervisado;</value>
+  </data>
+  <data name="Skills_PredictiveModeling_Item3" xml:space="preserve">
+    <value>Pipelines de scikit-learn;</value>
+  </data>
+  <data name="Skills_PredictiveModeling_Item4" xml:space="preserve">
+    <value>Métodos de ensamble (Random Forest, XGBoost, LightGBM);</value>
+  </data>
+  <data name="Skills_DeepLearning_Title" xml:space="preserve">
+    <value>Deep Learning</value>
+  </data>
+  <data name="Skills_DeepLearning_Item1" xml:space="preserve">
+    <value>TensorFlow, Keras, PyTorch;</value>
+  </data>
+  <data name="Skills_DeepLearning_Item2" xml:space="preserve">
+    <value>Visión por computador (CNNs, Transfer Learning);</value>
+  </data>
+  <data name="Skills_DeepLearning_Item3" xml:space="preserve">
+    <value>Sequences  (RNN, LSTM, Transformers);</value>
+  </data>
+  <data name="Skills_DeepLearning_Item4" xml:space="preserve">
+    <value>Generativo (GAN, VAE, modelos de difusión);</value>
+  </data>
+  <data name="Skills_MLOps_Title" xml:space="preserve">
+    <value>MLOps</value>
+  </data>
+  <data name="Skills_MLOps_Item1" xml:space="preserve">
+    <value>Pipelines CI/CD;</value>
+  </data>
+  <data name="Skills_MLOps_Item2" xml:space="preserve">
+    <value>Versioning;</value>
+  </data>
+  <data name="Skills_BigData_Title" xml:space="preserve">
+    <value>Big Data</value>
+  </data>
+  <data name="Skills_BigData_Item1" xml:space="preserve">
+    <value>Apache Spark (PySpark);</value>
+  </data>
+  <data name="Skills_BigData_Item2" xml:space="preserve">
+    <value>Streaming (Kafka);</value>
+  </data>
+  <data name="Skills_BigData_Item3" xml:space="preserve">
+    <value>Lagos de datos &amp; pipelines;</value>
+  </data>
+  <data name="Skills_CloudPlatforms_Title" xml:space="preserve">
+    <value>Plataformas en la nube</value>
+  </data>
+  <data name="Skills_CloudPlatforms_Item1" xml:space="preserve">
+    <value>Databricks;</value>
+  </data>
+  <data name="Skills_CloudPlatforms_Item2" xml:space="preserve">
+    <value>Azure;</value>
+  </data>
+  <data name="Skills_CloudPlatforms_Item3" xml:space="preserve">
+    <value>Despliegue</value>
+  </data>
+  <data name="Skills_CloudPlatforms_Item4" xml:space="preserve">
+    <value>Optimización de costes</value>
+  </data>
+  <data name="Skills_GenAI_Title" xml:space="preserve">
+    <value>Ingeniería de IA Generativa</value>
+  </data>
+  <data name="Skills_GenAI_Item1" xml:space="preserve">
+    <value>LLMs (GPT-4, Llama, Gemini);</value>
+  </data>
+  <data name="Skills_GenAI_Item2" xml:space="preserve">
+    <value>LangChain &amp; Hugging Face;</value>
+  </data>
+  <data name="Skills_GenAI_Item3" xml:space="preserve">
+    <value>Arquitecturas RAG;</value>
+  </data>
+  <data name="Skills_GenAI_Item4" xml:space="preserve">
+    <value>Fine-tuning;</value>
+  </data>
+  <data name="Skills_GenAI_Item5" xml:space="preserve">
+    <value>Transfer Learning;</value>
+  </data>
+  <data name="Skills_GenAI_Item6" xml:space="preserve">
+    <value>Ingeniería de prompts;</value>
+  </data>
+  <data name="Skills_SWEforAI_Title" xml:space="preserve">
+    <value>Ingeniería de software para IA</value>
+  </data>
+  <data name="Skills_SWEforAI_Item1" xml:space="preserve">
+    <value>APIs (FastAPI, .NET);</value>
+  </data>
+  <data name="Skills_SWEforAI_Item2" xml:space="preserve">
+    <value>Docker;</value>
   </data>
 </root>
