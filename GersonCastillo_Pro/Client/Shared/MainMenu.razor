@@ -25,13 +25,13 @@
                         <div class="offcanvas-body bg-black">
                             <ul class="navbar-nav me-auto mb-2 mb-lg-0 font-anton text-18">
                                 <li class="nav-item">
-                                    <a class="nav-link" @onclick="@(() => putFocusOn("Skills"))" style="cursor: pointer" data-bs-dismiss="offcanvas">@Localizer["Skills"]</a>
+                                    <a class="nav-link" @onclick="@(() => putFocusOn(@Localizer["Skills"]))" style="cursor: pointer" data-bs-dismiss="offcanvas">@Localizer["Skills"]</a>
                                 </li>
                                 <li class="nav-item">
-                                    <a class="nav-link" @onclick="@(() => putFocusOn("WorkProjects"))" style="cursor: pointer" data-bs-dismiss="offcanvas">@Localizer["WorkProjects"]</a>
+                                    <a class="nav-link" @onclick="@(() => putFocusOn(@Localizer["WorkProjects"]))" style="cursor: pointer" data-bs-dismiss="offcanvas">@Localizer["WorkProjects"]</a>
                                 </li>
                                 <li class="nav-item">
-                                    <a class="nav-link" @onclick="@(() => putFocusOn("Contact"))" style="cursor: pointer" data-bs-dismiss="offcanvas">@Localizer["Contact"]</a>
+                                    <a class="nav-link" @onclick="@(() => putFocusOn(@Localizer["Contact"]))" style="cursor: pointer" data-bs-dismiss="offcanvas">@Localizer["Contact"]</a>
                                 </li>
                             </ul>
                             <div class="d-flex align-items-center">
@@ -51,6 +51,9 @@
 @code {
     public async Task putFocusOn(string ElementId)
     {
+
+        ElementId = ElementId.Replace(" ", "").Replace("&", "");
+
         await JSRuntime.InvokeVoidAsync("focusOnElementbyId", ElementId);
     }
 }

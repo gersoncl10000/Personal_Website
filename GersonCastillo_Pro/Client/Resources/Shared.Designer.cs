@@ -79,7 +79,7 @@ namespace GersonCastillo_Pro.Client.Resources {
         }
         
         /// <summary>
-        ///   Busca una cadena traducida similar a Attorney.
+        ///   Busca una cadena traducida similar a Law Degree.
         /// </summary>
         public static string AcademicDegree3 {
             get {
@@ -88,11 +88,20 @@ namespace GersonCastillo_Pro.Client.Resources {
         }
         
         /// <summary>
-        ///   Busca una cadena traducida similar a Bachelor&apos;s Degree in Accounting.
+        ///   Busca una cadena traducida similar a Bachelor’s Degree in Public Accounting.
         /// </summary>
         public static string AcademicDegree4 {
             get {
                 return ResourceManager.GetString("AcademicDegree4", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Busca una cadena traducida similar a Master’s Degree in Big Data, Data Science &amp; Artificial Intelligence.
+        /// </summary>
+        public static string AcademicDegree5 {
+            get {
+                return ResourceManager.GetString("AcademicDegree5", resourceCulture);
             }
         }
         
@@ -115,7 +124,7 @@ namespace GersonCastillo_Pro.Client.Resources {
         }
         
         /// <summary>
-        ///   Busca una cadena traducida similar a Artificial Intelligence and Data Science.
+        ///   Busca una cadena traducida similar a Artificial Intelligence &amp; Data Science.
         /// </summary>
         public static string AIDataScience {
             get {
@@ -331,7 +340,7 @@ namespace GersonCastillo_Pro.Client.Resources {
         }
         
         /// <summary>
-        ///   Busca una cadena traducida similar a Konsolidator Iberia · Full-Time 2024 - Present.
+        ///   Busca una cadena traducida similar a Konsolidator Iberia · Full-Time 2024 - Feb 2025.
         /// </summary>
         public static string CurrentJob1Period {
             get {
@@ -412,7 +421,16 @@ namespace GersonCastillo_Pro.Client.Resources {
         }
         
         /// <summary>
-        ///   Busca una cadena traducida similar a Redemerca LLC 2019-Present.
+        ///   Busca una cadena traducida similar a Remote · Orlando, FL.
+        /// </summary>
+        public static string CurrentJob2Location {
+            get {
+                return ResourceManager.GetString("CurrentJob2Location", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Busca una cadena traducida similar a Aug. 2019 - Present.
         /// </summary>
         public static string CurrentJob2Period {
             get {
@@ -421,7 +439,7 @@ namespace GersonCastillo_Pro.Client.Resources {
         }
         
         /// <summary>
-        ///   Busca una cadena traducida similar a Investment portfolio&apos;s management. (Stock, Options &amp; Futures)..
+        ///   Busca una cadena traducida similar a Cofounder and accountable for the technology and analytics strategy to manage a private investment portfolio in stocks, options, and futures..
         /// </summary>
         public static string CurrentJob2Responsibility1 {
             get {
@@ -430,7 +448,7 @@ namespace GersonCastillo_Pro.Client.Resources {
         }
         
         /// <summary>
-        ///   Busca una cadena traducida similar a Market and company analysis..
+        ///   Busca una cadena traducida similar a Financial Technology (Fintech) Development: Designed and built from scratch a proprietary platform with ASP.NET Core, Python (NumPy, Pandas), and SQL for investment analysis and management..
         /// </summary>
         public static string CurrentJob2Responsibility2 {
             get {
@@ -439,7 +457,7 @@ namespace GersonCastillo_Pro.Client.Resources {
         }
         
         /// <summary>
-        ///   Busca una cadena traducida similar a Software development focused on market analysis..
+        ///   Busca una cadena traducida similar a Applied Data Science: Implemented predictive models to analyze market trends, evaluate investment opportunities, and automate strategic decision-making..
         /// </summary>
         public static string CurrentJob2Responsibility3 {
             get {
@@ -448,11 +466,83 @@ namespace GersonCastillo_Pro.Client.Resources {
         }
         
         /// <summary>
-        ///   Busca una cadena traducida similar a Business owner.
+        ///   Busca una cadena traducida similar a Managing Partner | Redemerca, LLC (Private Investment Company).
         /// </summary>
         public static string CurrentJob2Title1 {
             get {
                 return ResourceManager.GetString("CurrentJob2Title1", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Busca una cadena traducida similar a Madrid, Comunidad de Madrid, Spain · On-Site.
+        /// </summary>
+        public static string CurrentJob3Location {
+            get {
+                return ResourceManager.GetString("CurrentJob3Location", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Busca una cadena traducida similar a OnTime · Full-Time Feb 2025 - Present.
+        /// </summary>
+        public static string CurrentJob3Period {
+            get {
+                return ResourceManager.GetString("CurrentJob3Period", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Busca una cadena traducida similar a I lead a team of 30 people with responsibility over key financial and operational areas, driving efficiency through technology and data..
+        /// </summary>
+        public static string CurrentJob3Responsibility1 {
+            get {
+                return ResourceManager.GetString("CurrentJob3Responsibility1", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Busca una cadena traducida similar a Innovation and Automation: I lead active collaboration with the IT department in the design and development of new financial systems to automate internal processes, improve data quality, and enhance reporting..
+        /// </summary>
+        public static string CurrentJob3Responsibility2 {
+            get {
+                return ResourceManager.GetString("CurrentJob3Responsibility2", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Busca una cadena traducida similar a Solution Implementation: I direct the implementation of new software solutions for financial statement consolidation and the adoption of IFRS 16, focusing on data integrity and the optimization of internal control processes..
+        /// </summary>
+        public static string CurrentJob3Responsibility3 {
+            get {
+                return ResourceManager.GetString("CurrentJob3Responsibility3", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Busca una cadena traducida similar a Data Analysis and Strategy: Accountable for analysis and control of operating expenses (fleet, fuel), leveraging data to improve financial efficiency and lay the foundations for future predictive models..
+        /// </summary>
+        public static string CurrentJob3Responsibility4 {
+            get {
+                return ResourceManager.GetString("CurrentJob3Responsibility4", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Busca una cadena traducida similar a Deputy Finance Director.
+        /// </summary>
+        public static string CurrentJob3Title1 {
+            get {
+                return ResourceManager.GetString("CurrentJob3Title1", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Busca una cadena traducida similar a (OnTime - Integrated Logistics).
+        /// </summary>
+        public static string CurrentJob3Title2 {
+            get {
+                return ResourceManager.GetString("CurrentJob3Title2", resourceCulture);
             }
         }
         
@@ -610,6 +700,33 @@ namespace GersonCastillo_Pro.Client.Resources {
         }
         
         /// <summary>
+        ///   Busca una cadena traducida similar a Led the functional and technical definition; development team implemented with Oracle APEX..
+        /// </summary>
+        public static string EnterpriseProject5Action {
+            get {
+                return ResourceManager.GetString("EnterpriseProject5Action", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Busca una cadena traducida similar a Role: Responsible for functional and technical design. Definition of the architecture and specifications for a fixed assets portal (fleet, real estate, machinery, consumables), with access control, document management, maintenance, and connection to external telemetry. Business case, test design, and solution validation..
+        /// </summary>
+        public static string EnterpriseProject5Description {
+            get {
+                return ResourceManager.GetString("EnterpriseProject5Description", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Busca una cadena traducida similar a Asset Management Portal: 2025.
+        /// </summary>
+        public static string EnterpriseProject5Title {
+            get {
+                return ResourceManager.GetString("EnterpriseProject5Title", resourceCulture);
+            }
+        }
+        
+        /// <summary>
         ///   Busca una cadena traducida similar a Experience.
         /// </summary>
         public static string Experience {
@@ -736,7 +853,7 @@ namespace GersonCastillo_Pro.Client.Resources {
         }
         
         /// <summary>
-        ///   Busca una cadena traducida similar a Estratega de IA | AI/GenAI Engineer &amp; Arquitecto de Soluciones.
+        ///   Busca una cadena traducida similar a AI Strategist | AI/GenAI Engineer &amp; Solutions Architect .
         /// </summary>
         public static string IntroSubtitle {
             get {
@@ -745,7 +862,7 @@ namespace GersonCastillo_Pro.Client.Resources {
         }
         
         /// <summary>
-        ///   Busca una cadena traducida similar a Líder de Transformación Digital Financiera  .
+        ///   Busca una cadena traducida similar a Financial Digital Transformation Leader .
         /// </summary>
         public static string IntroTitle {
             get {
@@ -1231,6 +1348,33 @@ namespace GersonCastillo_Pro.Client.Resources {
         }
         
         /// <summary>
+        ///   Busca una cadena traducida similar a In progress. Designing and developing the solution..
+        /// </summary>
+        public static string PersonalProject4Action {
+            get {
+                return ResourceManager.GetString("PersonalProject4Action", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Busca una cadena traducida similar a Development of a SaaS solution for SME valuation combining machine learning, deep learning, and GenAI. Integration of Random Forest, XGBoost, RNNs, and LLMs with embeddings for financial statement analysis..
+        /// </summary>
+        public static string PersonalProject4Description {
+            get {
+                return ResourceManager.GetString("PersonalProject4Description", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Busca una cadena traducida similar a MSc Thesis – AI and LLM-based SME Valuation SaaS (UCM, 2025, In progress).
+        /// </summary>
+        public static string PersonalProject4Title {
+            get {
+                return ResourceManager.GetString("PersonalProject4Title", resourceCulture);
+            }
+        }
+        
+        /// <summary>
         ///   Busca una cadena traducida similar a Portfolio.
         /// </summary>
         public static string Portfolio {
@@ -1393,7 +1537,7 @@ namespace GersonCastillo_Pro.Client.Resources {
         }
         
         /// <summary>
-        ///   Busca una cadena traducida similar a Work Projects.
+        ///   Busca una cadena traducida similar a Work &amp; Projects.
         /// </summary>
         public static string WorkProjects {
             get {

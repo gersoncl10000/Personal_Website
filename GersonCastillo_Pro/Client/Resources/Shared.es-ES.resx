@@ -121,7 +121,7 @@
     <value>Competencias &amp; Tecnologías</value>
   </data>
   <data name="WorkProjects" xml:space="preserve">
-    <value>Proyectos de Trabajo</value>
+    <value>Experiencia &amp; Proyectos</value>
   </data>
   <data name="Contact" xml:space="preserve">
     <value>Contacto</value>
@@ -172,10 +172,10 @@
     <value>Herramientas de Desarrollo</value>
   </data>
   <data name="IntroTitle" xml:space="preserve">
-    <value>Financial Digital Transformation Leader </value>
+    <value>Líder de Transformación Digital Financiera</value>
   </data>
   <data name="IntroSubtitle" xml:space="preserve">
-    <value>AI Strategist | AI/GenAI Engineer &amp; Solutions Architect</value>
+    <value>Estratega de IA | AI/GenAI Engineer &amp; Arquitecto de Soluciones</value>
   </data>
   <data name="IntroDescription" xml:space="preserve">
     <value>Líder tecnológico senior con más de 15 años de experiencia probada en la dirección de equipos multidisciplinarios (+50 personas), estrategia financiera y desarrollo de software end-to-end. Mi carrera se define por mi capacidad para traducir complejos desafíos de negocio en soluciones tecnológicas robustas, escalables y con un impacto directo en la cuenta de resultados.</value>
@@ -415,13 +415,13 @@
     <value>Desarrollé todo el proyecto.</value>
   </data>
   <data name="CurrentJob1Title1" xml:space="preserve">
-    <value>Gerente de Éxito del Cliente</value>
+    <value>Customer Success Manager</value>
   </data>
   <data name="CurrentJob1Title2" xml:space="preserve">
     <value>(Especialista en Consolidación)</value>
   </data>
   <data name="CurrentJob1Period" xml:space="preserve">
-    <value>Konsolidator Iberia · Tiempo Completo 2024 - Presente</value>
+    <value>Konsolidator Iberia · Tiempo Completo 2024 - Febrero 2025</value>
   </data>
   <data name="CurrentJob1Location" xml:space="preserve">
     <value>Madrid, Comunidad de Madrid, España · Presencial</value>
@@ -445,67 +445,46 @@
     <value>Desarrollador de Soluciones de Automatización: Competente en crear soluciones de automatización usando REST API, .Net Core y SQL Server para optimizar procesos y mejorar la eficiencia.</value>
   </data>
   <data name="CurrentJob2Title1" xml:space="preserve">
-    <value>Propietario de negocio</value>
+    <value>Socio Propietario | Redemerca, LLC (Compañía de Inversión Privada)</value>
   </data>
   <data name="CurrentJob2Period" xml:space="preserve">
-    <value>Redemerca LLC 2019-Presente</value>
+    <value>Ago. 2019 - Presente</value>
+  </data>
+  <data name="CurrentJob2Location" xml:space="preserve">
+    <value>Remoto · Orlando, FL</value>
   </data>
   <data name="CurrentJob2Responsibility1" xml:space="preserve">
-    <value>Gestión de portafolio de inversiones. (Acciones, Opciones y Futuros).</value>
+    <value>Cofundador y responsable de la estrategia tecnológica y de análisis para la gestión de un portafolio de inversión privada en acciones, opciones y futuros.</value>
   </data>
   <data name="CurrentJob2Responsibility2" xml:space="preserve">
-    <value>Análisis de mercado y empresas.</value>
+    <value>Desarrollo de Tecnología Financiera (Fintech): Diseñé y construí desde cero una plataforma propietaria con ASP.NET Core, Python (Numpy, Pandas) y SQL para el análisis y gestión de inversiones.</value>
   </data>
   <data name="CurrentJob2Responsibility3" xml:space="preserve">
-    <value>Desarrollo de software enfocado en análisis de mercado.</value>
+    <value>Ciencia de Datos Aplicada: Implementé modelos predictivos para analizar tendencias de mercado, evaluar oportunidades de inversión y automatizar la toma de decisiones estratégicas.</value>
   </data>
-  <data name="PastJob1Title1" xml:space="preserve">
-    <value>Director de Finanzas y Administración</value>
+  <data name="CurrentJob3Title1" xml:space="preserve">
+    <value>Subdirector Financiero</value>
   </data>
-  <data name="PastJob1Period" xml:space="preserve">
-    <value>Marluis Inversiones 2006-2022</value>
+  <data name="CurrentJob3Title2" xml:space="preserve">
+    <value>(OnTime - Logística Integral)</value>
   </data>
-  <data name="PastJob1Responsibility1" xml:space="preserve">
-    <value>Gestión de las áreas contable, auditoría, financiera, administrativa y de recursos humanos.</value>
+  <data name="CurrentJob3Period" xml:space="preserve">
+    <value>OnTime · Tiempo Completo Febrero 2025 - Presente</value>
   </data>
-  <data name="PastJob1Responsibility2" xml:space="preserve">
-    <value>Modelado y preparación de estados financieros bajo estándares NIIF.</value>
+  <data name="CurrentJob3Location" xml:space="preserve">
+    <value>Madrid, Comunidad de Madrid, España · Presencial</value>
   </data>
-  <data name="PastJob1Responsibility3" xml:space="preserve">
-    <value>Desarrollo de planes y estrategias de inversión, presupuestos y planificación fiscal.</value>
+  <data name="CurrentJob3Responsibility1" xml:space="preserve">
+    <value>Lidero un equipo de 30 personas con responsabilidad sobre áreas financieras y operativas clave, impulsando la eficiencia a través de la tecnología y los datos.</value>
   </data>
-  <data name="PastJob1Responsibility4" xml:space="preserve">
-    <value>Supervisión de procesos administrativos y contables, auditoría interna, control interno y gestión de personal.</value>
+  <data name="CurrentJob3Responsibility2" xml:space="preserve">
+    <value>Innovación y Automatización: Lidero la colaboración activa con el departamento de TI en el diseño y desarrollo de nuevos sistemas financieros para automatizar procesos internos, mejorar la calidad del dato y la generación de reportes.</value>
   </data>
-  <data name="PastJob1Responsibility5" xml:space="preserve">
-    <value>Desarrollo de software y gestión de procesos de automatización de operaciones financieras.</value>
+  <data name="CurrentJob3Responsibility3" xml:space="preserve">
+    <value>Implementación de Soluciones: Dirijo la implementación de nuevas soluciones de software para la consolidación de estados financieros y la adopción de normativas IFRS 16, enfocándome en la integridad de los datos y la optimización de los procesos de control interno.</value>
   </data>
-  <data name="PastJob1Responsibility6" xml:space="preserve">
-    <value>Desarrollo de procesos ETL y ELT, ASP.NET Core, SQL Server, Power BI, Power Query, DAX.</value>
-  </data>
-  <data name="PastJob1Responsibility7" xml:space="preserve">
-    <value>Integración financiera y contable de desarrollos de software internos con el sistema ERP SAP Business One.</value>
-  </data>
-  <data name="AcademicDegree1" xml:space="preserve">
-    <value>Inglés para Propósitos Académicos (LEAP)</value>
-  </data>
-  <data name="AcademicDegree2" xml:space="preserve">
-    <value>Certificado de Inglés Empresarial</value>
-  </data>
-  <data name="AcademicDegree3" xml:space="preserve">
-    <value>Abogado</value>
-  </data>
-  <data name="AcademicDegree4" xml:space="preserve">
-    <value>Licenciatura en Contaduría Pública</value>
-  </data>
-  <data name="AIDataScience" xml:space="preserve">
-    <value>Inteligencia Artificial y Ciencia de Datos</value>
-  </data>
-  <data name="Leadership_Item10_Text" xml:space="preserve">
-    <value>Asumo la propiedad de los proyectos con iniciativa, compromiso y foco en la ejecución.</value>
-  </data>
-  <data name="Leadership_Item10_Title" xml:space="preserve">
-    <value>Mentalidad emprendedora</value>
+  <data name="CurrentJob3Responsibility4" xml:space="preserve">
+    <value>Análisis y Estrategia de Datos: Responsable del análisis y control del gasto operativo (flota, combustible), utilizando los datos para mejorar la eficiencia financiera y sentar las bases para futuros modelos predictivos.</value>
   </data>
   <data name="Leadership_Item1_Text" xml:space="preserve">
     <value>Capacidad para definir una visión clara, alinear objetivos y convertir la estrategia en resultados concretos.</value>
@@ -532,7 +511,7 @@
     <value>Orientación a resultados</value>
   </data>
   <data name="Leadership_Item5_Text" xml:space="preserve">
-    <value>Promuevo la transformación digital y la adopción de nuevas tecnologías en cada proceso.</value>
+    <value>Promovo la transformación digital y la adopción de nuevas tecnologías en cada proceso.</value>
   </data>
   <data name="Leadership_Item5_Title" xml:space="preserve">
     <value>Impulso a la innovación</value>
@@ -561,7 +540,76 @@
   <data name="Leadership_Item9_Title" xml:space="preserve">
     <value>Integridad y cumplimiento</value>
   </data>
+  <data name="Leadership_Item10_Text" xml:space="preserve">
+    <value>Asumo la propiedad de los proyectos con iniciativa, compromiso y foco en la ejecución.</value>
+  </data>
+  <data name="Leadership_Item10_Title" xml:space="preserve">
+    <value>Mentalidad emprendedora</value>
+  </data>
   <data name="Leadership_Title" xml:space="preserve">
     <value>Cualidades de Liderazgo</value>
+  </data>
+  <data name="EnterpriseProject5Title" xml:space="preserve">
+    <value>Portal de Gestión de Activos: 2025</value>
+  </data>
+  <data name="EnterpriseProject5Description" xml:space="preserve">
+    <value>Rol: Responsable de diseño funcional y técnico. Definición de la arquitectura y especificaciones para un portal de activos fijos (flota, inmuebles, maquinaria, consumibles), con control de accesos, gestión documental, mantenimientos y conexión con telemetría externa. Business case, diseño de pruebas y validación de la solución.</value>
+  </data>
+  <data name="EnterpriseProject5Action" xml:space="preserve">
+    <value>Responsable de la definición funcional y técnica; el equipo de desarrollo implementó con Oracle APEX.</value>
+  </data>
+  <data name="PastJob1Title1" xml:space="preserve">
+    <value>Director de Finanzas y Administración</value>
+  </data>
+  <data name="PastJob1Period" xml:space="preserve">
+    <value>Marluis Inversiones 2006-2022</value>
+  </data>
+  <data name="PastJob1Responsibility1" xml:space="preserve">
+    <value>Gestión de las áreas contable, auditoría, financiera, administrativa y de recursos humanos.</value>
+  </data>
+  <data name="PastJob1Responsibility2" xml:space="preserve">
+    <value>Modelado y preparación de estados financieros bajo estándares NIIF.</value>
+  </data>
+  <data name="PastJob1Responsibility3" xml:space="preserve">
+    <value>Desarrollo de planes y estrategias de inversión, presupuestos y planificación fiscal.</value>
+  </data>
+  <data name="PastJob1Responsibility4" xml:space="preserve">
+    <value>Supervisión de procesos administrativos y contables, auditoría interna, control interno y gestión de personal.</value>
+  </data>
+  <data name="PastJob1Responsibility5" xml:space="preserve">
+    <value>Desarrollo de software y gestión de procesos de automatización de operaciones financieras.</value>
+  </data>
+  <data name="PastJob1Responsibility6" xml:space="preserve">
+    <value>Desarrollo de procesos ETL y ELT, ASP.NET Core, SQL Server, Power BI, Power Query, DAX.</value>
+  </data>
+  <data name="PastJob1Responsibility7" xml:space="preserve">
+    <value>Integración financiera y contable de desarrollos de software internos con el sistema ERP SAP Business One.</value>
+  </data>
+  <data name="PersonalProject4Title" xml:space="preserve">
+    <value>TFM – SaaS de Valuación de Empresas con IA y LLMs (UCM, 2025, En curso)</value>
+  </data>
+  <data name="PersonalProject4Description" xml:space="preserve">
+    <value>Desarrollo de una solución SaaS para la valoración de PYMES combinando machine learning, deep learning y GenAI. Integración de Random Forest, XGBoost, RNNs y LLMs con embeddings para el análisis de estados financieros.</value>
+  </data>
+  <data name="PersonalProject4Action" xml:space="preserve">
+    <value>En curso. Diseño y desarrollo de la solución.</value>
+  </data>
+  <data name="AcademicDegree1" xml:space="preserve">
+    <value>Inglés para Propósitos Académicos (LEAP)</value>
+  </data>
+  <data name="AcademicDegree2" xml:space="preserve">
+    <value>Certificado de Inglés Empresarial</value>
+  </data>
+  <data name="AcademicDegree3" xml:space="preserve">
+    <value>Abogado</value>
+  </data>
+  <data name="AcademicDegree4" xml:space="preserve">
+    <value>Licenciatura en Contaduría Pública</value>
+  </data>
+  <data name="AIDataScience" xml:space="preserve">
+    <value>Inteligencia Artificial y Ciencia de Datos</value>
+  </data>
+  <data name="AcademicDegree5" xml:space="preserve">
+    <value>Máster en Big Data, Data Science e Inteligencia Artificial</value>
   </data>
 </root>

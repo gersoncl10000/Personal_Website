@@ -7,6 +7,8 @@ namespace GersonCastillo_Pro.Client.Models
         public string Degree { get; }
         public string LocationAndYear { get; }
 
+       
+
         public Education(string institutionLogo, string institutionName, string degree, string locationAndYear)
         {
             InstitutionLogo = institutionLogo;

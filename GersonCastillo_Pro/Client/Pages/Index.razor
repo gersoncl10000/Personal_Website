@@ -155,7 +155,7 @@
                                     <li>{</li>
                                     <li class="ps-2">Supervised;</li>
                                     <li class="ps-2">Unsupervised;</li>
-                                    <li class="ps-2">Scikit-learn;</li>
+                                    <li class="ps-2">Scikit-learn pipelines;</li>
                                     <li class="ps-2">Ensemble methods (Random Forest, XGBoost, LightGBM);</li>
                                     
 
@@ -166,9 +166,9 @@
                                 <ul class="text-14 list-unstyled">
                                     <li>{</li>
                                     <li class="ps-2">TensorFlow, Keras, PyTorch;</li>
-                                    <li class="ps-2">Computer Vision (CNNs);</li>
-                                    <li class="ps-2">Sequence (RNNs, LSTM);</li>
-                                    <li class="ps-2">Generative (GANs);</li>
+                                    <li class="ps-2">Computer Vision (CNNs, Transfer Learning);</li>
+                                    <li class="ps-2">Sequences (RNNs, LSTM, Transformers);</li>
+                                    <li class="ps-2">Generative (GANs, VAEs, Diffusion);</li>
                                     <li>}</li>
                                 </ul>
                             </ul>
@@ -198,13 +198,17 @@
                                 <ul class="text-14 list-unstyled">
                                     <li>{</li>
                                     <li class="ps-2">Apache Spark (PySpark);</li>
-                                    <li class="ps-2">Hadoop HDFS;</li>
+                                    <li class="ps-2">Streaming (Kafka);</li>
+                                    <li class="ps-2">Data lakes &amp; pipelines;</li>
                                     <li>}</li>
                                 </ul>
                                 <li class="fw-bold">Cloud Platforms</li>
                                 <ul class="text-14 list-unstyled">
                                     <li>{</li>
+                                    <li class="ps-2">Databricks;</li>
                                     <li class="ps-2">Azure;</li>
+                                    <li class="ps-2">Deployment</li>
+                                    <li class="ps-2">Cost optimization</li>
                                     <li>}</li>
                                 </ul>
                             </ul>
@@ -219,7 +223,7 @@
                                 <li class="fw-bold">GenAI Engineering</li>
                                 <ul class="text-14 list-unstyled">
                                     <li>{</li>
-                                    <li class="ps-2">LLMs (GPT-4, Llama, Mistral);</li>
+                                    <li class="ps-2">LLMs (GPT-4, Llama, Gemini);</li>
                                     <li class="ps-2">LangChain & Hugging Face;</li>
                                     <li class="ps-2">RAG Architectures;</li>
                                     <li class="ps-2">Fine-Tuning;</li>
@@ -257,7 +261,7 @@
         <Content3>
             <div class="h-100 p-4">
 
-                <div class="d-flex flex-column font-serif text-16">
+                <div class="d-flex flex-column font-serif text-18">
                     @if (businessSkills is not null)
                     {
                         @foreach (var skill in businessSkills)
@@ -409,7 +413,7 @@
 </Segment>
 
 <!-- Work & Projects -->
-<Segment p_tittle_hz_div_1="@Localizer["WorkAndProjects"]" p_hz_dv_1_active="true">
+<Segment p_tittle_hz_div_1="@Localizer["WorkProjects"]" p_hz_dv_1_active="true">
     <SegmentContent1Colum2 ActiveDivider1="true"
                            ActiveSection2="true"
                            ActiveTittleDivider1="true"
@@ -516,15 +520,15 @@
             </div>
         </Content2>
         <Content3>
-            <SegmentContent2Colum1 ActiveDivider1="true"
+            <SegmentContent2Colum1 ActiveDivider1="false"
                                    ActiveDivider2="true"
-                                   ActiveTittleDivider1="true"
+                                   ActiveTittleDivider1="false"
                                    ActiveTittleDivider2="true"
                                    ActiveSection2="true"
                                    OutsideTittle1="@Localizer["NewestCoursesCertifications"]"
                                    OutsideTittle3="@Localizer["AcademicDegrees"]">
 
-                <Content1>
+                @* <Content1>
                     <div class="py-2">
                         @if (certifications is not null)
                         {
@@ -554,13 +558,26 @@
                             }
                         }
                     </div>
-                </Content1>
+                </Content1> *@
                 <Content3>
                     <div class="m-2">
                         @if (academicDegrees is not null)
                         {
-                            <div class="row text-center my-2">
-                                @foreach (var degree in academicDegrees.Take(2))
+                            @foreach (var degree in academicDegrees.Take(1))
+                            {
+                                <div class="row text-center my-5">
+                                    <div class="col-12">
+                                        <img height="150" src="@degree.InstitutionLogo" />
+                                        <div class="d-flex flex-column">
+                                            <div class="font-serif text-16">@degree.InstitutionName</div>
+                                            <div class="font-serif text-21 fw-bold">@degree.Degree</div>
+                                            <div class="font-serif text-14">@degree.LocationAndYear</div>
+                                        </div>
+                                    </div>
+                                </div>
+                            }
+                            <div class="row text-center my-5">
+                                @foreach (var degree in academicDegrees.Skip(1).Take(2))
                                 {
                                     <div class="col-6">
                                         <img height="50" src="@degree.InstitutionLogo" />
@@ -572,9 +589,9 @@
                                     </div>
                                 }
                             </div>
-                            @foreach (var degree in academicDegrees.Skip(2))
+                            @foreach (var degree in academicDegrees.Skip(3))
                             {
-                                <div class="row text-center mt-2">
+                                <div class="row text-center mt-5">
                                     <div class="col-12">
                                         <img height="50" src="@degree.InstitutionLogo" />
                                         <div class="d-flex flex-column">

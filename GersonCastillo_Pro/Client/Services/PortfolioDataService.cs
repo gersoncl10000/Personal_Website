@@ -34,6 +34,16 @@ namespace GersonCastillo_Pro.Client.Services
         {
             return new List<ProjectModel>
             {
+                
+
+                // New personal project: TFM – SaaS de Valuación de Empresas con IA y LLMs (UCM, 2025, En curso)
+                new(_localizer["PersonalProject4Title"],
+                    _localizer["PersonalProject4Description"],
+                    _localizer["PersonalProject4Action"],
+                    "Python, Jupyter Notebook;",
+                    "Scikit-learn, XGBoost, TensorFlow/Keras, Hugging Face Transformers, LangChain, Embeddings, FastAPI;",
+                    "",
+                    ""),
                 new(_localizer["PersonalProject1Title"], 
                     _localizer["PersonalProject1Description"], 
                     _localizer["PersonalProject1Action"], 
@@ -64,6 +74,15 @@ namespace GersonCastillo_Pro.Client.Services
         {
             return new List<ProjectModel>
             {
+                
+                // New enterprise project: Asset Management Portal (no repository)
+                new(_localizer["EnterpriseProject5Title"],
+                    _localizer["EnterpriseProject5Description"],
+                    _localizer["EnterpriseProject5Action"],
+                    "", // languages
+                    "Oracle APEX;", // frameworks/libraries
+                    "", // link
+                    ""), // repository
                 new(_localizer["EnterpriseProject1Title"], 
                     _localizer["EnterpriseProject1Description"], 
                     _localizer["EnterpriseProject1Action"], 
@@ -102,22 +121,22 @@ namespace GersonCastillo_Pro.Client.Services
         {
             return new List<WorkExperience>
             {
-                new(new List<string> { _localizer["CurrentJob1Title1"], _localizer["CurrentJob1Title2"] }, 
-                    _localizer["CurrentJob1Period"], 
-                    _localizer["CurrentJob1Location"], 
-                    new List<string> 
-                    { 
-                        _localizer["CurrentJob1Responsibility1"],
-                        _localizer["CurrentJob1Responsibility2"],
-                        _localizer["CurrentJob1Responsibility3"],
-                        _localizer["CurrentJob1Responsibility4"],
-                        _localizer["CurrentJob1Responsibility5"],
-                        _localizer["CurrentJob1Responsibility6"]
+                // New current job: OnTime
+                new(new List<string> { _localizer["CurrentJob3Title1"], _localizer["CurrentJob3Title2"] },
+                    _localizer["CurrentJob3Period"],
+                    _localizer["CurrentJob3Location"],
+                    new List<string>
+                    {
+                        _localizer["CurrentJob3Responsibility1"],
+                        _localizer["CurrentJob3Responsibility2"],
+                        _localizer["CurrentJob3Responsibility3"],
+                        _localizer["CurrentJob3Responsibility4"]
                     }),
 
+                // Existing current job: Business owner
                 new(new List<string> { _localizer["CurrentJob2Title1"] }, 
                     _localizer["CurrentJob2Period"], 
-                    "", 
+                    _localizer["CurrentJob2Location"], 
                     new List<string> 
                     { 
                         _localizer["CurrentJob2Responsibility1"],
@@ -131,6 +150,19 @@ namespace GersonCastillo_Pro.Client.Services
         {
             return new List<WorkExperience>
             {
+                new(new List<string> { _localizer["CurrentJob1Title1"], _localizer["CurrentJob1Title2"] }, 
+                    _localizer["CurrentJob1Period"], 
+                    _localizer["CurrentJob1Location"], 
+                    new List<string> 
+                    { 
+                        _localizer["CurrentJob1Responsibility1"],
+                        _localizer["CurrentJob1Responsibility2"],
+                        _localizer["CurrentJob1Responsibility3"],
+                        _localizer["CurrentJob1Responsibility4"],
+                        _localizer["CurrentJob1Responsibility5"],
+                        _localizer["CurrentJob1Responsibility6"]
+                    }),
+
                 new(new List<string> { _localizer["PastJob1Title1"] }, 
                     _localizer["PastJob1Period"], 
                     "", 
@@ -151,6 +183,7 @@ namespace GersonCastillo_Pro.Client.Services
         {
             return new List<Education>
             {
+                new("img/icons/Universidad_Complutense_de_Madrid.png", "Universidad Complutense de Madrid (UCM)", _localizer["AcademicDegree5"], "Madrid,España (2025)"),
                 new("img/icons/langaracoa.jpg", "Langara College", _localizer["AcademicDegree1"], "BC,Canada (2023)"),
                 new("img/icons/Logo-Ilac.png", "ILAC", _localizer["AcademicDegree2"], "BC,Canada (2022)"),
                 new("img/icons/ugma-logo.png", "Universidad Nororiental Gran Mariscal de Ayacucho", _localizer["AcademicDegree3"], "BO,Venezuela (2016)"),
@@ -164,6 +197,7 @@ namespace GersonCastillo_Pro.Client.Services
             return new List<Certification>
             {
                 new("img/icons/Microsoft_logo.svg", "https://coursera.org/share/797b370403137a06821cc41d2f567946", "on going...", "Azure Data Engineer Associate", "Coursera, on going... 2024"),
+                new("img/icons/Harvard_Online.png", "https://credentials.edx.org/credentials/190dbb2530e547fc8bc31b579020e8f3/", "Show credential", "Professional Certificate in Data Science and Machine Learning", "HarvardX (Harvard University), December 2024"),
                 new("img/icons/INEAF.png", "/files/certificate20241013-1848.pdf", "Show credential", "Advanced Course in Accounting and Tax Consolidation", "INEAF - Business School, October 2024"),
                 new("img/icons/MongoBD.png", "https://coursera.org/share/d42dc58e346e2f9b6799ef823eff2456", "Show credential", "MongoDB", "MongoDB Inc., October 2024"),
                 new("img/icons/Udemy-Emblem.png", "https://www.udemy.com/certificate/UC-51f6f737-1d7e-47f7-b1d7-61d31a3acfc0/", "Show credential", "Microsoft Power BI for Financial Reporting", "Udemy, May 2024"),
