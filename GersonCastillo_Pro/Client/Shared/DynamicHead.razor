@@ -8,9 +8,9 @@
         {
             try
             {
-                await JSRuntime.InvokeVoidAsync("updatePageMeta", 
-                    Localizer["PageTitle"], 
-                    Localizer["PageDescription"]);
+                var title = Localizer["PageTitle"].Value;
+                var description = Localizer["PageDescription"].Value;
+                await JSRuntime.InvokeVoidAsync("updatePageMeta", title, description);
             }
             catch
             {
