@@ -1,7 +1,6 @@
 ---
 import Layout from "../layouts/Layout.astro";
 import ContactCTA from "../components/ContactCTA.astro";
-import { identity } from "../data/content";
 const opportunities = [
   [
     "Documentos y tareas repetitivas",
@@ -45,8 +44,8 @@ const phases = [
 ---
 
 <Layout
-  title="IA para Finanzas y Administración · Castillo"
-  description="Evalúa oportunidades de automatización, agentes, GenAI y analítica aplicada a Finanzas. Del caso de uso a la implantación, con control y criterio financiero."
+  title="Data & AI para Finanzas · Castillo"
+  description="Evaluación, diseño e implantación de automatización, GenAI, agentes, analítica y forecasting desde el problema financiero, con control y trazabilidad."
 >
   <section class="page-hero">
     <div class="wrap">
@@ -63,13 +62,8 @@ const phases = [
         Identificar dónde aporta valor, decidir qué merece construirse y
         llevarlo a producción con los controles que Finanzas necesita.
       </p>
-      <a
-        class="button"
-        href={identity.linkedin}
-        target="_blank"
-        rel="noopener noreferrer"
-      >
-        Hablemos de IA por LinkedIn <span aria-hidden="true">↗</span>
+      <a class="button" href="/contacto/#message-heading">
+        Hablemos de tu proyecto <span aria-hidden="true">→</span>
       </a>
     </div>
   </section>
@@ -188,9 +182,9 @@ const phases = [
             ¿Es obligatorio utilizar Azhum?<span aria-hidden="true">+</span>
           </summary>
           <div>
-            No. Azhum es mi producto propio y una empresa tecnológica separada.
-            Castillo mantiene independencia para trabajar con la plataforma que
-            mejor responda a tu contexto.
+            No. Azhum es mi producto propio y una opción cuando encaja. Castillo
+            mantiene independencia para trabajar con la plataforma que mejor
+            responda a tu contexto.
           </div>
         </details>
         <details>

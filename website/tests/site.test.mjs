@@ -2,7 +2,13 @@ import { test } from "node:test";
 import assert from "node:assert/strict";
 import { readFileSync, existsSync } from "node:fs";
 import path from "node:path";
-const routes = ["/", "/ia-finanzas/", "/contacto/", "/consolidacion/"];
+const routes = [
+  "/",
+  "/ia-finanzas/",
+  "/sobre-castillo/",
+  "/contacto/",
+  "/consolidacion/",
+];
 const resolve = (route) =>
   path.join("dist", route.endsWith("/") ? `${route}index.html` : route);
 
@@ -40,6 +46,52 @@ test("Homepage declares the Castillo symbol as favicon and business logo", () =>
     html,
     /"logo":"https:\/\/gersoncastillo\.dev\/images\/castillo-symbol\.png"/,
   );
+  assert.match(
+    html,
+    /property="og:image" content="https:\/\/gersoncastillo\.dev\/images\/castillo-social\.png"/,
+  );
+});
+
+test("Commercial positioning and service deliverables are visible on the homepage", () => {
+  const html = readFileSync(resolve("/"), "utf8");
+  for (const text of [
+    "17 años en Finanzas",
+    "Cuando Finanzas sabe que algo tiene que cambiar.",
+    "QUÉ RECIBE EL CLIENTE",
+    "Un proceso objetivo y una hoja de ruta con prioridades.",
+    "Un diseño funcional con alcance y criterios de aceptación.",
+    "Una oportunidad evaluada y una solución diseñada para su contexto.",
+    "Una implantación con responsabilidades, pruebas y seguimiento.",
+    "Hablemos de tu proyecto",
+  ]) {
+    assert.match(html, new RegExp(text.replace(/[.*+?^${}()|[\]\\]/g, "\\$&")));
+  }
+  assert.doesNotMatch(
+    html,
+    /FOCO \/ DATA &amp; AI|TECNOLOGÍA PROPIA \/ EMPRESA SEPARADA|Formulario de contacto/,
+  );
+});
+
+test("About page contains only the approved academic qualifications", () => {
+  const html = readFileSync(resolve("/sobre-castillo/"), "utf8");
+  for (const degree of [
+    "Licenciatura en Contaduría Pública",
+    "Abogado",
+    "Máster en Big Data, Data Science e Inteligencia Artificial",
+  ]) {
+    assert.match(html, new RegExp(degree));
+  }
+  assert.doesNotMatch(html, /HarvardX|MOOC|certificaci[oó]n|curso/i);
+});
+
+test("Generated public copy avoids unsupported team and AI delivery claims", () => {
+  for (const route of routes) {
+    const html = readFileSync(resolve(route), "utf8");
+    assert.doesNotMatch(
+      html,
+      /nuestro equipo|hemos implantado agentes|agentes en producci[oó]n|clientes como|l[ií]der de mercado/i,
+    );
+  }
 });
 test("Internal links, fragments and image assets resolve in the build", () => {
   for (const route of routes) {

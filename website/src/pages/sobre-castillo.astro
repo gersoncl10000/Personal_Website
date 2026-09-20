@@ -1,0 +1,188 @@
+---
+import Layout from "../layouts/Layout.astro";
+import AzhumLogo from "../components/AzhumLogo.astro";
+import ContactCTA from "../components/ContactCTA.astro";
+import { careerPath, education, identity, steps } from "../data/content";
+---
+
+<Layout
+  title="Sobre Castillo y Gerson Castillo"
+  description="Conoce la trayectoria de Gerson Castillo en dirección financiera, transformación, sistemas y software, y la práctica independiente Castillo."
+>
+  <section class="page-hero about-hero">
+    <div class="wrap">
+      <p class="eyebrow">SOBRE CASTILLO</p>
+      <h1>
+        Finanzas, transformación
+        <br />
+        <em>y tecnología.</em>
+      </h1>
+      <p class="lead">
+        Castillo es la práctica profesional independiente de Gerson Castillo.
+        Existe para convertir necesidades financieras en procesos, sistemas y
+        soluciones que llegan a la operación.
+      </p>
+    </div>
+  </section>
+
+  <section class="section about-intro">
+    <div class="wrap split">
+      <p class="eyebrow">QUÉ ES CASTILLO</p>
+      <div>
+        <h2>Una práctica personal para conectar Finanzas y Tecnología.</h2>
+        <div class="two-copy">
+          <p>
+            Muchos proyectos fallan en el espacio entre lo que Finanzas necesita
+            y lo que la tecnología termina construyendo. Castillo trabaja en ese
+            espacio: diagnóstico, diseño funcional, datos, coordinación e
+            implantación.
+          </p>
+          <p>
+            Gerson lidera personalmente cada proyecto, colaborando con los
+            equipos del cliente, proveedores o especialistas externos cuando el
+            contexto lo requiere. Castillo no representa una plantilla ni una
+            herramienta predeterminada.
+          </p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <section class="section founder about-founder">
+    <div class="wrap founder-grid">
+      <div class="founder-photo">
+        <img
+          src="/images/gerson.jpg"
+          alt="Retrato profesional de Gerson Castillo"
+          width="1280"
+          height="1280"
+        />
+        <span>17 AÑOS EN FINANZAS</span>
+      </div>
+      <div class="founder-copy">
+        <p class="eyebrow">GERSON CASTILLO</p>
+        <h2>Entender Finanzas. Saber construir.</h2>
+        <p class="lead">
+          Mi trayectoria profesional se ha desarrollado en la intersección entre
+          la dirección financiera y los sistemas: desde la gestión de Finanzas
+          en organizaciones complejas hasta el diseño e implantación de software
+          y soluciones de datos.
+        </p>
+        <p>
+          He trabajado como responsable financiero que compra y utiliza
+          tecnología, como profesional que dirige implantaciones y como fundador
+          que construye producto. Esa perspectiva me permite hablar con quienes
+          operan el negocio y con quienes construyen la solución.
+        </p>
+        <a
+          class="text-link"
+          href={identity.linkedin}
+          target="_blank"
+          rel="noopener noreferrer"
+        >
+          Ver trayectoria completa en LinkedIn <span aria-hidden="true">↗</span>
+        </a>
+      </div>
+    </div>
+  </section>
+
+  <section class="section career-section">
+    <div class="wrap">
+      <div class="section-heading">
+        <div>
+          <p class="eyebrow">TRAYECTORIA EJECUTIVA</p>
+          <h2>Experiencia desde varios lados de la misma mesa.</h2>
+        </div>
+        <p>
+          Una secuencia profesional que conecta criterio financiero y capacidad
+          de ejecución.
+        </p>
+      </div>
+      <ol class="career-timeline">
+        {careerPath.map(([title, description], index) => (
+          <li>
+            <span>0{index + 1}</span>
+            <div>
+              <h3>{title}</h3>
+              <p>{description}</p>
+            </div>
+          </li>
+        ))}
+      </ol>
+    </div>
+  </section>
+
+  <section class="section education-section">
+    <div class="wrap split">
+      <div>
+        <p class="eyebrow">FORMACIÓN ACADÉMICA</p>
+        <h2>Base financiera, jurídica y tecnológica.</h2>
+      </div>
+      <ul class="education-list">
+        {education.map(([degree, institution]) => (
+          <li>
+            <strong>{degree}</strong>
+            <span>{institution}</span>
+          </li>
+        ))}
+      </ul>
+    </div>
+  </section>
+
+  <section class="azhum-section about-azhum">
+    <div class="wrap azhum-grid">
+      <div>
+        <p class="eyebrow">PRODUCTO PROPIO / INTELIGENCIA FINANCIERA</p>
+        <h2 class="azhum-logo">
+          <AzhumLogo />
+        </h2>
+      </div>
+      <div>
+        <h3>Producto propio. Evidencia de construcción.</h3>
+        <p>
+          Azhum es la plataforma de inteligencia financiera que he diseñado y
+          construido. Demuestra una capacidad tecnológica real y puede formar
+          parte de una solución cuando encaja.
+        </p>
+        <p>
+          Castillo mantiene independencia para trabajar con el ERP, la
+          arquitectura, el proveedor o la herramienta adecuada para cada
+          proyecto. Azhum no es un requisito.
+        </p>
+        <a
+          class="text-link"
+          href={identity.azhum}
+          target="_blank"
+          rel="noopener noreferrer"
+        >
+          Conocer Azhum <span aria-hidden="true">↗</span>
+        </a>
+      </div>
+    </div>
+  </section>
+
+  <section class="section about-method">
+    <div class="wrap">
+      <div class="section-heading">
+        <div>
+          <p class="eyebrow">FORMA DE TRABAJAR</p>
+          <h2>Responsabilidad personal en cada etapa.</h2>
+        </div>
+        <p>
+          Colaboración directa con Finanzas, IT y los especialistas que el
+          proyecto requiera.
+        </p>
+      </div>
+      <ol class="steps compact-steps">
+        {steps.map(([title, description], index) => (
+          <li>
+            <span>0{index + 1}</span>
+            <h3>{title}</h3>
+            <p>{description}</p>
+          </li>
+        ))}
+      </ol>
+    </div>
+  </section>
+  <ContactCTA />
+</Layout>

@@ -3,15 +3,27 @@ import Layout from "../layouts/Layout.astro";
 import TransformationGraphic from "../components/TransformationGraphic.astro";
 import AzhumLogo from "../components/AzhumLogo.astro";
 import ContactCTA from "../components/ContactCTA.astro";
-import { capabilities, steps, identity } from "../data/content";
+import {
+  capabilities,
+  careerPath,
+  cfoProblems,
+  credentials,
+  education,
+  identity,
+  steps,
+  technologyOptions,
+} from "../data/content";
 ---
 
-<Layout>
+<Layout
+  title="Transformación financiera y sistemas · Castillo"
+  description="Castillo conecta Finanzas y Tecnología: diagnóstico, procesos, arquitectura funcional, datos e implantación de soluciones lideradas por Gerson Castillo."
+>
   <section class="hero">
     <div class="wrap hero-grid">
       <div class="hero-copy">
         <p class="eyebrow">
-          <span class="gold-dash"></span> CONSULTORÍA Y DESARROLLO PARA FINANZAS
+          <span class="gold-dash"></span> CASTILLO · TRANSFORMACIÓN FINANCIERA
         </p>
         <h1>
           <span class="hero-line">Del problema</span>{" "}
@@ -19,31 +31,52 @@ import { capabilities, steps, identity } from "../data/content";
           <em>solución implantada.</em>
         </h1>
         <p class="hero-description">
-          Conecto finanzas, procesos, datos y tecnología para mejorar cómo tu
-          organización opera, controla y toma decisiones.
+          Diseño procesos, sistemas y soluciones tecnológicas para mejorar cómo
+          Finanzas opera, controla y toma decisiones. Data & AI cuando aportan
+          valor.
         </p>
         <div class="hero-actions">
           <a class="button" href="/contacto/#message-heading">
-            Formulario de contacto <span aria-hidden="true">→</span>
+            Hablemos de tu proyecto <span aria-hidden="true">→</span>
           </a>
-          <a class="text-link" href="#capacidades">
-            Explorar capacidades <span aria-hidden="true">↓</span>
+          <a class="text-link" href="#servicios">
+            Explorar servicios <span aria-hidden="true">↓</span>
           </a>
         </div>
         <p class="hero-signature">
-          Gerson Castillo <span>·</span> Dirección financiera y construcción
-          tecnológica
+          Gerson Castillo <span>·</span> Finanzas, transformación y tecnología
         </p>
       </div>
       <TransformationGraphic />
     </div>
-    <div class="wrap hero-bottom">
-      <span>TRANSFORMACIÓN FINANCIERA, DE PRINCIPIO A FIN</span>
-      <span>
-        Procesos <b>·</b> Sistemas <b>·</b> Data & AI <b>·</b> Implantación
-      </span>
+    <div class="wrap credentials-strip" aria-label="Credenciales profesionales">
+      {credentials.map((credential) => (
+        <span>{credential}</span>
+      ))}
     </div>
   </section>
+
+  <section class="section cfo-problems">
+    <div class="wrap problems-grid">
+      <div>
+        <p class="eyebrow">CUÁNDO TIENE SENTIDO HABLAR</p>
+        <h2>Cuando Finanzas sabe que algo tiene que cambiar.</h2>
+        <p class="section-intro">
+          El punto de partida no es una herramienta. Es una fricción concreta
+          que afecta al control, la operación o la capacidad de decidir.
+        </p>
+      </div>
+      <ol class="problem-list">
+        {cfoProblems.map((problem, index) => (
+          <li>
+            <span>0{index + 1}</span>
+            {problem}
+          </li>
+        ))}
+      </ol>
+    </div>
+  </section>
+
   <section class="bridge section">
     <div class="wrap split">
       <p class="eyebrow">EL PUNTO DE CONEXIÓN</p>
@@ -57,63 +90,103 @@ import { capabilities, steps, identity } from "../data/content";
         </h2>
         <div class="two-copy">
           <p>
-            Una transformación necesita algo más que una buena herramienta:
-            necesita traducir el criterio financiero en procesos, requisitos y
-            decisiones de diseño.
+            La Dirección Financiera sabe qué necesita conseguir, pero no siempre
+            puede convertirlo en arquitectura funcional, especificaciones,
+            datos, integraciones y criterios de aceptación.
           </p>
           <p>
-            Trabajo en esa intersección. Desde entender qué debe cambiar hasta
-            construir la solución o dirigir su implantación con IT y los
-            proveedores adecuados.
+            IT conoce la tecnología, pero no necesariamente la lógica financiera
+            y contable. Trabajo precisamente en esa frontera para convertir una
+            necesidad del negocio en una solución que pueda construirse,
+            validarse y operar.
           </p>
         </div>
       </div>
     </div>
   </section>
-  <section class="capabilities section" id="capacidades">
+
+  <section class="capabilities section" id="servicios">
     <div class="wrap">
       <div class="section-heading">
         <div>
-          <p class="eyebrow">CAPACIDADES</p>
+          <p class="eyebrow">SERVICIOS</p>
           <h2>
-            Cuatro perspectivas.
+            Del diagnóstico.
             <br />
-            <em>Una transformación coherente.</em>
+            <em>A la solución implantada.</em>
           </h2>
         </div>
         <p>
-          Del proceso al sistema.
-          <br />
-          Del dato a la decisión.
-          <br />
-          Del diseño a la operación.
+          Cuatro líneas de trabajo conectadas por el mismo criterio financiero.
         </p>
       </div>
       <div class="capability-grid">
-        {capabilities.map((c) => (
-          <article class="capability" id={c.id}>
-            <span class="number">{c.number}</span>
-            <h3>{c.title}</h3>
-            <p>{c.text}</p>
-            <p class="tags">{c.tags}</p>
-            <details>
-              <summary>
-                Alcance y entregables <span aria-hidden="true">+</span>
-              </summary>
-              <div>
-                <p>{c.detail}</p>
-                <strong>{c.deliverable}</strong>
-              </div>
-            </details>
+        {capabilities.map((service) => (
+          <article class="capability" id={service.id}>
+            <span class="number">{service.number}</span>
+            <h3>{service.title}</h3>
+            <p class="service-label">QUÉ PROBLEMA RESUELVE</p>
+            <p>{service.problem}</p>
+            <p class="service-label">QUÉ HACE CASTILLO</p>
+            <p>{service.work}</p>
+            <p class="tags">{service.tags}</p>
+            <div class="service-deliverable">
+              <span>QUÉ RECIBE EL CLIENTE</span>
+              <strong>{service.deliverable}</strong>
+            </div>
           </article>
         ))}
       </div>
     </div>
   </section>
+
+  <section class="section method" id="como-trabajo">
+    <div class="wrap">
+      <div class="section-heading">
+        <div>
+          <p class="eyebrow">CÓMO TRABAJO</p>
+          <h2>
+            El diseño es el inicio.
+            <br />
+            <em>La implantación, el compromiso.</em>
+          </h2>
+        </div>
+        <p>Proyectos definidos por alcance, entregables y calendario.</p>
+      </div>
+      <ol class="steps">
+        {steps.map(([title, description], index) => (
+          <li>
+            <span>0{index + 1}</span>
+            <h3>{title}</h3>
+            <p>{description}</p>
+          </li>
+        ))}
+      </ol>
+      <div class="method-note">
+        <div>
+          <span>INDEPENDENCIA TECNOLÓGICA</span>
+          <h3>La tecnología es consecuencia del problema.</h3>
+          <p>
+            Castillo no parte de una herramienta predeterminada. La solución se
+            decide después de entender el proceso, los datos, los controles y la
+            arquitectura existente.
+          </p>
+        </div>
+        <ul class="technology-options">
+          {technologyOptions.map((option) => (
+            <li>{option}</li>
+          ))}
+        </ul>
+      </div>
+    </div>
+  </section>
+
   <section class="ai-feature">
     <div class="wrap ai-grid">
       <div>
-        <p class="eyebrow gold">FOCO / DATA & AI PARA FINANZAS</p>
+        <p class="eyebrow gold">
+          DATA & AI / NUEVAS PALANCAS DE TRANSFORMACIÓN
+        </p>
         <h2>
           Inteligencia artificial.
           <br />
@@ -122,11 +195,12 @@ import { capabilities, steps, identity } from "../data/content";
           Aplicación real.
         </h2>
         <p>
-          La pregunta no es dónde poner IA. Es qué problema merece resolverse
-          con ella y qué hace falta para llevarla a la operación.
+          Data & AI amplía las opciones de transformación. La pregunta sigue
+          siendo qué problema merece resolverse, con qué datos y con qué
+          controles.
         </p>
         <a class="button light" href="/ia-finanzas/">
-          Explorar IA para Finanzas <span aria-hidden="true">↗</span>
+          Explorar Data & AI para Finanzas <span aria-hidden="true">→</span>
         </a>
       </div>
       <div class="ai-opportunities">
@@ -135,7 +209,7 @@ import { capabilities, steps, identity } from "../data/content";
           <span>01</span>
           <div>
             <h3>Operaciones con menos fricción</h3>
-            <p>Agentes, automatización y procesamiento documental.</p>
+            <p>Automatización, agentes y procesamiento documental.</p>
           </div>
           <b aria-hidden="true">↗</b>
         </a>
@@ -143,7 +217,7 @@ import { capabilities, steps, identity } from "../data/content";
           <span>02</span>
           <div>
             <h3>Información para anticiparse</h3>
-            <p>Analítica avanzada, anomalías y modelos predictivos.</p>
+            <p>Analítica avanzada, forecasting y señales de riesgo.</p>
           </div>
           <b aria-hidden="true">↗</b>
         </a>
@@ -162,42 +236,7 @@ import { capabilities, steps, identity } from "../data/content";
       </div>
     </div>
   </section>
-  <section class="section method" id="enfoque">
-    <div class="wrap">
-      <div class="section-heading">
-        <div>
-          <p class="eyebrow">CÓMO TRABAJO</p>
-          <h2>
-            El diseño es el inicio.
-            <br />
-            <em>La implantación, el compromiso.</em>
-          </h2>
-        </div>
-        <p>
-          Proyectos definidos por alcance,
-          <br />
-          entregables y calendario.
-        </p>
-      </div>
-      <ol class="steps">
-        {steps.map(([title, description], i) => (
-          <li>
-            <span>0{i + 1}</span>
-            <h3>{title}</h3>
-            <p>{description}</p>
-          </li>
-        ))}
-      </ol>
-      <div class="method-note">
-        <span>INDEPENDENCIA TECNOLÓGICA</span>
-        <p>
-          La solución puede apoyarse en tu ERP, IT interno, proveedores,
-          plataformas low-code o desarrollo propio. La elección responde al
-          problema.
-        </p>
-      </div>
-    </div>
-  </section>
+
   <section class="founder section" id="gerson">
     <div class="wrap founder-grid">
       <div class="founder-photo">
@@ -210,42 +249,55 @@ import { capabilities, steps, identity } from "../data/content";
         />
         <span>GERSON CASTILLO / FUNDADOR</span>
       </div>
-      <div>
-        <p class="eyebrow">LA PERSONA DETRÁS DE CASTILLO</p>
+      <div class="founder-copy">
+        <p class="eyebrow">GERSON CASTILLO</p>
         <h2>
-          Entender Finanzas.
+          Finanzas, transformación
           <br />
-          <em>Saber construir.</em>
+          <em>y tecnología.</em>
         </h2>
         <p class="lead">
-          Soy Gerson Castillo. Mi trayectoria conecta la dirección financiera
-          con la implantación de sistemas y el desarrollo de software.
+          Mi trayectoria profesional se ha desarrollado en la intersección entre
+          la dirección financiera y los sistemas: desde la gestión de Finanzas
+          en organizaciones complejas hasta el diseño e implantación de software
+          y soluciones de datos.
         </p>
         <p>
-          Esa combinación me permite conversar con quienes operan el negocio y
-          con quienes construyen la tecnología, y convertir sus necesidades en
-          una solución compartida.
+          He trabajado desde tres lados de la misma mesa: como responsable
+          financiero que compra y utiliza tecnología, como profesional que
+          dirige implantaciones y como fundador que construye producto.
         </p>
-        <p>
-          Lidero personalmente los proyectos de Castillo, desde el diagnóstico
-          hasta la implantación, colaborando con los equipos y especialistas que
-          cada contexto requiere.
+        <div class="career-preview" aria-label="Trayectoria ejecutiva">
+          {careerPath.slice(0, 4).map(([title]) => (
+            <span>{title}</span>
+          ))}
+        </div>
+        <p class="education-preview">
+          <strong>Formación:</strong>{" "}
+          {education.map(([degree]) => degree).join(" · ")}
         </p>
-        <a
-          class="text-link"
-          href={identity.linkedin}
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Conocer mi trayectoria en LinkedIn <span aria-hidden="true">↗</span>
-        </a>
+        <div class="inline-actions">
+          <a class="button" href="/sobre-castillo/">
+            Sobre Castillo y Gerson <span aria-hidden="true">→</span>
+          </a>
+          <a
+            class="text-link"
+            href={identity.linkedin}
+            target="_blank"
+            rel="noopener noreferrer"
+          >
+            Ver trayectoria completa en LinkedIn{" "}
+            <span aria-hidden="true">↗</span>
+          </a>
+        </div>
       </div>
     </div>
   </section>
+
   <section class="azhum-section">
     <div class="wrap azhum-grid">
       <div>
-        <p class="eyebrow">TECNOLOGÍA PROPIA / EMPRESA SEPARADA</p>
+        <p class="eyebrow">PRODUCTO PROPIO / INTELIGENCIA FINANCIERA</p>
         <h2 class="azhum-logo">
           <AzhumLogo />
         </h2>
@@ -253,12 +305,13 @@ import { capabilities, steps, identity } from "../data/content";
       <div>
         <h3>Capacidad tecnológica, construida.</h3>
         <p>
-          Azhum es la plataforma de inteligencia financiera que he diseñado y
-          construido. Un producto propio que conecta software, datos e IA.
+          Azhum es la plataforma de inteligencia financiera diseñada y
+          construida por Gerson Castillo.
         </p>
         <p>
-          Puede formar parte de un proyecto cuando encaja. La práctica de
-          Castillo mantiene su independencia para elegir la tecnología adecuada.
+          Puede formar parte de una solución cuando encaja. Castillo mantiene
+          independencia tecnológica para trabajar con la herramienta o
+          arquitectura adecuada para cada proyecto.
         </p>
         <a
           class="text-link"

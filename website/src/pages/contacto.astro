@@ -12,9 +12,9 @@ import ContactForm from "../components/ContactForm.astro";
     <div class="wrap">
       <p class="eyebrow">CONTACTO DIRECTO / GERSON CASTILLO</p>
       <h1>
-        Una conversación.
+        Hablemos de tu proyecto.
         <br />
-        <em>Un problema concreto.</em>
+        <em>Empecemos por el problema.</em>
       </h1>
       <p class="lead">
         Cuéntame qué necesita cambiar en tu función financiera. Partiremos de tu
@@ -23,13 +23,14 @@ import ContactForm from "../components/ContactForm.astro";
     </div>
   </section>
   <div class="wrap contact-grid">
-    <div>
+    <ContactForm />
+    <aside>
       <div class="contact-panel">
-        <p class="eyebrow">MI CANAL PRINCIPAL</p>
-        <h2>Conectemos en LinkedIn.</h2>
+        <p class="eyebrow">OTRA FORMA DE CONTACTO</p>
+        <h2>También puedes encontrarme en LinkedIn.</h2>
         <p>
-          Es el mejor punto de partida para conocernos y hablar de lo que
-          necesitas.
+          Si ya estamos conectados o prefieres una conversación directa, puedes
+          escribirme allí.
         </p>
         <a
           id="linkedin-cta"
@@ -58,14 +59,13 @@ import ContactForm from "../components/ContactForm.astro";
           No necesitas tener la solución definida. Ese es parte del trabajo.
         </p>
       </div>
-    </div>
-    <ContactForm />
+    </aside>
   </div>
 </Layout>
 
 <style>
   .contact-grid {
-    grid-template-columns: 0.9fr 1.1fr;
+    grid-template-columns: 1.1fr 0.9fr;
     gap: 45px;
     align-items: start;
   }

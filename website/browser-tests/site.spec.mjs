@@ -8,6 +8,7 @@ for (const width of [390, 768, 1440]) {
     for (const route of [
       "/",
       "/ia-finanzas/",
+      "/sobre-castillo/",
       "/contacto/",
       "/consolidacion/",
     ]) {
@@ -48,22 +49,26 @@ test("Mobile menu, details, AI contact and keyboard", async ({ page }) => {
   await menu.click();
   await page
     .getByRole("navigation")
-    .getByRole("link", { name: "Capacidades" })
+    .getByRole("link", { name: "Servicios" })
     .click();
   await expect(menu).toHaveAttribute("aria-expanded", "false");
-  await page.locator("summary").first().click();
-  await expect(page.locator("details").first()).toHaveAttribute("open", "");
+  await expect(page.locator("#servicios")).toBeInViewport();
   await page.goto("/");
   await expect(
-    page.getByRole("link", { name: "Formulario de contacto" }).first(),
+    page.getByRole("link", { name: "Hablemos de tu proyecto" }).first(),
   ).toHaveAttribute("href", "/contacto/#message-heading");
+  await expect(page.getByText("QUÉ RECIBE EL CLIENTE")).toHaveCount(4);
   await page.goto("/ia-finanzas/");
   await expect(
-    page.getByRole("link", { name: "Hablemos de IA por LinkedIn" }),
-  ).toHaveAttribute(
-    "href",
-    "https://www.linkedin.com/in/gersoncastillolorenzo/",
-  );
+    page.getByRole("link", { name: "Hablemos de tu proyecto" }).first(),
+  ).toHaveAttribute("href", "/contacto/#message-heading");
+  await page.goto("/sobre-castillo/");
+  await expect(
+    page.getByRole("heading", { name: /Finanzas, transformación/ }),
+  ).toBeVisible();
+  await expect(
+    page.getByText("Licenciatura en Contaduría Pública"),
+  ).toBeVisible();
   await page.goto("/contacto/");
   await expect(page.locator("#linkedin-cta")).toHaveAttribute(
     "href",
@@ -74,18 +79,28 @@ test("Mobile menu, details, AI contact and keyboard", async ({ page }) => {
 test("Capture review screenshots", async ({ page }) => {
   for (const width of [1440, 390]) {
     await page.setViewportSize({ width, height: 1000 });
-    await page.goto("/");
-    for (const img of await page.locator("img").all()) {
-      await img.scrollIntoViewIfNeeded();
-      await expect
-        .poll(() => img.evaluate((el) => el.complete && el.naturalWidth > 0))
-        .toBeTruthy();
+    for (const [name, route] of [
+      ["home", "/"],
+      ["sobre-castillo", "/sobre-castillo/"],
+    ]) {
+      await page.goto(route);
+      await page.evaluate(() => document.fonts.ready);
+      for (const img of await page.locator("img").all()) {
+        await img.scrollIntoViewIfNeeded();
+        await expect
+          .poll(() => img.evaluate((el) => el.complete && el.naturalWidth > 0))
+          .toBeTruthy();
+      }
+      await page.evaluate(() =>
+        window.scrollTo({ top: 0, behavior: "instant" }),
+      );
+      await page.screenshot({
+        path: `test-results/${name}-${width}.png`,
+        fullPage: true,
+      });
+      if (name === "home") {
+        await page.screenshot({ path: `test-results/hero-${width}.png` });
+      }
     }
-    await page.evaluate(() => window.scrollTo({ top: 0, behavior: "instant" }));
-    await page.screenshot({
-      path: `test-results/home-${width}.png`,
-      fullPage: true,
-    });
-    await page.screenshot({ path: `test-results/hero-${width}.png` });
   }
 });
