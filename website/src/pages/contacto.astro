@@ -1,0 +1,89 @@
+---
+import Layout from "../layouts/Layout.astro";
+import { identity } from "../data/content";
+import ContactForm from "../components/ContactForm.astro";
+---
+
+<Layout
+  title="Hablemos de tu proyecto · Castillo"
+  description="Cuéntame qué necesita cambiar en tu función financiera. Contacto directo con Gerson Castillo para proyectos de procesos, sistemas y Data & AI."
+>
+  <section class="page-hero">
+    <div class="wrap">
+      <p class="eyebrow">CONTACTO DIRECTO / GERSON CASTILLO</p>
+      <h1>
+        Una conversación.
+        <br />
+        <em>Un problema concreto.</em>
+      </h1>
+      <p class="lead">
+        Cuéntame qué necesita cambiar en tu función financiera. Partiremos de tu
+        contexto para valorar el alcance y el siguiente paso.
+      </p>
+    </div>
+  </section>
+  <div class="wrap contact-grid">
+    <div>
+      <div class="contact-panel">
+        <p class="eyebrow">MI CANAL PRINCIPAL</p>
+        <h2>Conectemos en LinkedIn.</h2>
+        <p>
+          Es el mejor punto de partida para conocernos y hablar de lo que
+          necesitas.
+        </p>
+        <a
+          id="linkedin-cta"
+          class="button"
+          href={identity.linkedin}
+          target="_blank"
+          rel="noopener noreferrer"
+        >
+          Contactar por LinkedIn <span aria-hidden="true">↗</span>
+        </a>
+      </div>
+      <div class="contact-context">
+        <p class="eyebrow">PARA EMPEZAR, ES ÚTIL CONOCER</p>
+        <ol class="contact-prompts">
+          <li>
+            <span>01</span> El proceso, sistema o decisión que quieres mejorar.
+          </li>
+          <li>
+            <span>02</span> Las dificultades actuales y los equipos implicados.
+          </li>
+          <li>
+            <span>03</span> Qué resultado buscas y en qué horizonte.
+          </li>
+        </ol>
+        <p>
+          No necesitas tener la solución definida. Ese es parte del trabajo.
+        </p>
+      </div>
+    </div>
+    <ContactForm />
+  </div>
+</Layout>
+
+<style>
+  .contact-grid {
+    grid-template-columns: 0.9fr 1.1fr;
+    gap: 45px;
+    align-items: start;
+  }
+  .contact-context {
+    margin-top: 38px;
+  }
+  .contact-context > p:last-child {
+    font-size: 14px;
+    color: var(--muted);
+  }
+  .contact-panel .eyebrow {
+    font-size: 11px;
+    margin: 0 0 18px;
+  }
+  @media (max-width: 800px) {
+    .contact-grid {
+      grid-template-columns: 1fr;
+      gap: 36px;
+    }
+  }
+</style>

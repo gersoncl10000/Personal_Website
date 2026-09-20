@@ -1,0 +1,85 @@
+---
+import Layout from "../layouts/Layout.astro";
+import reports from "../data/reports.json";
+---
+
+<Layout
+  title="Ejercicio de consolidación financiera · Gerson Castillo"
+  description="Recurso educativo de Gerson Castillo sobre consolidación financiera: premisas, mapa de procesos, presentación e informes de Power BI."
+>
+  <section class="page-hero">
+    <div class="wrap resource">
+      <p class="eyebrow">RECURSO EDUCATIVO / GERSON CASTILLO</p>
+      <h1>
+        Consolidación
+        <br />
+        <em>financiera.</em>
+      </h1>
+      <p class="lead">
+        Ejercicio sobre Normas Internacionales de Información Financiera
+        (NIC-NIIF), conservado de la web anterior. Es material educativo, no un
+        caso de cliente.
+      </p>
+    </div>
+  </section>
+  <section class="section white-section">
+    <div class="wrap resource">
+      <h2>Premisas del ejercicio</h2>
+      <p>
+        Grupo empresarial ficticio: Casa Matriz, S.A., con sede en España y
+        moneda funcional EUR; Subsidiaria, Inc., con sede en Estados Unidos y
+        moneda funcional USD.
+      </p>
+      <ul>
+        <li>
+          En junio de 2023, la matriz paga 100.000 € por el 70 % de las acciones
+          comunes de la subsidiaria.
+        </li>
+        <li>
+          Vende mercancía a la subsidiaria por 5.000 €, con un margen del 20 %.
+        </li>
+        <li>
+          Vende equipos por 10.000 €, con una ganancia de 1.000 € sobre el coste
+          de adquisición.
+        </li>
+        <li>
+          El ejercicio establece una relación de control para trabajar la
+          consolidación.
+        </li>
+      </ul>
+      <img
+        src="/images/consolidacion.jpg"
+        alt="Mapa de procesos y flujo de datos del ejercicio de consolidación financiera"
+        loading="lazy"
+      />
+      <h2>Presentación e informes</h2>
+      <a
+        class="button"
+        href="/files/Ejercicio%20de%20Consolidacion%20Finaciera%20Publico.pptx"
+        download
+      >
+        Descargar presentación PowerPoint <span aria-hidden="true">↓</span>
+      </a>
+      <ul class="report-links">
+        {reports.map((url, i) => (
+          <li>
+            <a href={url} target="_blank" rel="noopener noreferrer">
+              {
+                [
+                  "Balance consolidado: activo",
+                  "Balance consolidado: pasivo",
+                  "Estado de resultados consolidado",
+                ][i]
+              }{" "}
+              · Power BI ↗
+            </a>
+          </li>
+        ))}
+      </ul>
+      <p>
+        Los informes se abren en el servicio externo de Microsoft Power BI. Su
+        disponibilidad depende de la publicación original.
+      </p>
+    </div>
+  </section>
+</Layout>

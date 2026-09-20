@@ -1,0 +1,17 @@
+/* Source audit: legacy bootstrap.custom.scss. These are not the new brand. */
+:root {
+  --legacy-black: #000000;
+  --legacy-red: #bf0413;
+  --legacy-orange: #f27405;
+  /* Navy: dominant pixel in supplied original PNG. Gold: sampled interior pixel (100,100); raster approximation, not a vector specification. */
+  --navy: #081327;
+  --paper: #f3f6f9;
+  --white: #fff;
+  --gold: #dcb574;
+  --ink: #102238;
+  --muted: #526174;
+  --line: #dbe2e9;
+  --serif: "Manrope Variable", "Segoe UI", sans-serif;
+  --sans: "Inter Variable", "Segoe UI", sans-serif;
+  --width: 1280px;
+}

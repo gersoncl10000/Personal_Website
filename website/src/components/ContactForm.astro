@@ -1,0 +1,272 @@
+---
+const accessKey = import.meta.env.PUBLIC_WEB3FORMS_ACCESS_KEY?.trim() || "";
+---
+
+<section class="message-panel" aria-labelledby="message-heading">
+  <p class="eyebrow">TAMBIÉN PUEDES ESCRIBIRME AQUÍ</p>
+  <h2 id="message-heading">Cuéntame tu proyecto.</h2>
+  <p class="form-intro">Déjame un mensaje y te responderé por correo.</p>
+  <form
+    id="contact-form"
+    method="post"
+    action="https://api.web3forms.com/submit"
+    data-configured={Boolean(accessKey)}
+  >
+    <input type="hidden" name="access_key" value={accessKey} />
+    <input
+      type="hidden"
+      name="subject"
+      value="[Castillo] Nueva consulta · gersoncastillo.dev"
+    />
+    <input
+      type="hidden"
+      name="from_name"
+      value="Castillo · Transformación Financiera"
+    />
+    <input type="hidden" name="origen" value="gersoncastillo.dev/contacto" />
+    <input
+      type="checkbox"
+      name="botcheck"
+      class="form-honeypot"
+      tabindex="-1"
+      aria-hidden="true"
+      autocomplete="off"
+    />
+    <fieldset disabled={!accessKey}>
+      <legend class="visually-hidden">Datos de contacto y mensaje</legend>
+      <div class="form-row">
+        <div class="form-field">
+          <label for="contact-name">Nombre</label>
+          <input
+            id="contact-name"
+            name="name"
+            autocomplete="name"
+            required
+            maxlength="100"
+          />
+        </div>
+        <div class="form-field">
+          <label for="contact-email">Correo electrónico</label>
+          <input
+            id="contact-email"
+            name="email"
+            type="email"
+            autocomplete="email"
+            required
+            maxlength="254"
+          />
+        </div>
+      </div>
+      <div class="form-field">
+        <label for="contact-company">
+          Empresa <span>(opcional)</span>
+        </label>
+        <input
+          id="contact-company"
+          name="empresa"
+          autocomplete="organization"
+          maxlength="150"
+        />
+      </div>
+      <div class="form-field">
+        <label for="contact-message">¿Qué te gustaría mejorar?</label>
+        <textarea
+          id="contact-message"
+          name="message"
+          required
+          minlength="10"
+          maxlength="5000"
+          rows="5"
+          aria-describedby="message-hint"
+        ></textarea>
+        <small id="message-hint">
+          Un poco de contexto es suficiente para empezar.
+        </small>
+      </div>
+      <p class="form-privacy">
+        Gerson Castillo utilizará tus datos para responder a esta consulta. El
+        envío se procesa mediante{" "}
+        <a
+          href="https://web3forms.com/privacy"
+          target="_blank"
+          rel="noopener noreferrer"
+        >
+          Web3Forms (privacidad)
+        </a>
+        .
+      </p>
+      <button class="button" type="submit">
+        Enviar mensaje <span aria-hidden="true">↗</span>
+      </button>
+    </fieldset>
+    <p
+      id="contact-status"
+      class="form-status"
+      role="status"
+      aria-live="polite"
+      aria-atomic="true"
+    >
+      {!accessKey &&
+        "El formulario estará disponible próximamente. Mientras tanto, puedes contactarme por LinkedIn."}
+    </p>
+  </form>
+</section>
+
+<script>
+  import { sendContact } from "../lib/contact.mjs";
+  const form = document.querySelector<HTMLFormElement>("#contact-form");
+  const status = document.querySelector<HTMLElement>("#contact-status");
+  const fields = form?.querySelector<HTMLFieldSetElement>("fieldset");
+  const button = form?.querySelector<HTMLButtonElement>(
+    'button[type="submit"]',
+  );
+  let sending = false;
+  form?.addEventListener("submit", async (event) => {
+    event.preventDefault();
+    if (sending || !status || !button || form.dataset.configured !== "true")
+      return;
+    if (!form.reportValidity()) return;
+    const data = new FormData(form);
+    for (const key of ["name", "email", "empresa", "message"]) {
+      data.set(key, String(data.get(key) || "").trim());
+    }
+    if (!data.get("name") || String(data.get("message")).length < 10) {
+      status.textContent =
+        "Indica tu nombre y un mensaje de al menos 10 caracteres.";
+      status.dataset.state = "error";
+      return;
+    }
+    sending = true;
+    if (fields) fields.disabled = true;
+    button.disabled = true;
+    form.setAttribute("aria-busy", "true");
+    status.dataset.state = "sending";
+    status.textContent = "Enviando tu mensaje…";
+    const result = await sendContact(data);
+    status.textContent = result.message;
+    status.dataset.state = result.ok ? "success" : "error";
+    if (result.ok) form.reset();
+    form.removeAttribute("aria-busy");
+    if (fields) fields.disabled = false;
+    button.disabled = false;
+    sending = false;
+  });
+</script>
+
+<style>
+  .message-panel {
+    border: 1px solid var(--line);
+    border-top: 3px solid var(--navy);
+    padding: 36px;
+    border-radius: 3px;
+  }
+  h2 {
+    font-size: 30px;
+  }
+  .eyebrow {
+    margin-bottom: 14px;
+  }
+  .form-intro {
+    color: var(--muted);
+    font-size: 14px;
+    margin: 15px 0 28px;
+  }
+  fieldset {
+    border: 0;
+    padding: 0;
+    margin: 0;
+    min-width: 0;
+  }
+  .form-row {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 18px;
+  }
+  .form-field {
+    display: flex;
+    flex-direction: column;
+    margin-bottom: 20px;
+    gap: 7px;
+  }
+  label {
+    font-size: 13px;
+    font-weight: 600;
+  }
+  label span,
+  small {
+    color: var(--muted);
+    font-weight: 400;
+    font-size: 12px;
+  }
+  input,
+  textarea {
+    width: 100%;
+    border: 1px solid #8997a7;
+    border-radius: 3px;
+    padding: 11px 12px;
+    background: white;
+    color: var(--ink);
+    font: 16px/1.5 var(--sans);
+  }
+  textarea {
+    resize: vertical;
+    min-height: 145px;
+  }
+  input:focus-visible,
+  textarea:focus-visible {
+    outline: 2px solid var(--navy);
+    outline-offset: 3px;
+  }
+  .form-privacy {
+    font-size: 12px;
+    color: var(--muted);
+    margin: 4px 0 22px;
+  }
+  .form-privacy a {
+    text-decoration: underline;
+    text-underline-offset: 3px;
+  }
+  button {
+    border: 0;
+    cursor: pointer;
+  }
+  button:disabled {
+    cursor: not-allowed;
+    opacity: 0.65;
+    transform: none;
+  }
+  .form-status {
+    font-size: 14px;
+    margin-top: 18px;
+  }
+  .form-status:empty {
+    display: none;
+  }
+  .form-status[data-state="error"] {
+    color: #9b2b26;
+  }
+  .form-status[data-state="success"] {
+    color: #206043;
+  }
+  .form-honeypot {
+    display: none;
+  }
+  .visually-hidden {
+    position: absolute;
+    width: 1px;
+    height: 1px;
+    overflow: hidden;
+    clip-path: inset(50%);
+  }
+  @media (max-width: 1100px) {
+    .form-row {
+      grid-template-columns: 1fr;
+      gap: 0;
+    }
+  }
+  @media (max-width: 800px) {
+    .message-panel {
+      padding: 25px;
+    }
+  }
+</style>

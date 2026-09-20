@@ -1,0 +1,211 @@
+---
+import Layout from "../layouts/Layout.astro";
+import ContactCTA from "../components/ContactCTA.astro";
+import { identity } from "../data/content";
+const opportunities = [
+  [
+    "Documentos y tareas repetitivas",
+    "Extraer y clasificar información de documentos, preparar registros y coordinar tareas con automatización y agentes.",
+    "Evaluar: volumen, excepciones y validación humana.",
+  ],
+  [
+    "Análisis y explicación financiera",
+    "Consultar información y preparar borradores de análisis con GenAI, utilizando fuentes identificables y permisos adecuados.",
+    "Evaluar: trazabilidad, exactitud y acceso al dato.",
+  ],
+  [
+    "Previsión y señales de riesgo",
+    "Explorar forecasting, modelos predictivos y detección de anomalías para orientar la revisión y la toma de decisiones.",
+    "Evaluar: histórico, calidad del dato y error tolerable.",
+  ],
+];
+const phases = [
+  [
+    "Descubrir",
+    "Identificar fricciones y casos de uso con Finanzas y Administración.",
+  ],
+  ["Priorizar", "Contrastar viabilidad, retorno esperado, coste y riesgo."],
+  [
+    "Diseñar",
+    "Definir arquitectura, datos, controles y criterios de aceptación.",
+  ],
+  [
+    "Construir o dirigir",
+    "Desarrollar o coordinar al equipo y la plataforma adecuados.",
+  ],
+  [
+    "Implantar",
+    "Probar con usuarios, validar excepciones y acompañar la adopción.",
+  ],
+  [
+    "Medir y gobernar",
+    "Seguir resultados, costes, calidad y oportunidades de mejora.",
+  ],
+];
+---
+
+<Layout
+  title="IA para Finanzas y Administración · Castillo"
+  description="Evalúa oportunidades de automatización, agentes, GenAI y analítica aplicada a Finanzas. Del caso de uso a la implantación, con control y criterio financiero."
+>
+  <section class="page-hero">
+    <div class="wrap">
+      <div class="page-kicker">
+        <p class="eyebrow">DATA & AI / FINANZAS Y ADMINISTRACIÓN</p>
+        <a href="/">← Transformación financiera</a>
+      </div>
+      <h1>
+        De la oportunidad de IA
+        <br />
+        <em>a una solución que opera.</em>
+      </h1>
+      <p class="lead">
+        Identificar dónde aporta valor, decidir qué merece construirse y
+        llevarlo a producción con los controles que Finanzas necesita.
+      </p>
+      <a
+        class="button"
+        href={identity.linkedin}
+        target="_blank"
+        rel="noopener noreferrer"
+      >
+        Hablemos de IA por LinkedIn <span aria-hidden="true">↗</span>
+      </a>
+    </div>
+  </section>
+  <section class="section white-section" id="oportunidades">
+    <div class="wrap">
+      <div class="section-heading">
+        <div>
+          <p class="eyebrow">PARTIR DEL PROBLEMA</p>
+          <h2>
+            No toda tarea necesita IA.
+            <br />
+            <em>Algunas sí merecen otra solución.</em>
+          </h2>
+        </div>
+        <p>Ámbitos de aplicación para evaluar según tus datos y procesos.</p>
+      </div>
+      <div class="opportunity-grid">
+        {opportunities.map(([title, text, check], i) => (
+          <article>
+            <span class="number">0{i + 1}</span>
+            <h3>{title}</h3>
+            <p>{text}</p>
+            <small>{check}</small>
+          </article>
+        ))}
+      </div>
+    </div>
+  </section>
+  <section class="section">
+    <div class="wrap">
+      <div class="section-heading">
+        <div>
+          <p class="eyebrow">DEL CASO DE USO A LA IMPLANTACIÓN</p>
+          <h2>
+            Primero, criterio.
+            <br />
+            <em>Después, tecnología.</em>
+          </h2>
+        </div>
+        <p>Una hoja de ruta con decisiones y entregables en cada etapa.</p>
+      </div>
+      <div class="opportunity-grid">
+        {phases.map(([title, text], i) => (
+          <article>
+            <span class="number">0{i + 1}</span>
+            <h3>{title}</h3>
+            <p>{text}</p>
+          </article>
+        ))}
+      </div>
+    </div>
+  </section>
+  <section class="section governance" id="gobierno">
+    <div class="wrap ai-grid">
+      <div>
+        <p class="eyebrow gold">GOBIERNO DESDE EL DISEÑO</p>
+        <h2>
+          Más autonomía.
+          <br />
+          <em>Con límites claros.</em>
+        </h2>
+        <p>
+          La calidad de una solución también se mide por cómo trata una
+          excepción, justifica una respuesta y permite que una persona
+          intervenga.
+        </p>
+      </div>
+      <ul class="checks">
+        <li>
+          <span>01</span> Datos, permisos y fuentes identificados.
+        </li>
+        <li>
+          <span>02</span> Revisión humana en las decisiones que lo requieren.
+        </li>
+        <li>
+          <span>03</span> Pruebas y criterios de aceptación antes del
+          despliegue.
+        </li>
+        <li>
+          <span>04</span> Trazabilidad de resultados y gestión de excepciones.
+        </li>
+        <li>
+          <span>05</span> Seguimiento de calidad, coste y adopción.
+        </li>
+      </ul>
+    </div>
+  </section>
+  <section class="section white-section">
+    <div class="wrap faq">
+      <p class="eyebrow">PREGUNTAS PRÁCTICAS</p>
+      <h2>Antes de empezar.</h2>
+      <div style="margin-top:35px">
+        <details>
+          <summary>
+            ¿Hay que sustituir el ERP?<span aria-hidden="true">+</span>
+          </summary>
+          <div>
+            No necesariamente. El diagnóstico determina qué puede resolverse con
+            el sistema actual, una integración, automatización o una aplicación
+            específica. La tecnología se elige después de entender el proceso.
+          </div>
+        </details>
+        <details>
+          <summary>
+            ¿Quién construye la solución?<span aria-hidden="true">+</span>
+          </summary>
+          <div>
+            Puedo desarrollar directamente cuando el alcance encaja, o definir y
+            dirigir la implantación con tu equipo de IT, un proveedor o
+            especialistas externos. Las responsabilidades se acuerdan desde el
+            inicio.
+          </div>
+        </details>
+        <details>
+          <summary>
+            ¿Es obligatorio utilizar Azhum?<span aria-hidden="true">+</span>
+          </summary>
+          <div>
+            No. Azhum es mi producto propio y una empresa tecnológica separada.
+            Castillo mantiene independencia para trabajar con la plataforma que
+            mejor responda a tu contexto.
+          </div>
+        </details>
+        <details>
+          <summary>
+            ¿Se puede estimar el retorno antes de construir?
+            <span aria-hidden="true">+</span>
+          </summary>
+          <div>
+            Se puede formular un caso de negocio con hipótesis explícitas sobre
+            volumen, tiempos, costes y riesgos. Esas hipótesis deben
+            contrastarse; no son una promesa de ahorro.
+          </div>
+        </details>
+      </div>
+    </div>
+  </section>
+  <ContactCTA />
+</Layout>
