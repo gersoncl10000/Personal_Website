@@ -29,6 +29,18 @@ test("All public pages contain indexable Spanish content and unique metadata", (
     titles.add(title);
   }
 });
+test("Homepage declares the Castillo symbol as favicon and business logo", () => {
+  const html = readFileSync(resolve("/"), "utf8");
+  assert.match(
+    html,
+    /rel="icon"[^>]+sizes="200x200"[^>]+href="\/images\/castillo-symbol\.png"/,
+  );
+  assert.match(html, /rel="apple-touch-icon"[^>]+castillo-symbol\.png/);
+  assert.match(
+    html,
+    /"logo":"https:\/\/gersoncastillo\.dev\/images\/castillo-symbol\.png"/,
+  );
+});
 test("Internal links, fragments and image assets resolve in the build", () => {
   for (const route of routes) {
     const html = readFileSync(resolve(route), "utf8");

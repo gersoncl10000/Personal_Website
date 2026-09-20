@@ -19,7 +19,13 @@ const canonical = new URL(current, Astro.site);
     <meta charset="utf-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1" />
     <title>{title}</title>
-    <link rel="icon" type="image/png" href="/images/castillo-symbol.png" />
+    <link
+      rel="icon"
+      type="image/png"
+      sizes="200x200"
+      href="/images/castillo-symbol.png"
+    />
+    <link rel="apple-touch-icon" href="/images/castillo-symbol.png" />
     <meta name="description" content={description} />
     <link rel="canonical" href={canonical} />
     <meta property="og:title" content={title} />
@@ -36,6 +42,8 @@ const canonical = new URL(current, Astro.site);
         "@type": "ProfessionalService",
         name: identity.name,
         url: Astro.site,
+        logo: new URL("/images/castillo-symbol.png", Astro.site),
+        image: new URL("/images/castillo-symbol.png", Astro.site),
         founder: { "@type": "Person", name: "Gerson Castillo" },
       })}
     ></script>
