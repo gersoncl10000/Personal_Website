@@ -53,6 +53,10 @@ test("Mobile menu, details, AI contact and keyboard", async ({ page }) => {
   await expect(menu).toHaveAttribute("aria-expanded", "false");
   await page.locator("summary").first().click();
   await expect(page.locator("details").first()).toHaveAttribute("open", "");
+  await page.goto("/");
+  await expect(
+    page.getByRole("link", { name: "Formulario de contacto" }).first(),
+  ).toHaveAttribute("href", "/contacto/#message-heading");
   await page.goto("/ia-finanzas/");
   await expect(
     page.getByRole("link", { name: "Hablemos de IA por LinkedIn" }),
