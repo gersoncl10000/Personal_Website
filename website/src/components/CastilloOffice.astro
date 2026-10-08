@@ -1,0 +1,29 @@
+---
+import { castilloOffice } from "../data/content";
+---
+
+<section class="office-section" aria-labelledby="castillo-office-title">
+  <div class="wrap office-grid">
+    <div>
+      <p class="eyebrow">OFICINA DE CASTILLO EN MADRID</p>
+      <h2 id="castillo-office-title">Un punto de encuentro en Madrid.</h2>
+    </div>
+    <address class="office-address">
+      <strong>Castillo · Transformación Financiera</strong>
+      <span>{castilloOffice.name}</span>
+      <p>{castilloOffice.streetAddress}</p>
+      <p>
+        {castilloOffice.postalCode} {castilloOffice.locality},{" "}
+        {castilloOffice.country}
+      </p>
+      <a
+        class="text-link"
+        href={castilloOffice.maps}
+        target="_blank"
+        rel="noopener noreferrer"
+      >
+        Ver ubicación <span aria-hidden="true">↗</span>
+      </a>
+    </address>
+  </div>
+</section>

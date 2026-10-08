@@ -4,7 +4,7 @@ export const identity = {
   azhum: "https://azhum.com",
 };
 
-export const azhumOffice = {
+export const castilloOffice = {
   name: "Avalon – PE AVALON",
   streetAddress: "Calle Santa Leonor 65",
   postalCode: "28037",
