@@ -84,6 +84,18 @@ test("About page contains only the approved academic qualifications", () => {
   assert.doesNotMatch(html, /HarvardX|MOOC|certificaci[oó]n|curso/i);
 });
 
+test("Azhum office in Madrid is visible without becoming Castillo's address", () => {
+  for (const route of ["/", "/sobre-castillo/"]) {
+    const html = readFileSync(resolve(route), "utf8");
+    assert.match(html, /OFICINA DE AZHUM EN MADRID/);
+    assert.match(html, /Avalon – PE AVALON/);
+    assert.match(html, /Calle Santa Leonor 65/);
+    assert.match(html, /28037 Madrid, España/);
+  }
+  const layout = readFileSync("src/layouts/Layout.astro", "utf8");
+  assert.doesNotMatch(layout, /Calle Santa Leonor 65/);
+});
+
 test("Generated public copy avoids unsupported team and AI delivery claims", () => {
   for (const route of routes) {
     const html = readFileSync(resolve(route), "utf8");

@@ -4,6 +4,15 @@ export const identity = {
   azhum: "https://azhum.com",
 };
 
+export const azhumOffice = {
+  name: "Avalon – PE AVALON",
+  streetAddress: "Calle Santa Leonor 65",
+  postalCode: "28037",
+  locality: "Madrid",
+  country: "España",
+  maps: "https://www.google.com/maps/search/?api=1&query=Avalon%20PE%20AVALON%2C%20Calle%20Santa%20Leonor%2065%2C%2028037%20Madrid%2C%20Espa%C3%B1a",
+};
+
 export const credentials = [
   "17 años en Finanzas",
   "Dirección financiera",

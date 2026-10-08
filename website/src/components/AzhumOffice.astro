@@ -1,0 +1,20 @@
+---
+import { azhumOffice } from "../data/content";
+---
+
+<address class="azhum-office">
+  <span>OFICINA DE AZHUM EN MADRID</span>
+  <strong>{azhumOffice.name}</strong>
+  <p>{azhumOffice.streetAddress}</p>
+  <p>
+    {azhumOffice.postalCode} {azhumOffice.locality}, {azhumOffice.country}
+  </p>
+  <a
+    class="text-link"
+    href={azhumOffice.maps}
+    target="_blank"
+    rel="noopener noreferrer"
+  >
+    Ver ubicación <span aria-hidden="true">↗</span>
+  </a>
+</address>

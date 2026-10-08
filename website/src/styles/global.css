@@ -667,6 +667,32 @@ details strong {
 .azhum-grid .text-link {
   margin-top: 15px;
 }
+.azhum-office {
+  border-top: 1px solid #cbd6e1;
+  display: grid;
+  font-style: normal;
+  margin-top: 30px;
+  padding-top: 22px;
+}
+.azhum-office > span {
+  color: #536479;
+  font-size: 10px;
+  font-weight: 650;
+  letter-spacing: 0.11em;
+  margin-bottom: 8px;
+}
+.azhum-office strong {
+  color: var(--ink);
+  font-size: 15px;
+  font-weight: 600;
+  margin-bottom: 3px;
+}
+.azhum-office p {
+  margin: 0;
+}
+.azhum-office .text-link {
+  justify-self: start;
+}
 .contact-cta {
   background: var(--navy);
   color: white;
