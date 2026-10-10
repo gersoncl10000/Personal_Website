@@ -1,5 +1,11 @@
 # Arquitectura actual y decisión de migración
 
+## Actualización de dominio — 2026-10-10
+
+La aplicación actual es Astro estático en `website/`, publicado en el mismo recurso Azure Static Web Apps `ProfessionalWebsite`. Se prepara `https://gersoncastillo.com` como dominio principal: configuración Astro, sitemap, robots y origen del formulario actualizados. El dominio `.com` resuelve a Azure mediante ALIAS; su validación y HTTPS deben completarse antes de publicar el cambio. Los dominios `.dev` continúan asociados al recurso durante la migración. La auditoría que sigue registra el estado anterior y se conserva como historial.
+
+## Auditoría histórica
+
 Auditoría: 2026-09-19. Rama local: `redesign/castillo-transformacion`.
 
 ## Estado observado

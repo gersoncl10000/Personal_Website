@@ -13,7 +13,7 @@ Sin configuración se presenta el formulario deshabilitado con alternativa Linke
 
 ## Separación de Azhum
 
-El código de Azhum combina Web3Forms con su función Azure de captación. Castillo envía exclusivamente a `https://api.web3forms.com/submit`, con asunto `[Castillo] Nueva consulta · gersoncastillo.dev`. No utiliza la función, colas ni configuración de Azhum.
+El código de Azhum combina Web3Forms con su función Azure de captación. Castillo envía exclusivamente a `https://api.web3forms.com/submit`, con asunto `[Castillo] Nueva consulta · gersoncastillo.com` y origen `gersoncastillo.com/contacto`. No utiliza la función, colas ni configuración de Azhum. El cambio de dominio conserva los campos, la clave y el destinatario del formulario.
 
 Castillo utiliza la clave propia aportada por el propietario el 20/09/2026, configurada en `website/.env.local` (ignorado por Git). La clave y ajustes de Azhum permanecen intactos. Para reforzar protección más adelante, añadir hCaptcha y exigirlo en el formulario independiente de Castillo de manera coordinada.
 

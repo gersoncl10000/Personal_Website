@@ -44,11 +44,11 @@ test("Castillo favicon declarations and legacy icon paths use the supplied symbo
   assert.match(html, /rel="apple-touch-icon"[^>]+castillo-symbol\.png/);
   assert.match(
     html,
-    /"logo":"https:\/\/gersoncastillo\.dev\/images\/castillo-symbol\.png"/,
+    /"logo":"https:\/\/gersoncastillo\.com\/images\/castillo-symbol\.png"/,
   );
   assert.match(
     html,
-    /property="og:image" content="https:\/\/gersoncastillo\.dev\/images\/castillo-social\.png"/,
+    /property="og:image" content="https:\/\/gersoncastillo\.com\/images\/castillo-social\.png"/,
   );
   const symbol = readFileSync("dist/images/castillo-symbol.png");
   for (const alias of ["gerson_ico.png", "favicon.png"]) {
@@ -73,6 +73,53 @@ test("Castillo favicon declarations and legacy icon paths use the supplied symbo
   );
   assert.equal(png.readUInt32BE(16), 48);
   assert.equal(png.readUInt32BE(20), 48);
+});
+
+test("Public metadata and crawler files use the primary .com domain", () => {
+  const publicSite = "https://gersoncastillo.com";
+  for (const route of [...routes, "/404.html"]) {
+    const html = readFileSync(resolve(route), "utf8");
+    const expectedUrl = new URL(
+      route === "/404.html" ? "/404/" : route,
+      publicSite,
+    ).href;
+    assert.ok(html.includes(`<link rel="canonical" href="${expectedUrl}"`));
+    assert.ok(
+      html.includes(`<meta property="og:url" content="${expectedUrl}"`),
+    );
+    assert.ok(
+      html.includes(
+        `name="twitter:image" content="${publicSite}/images/castillo-social.png"`,
+      ),
+    );
+    const schema = JSON.parse(
+      html.match(
+        /<script[^>]*type="application\/ld\+json"[^>]*>([\s\S]*?)<\/script>/,
+      )[1],
+    );
+    assert.equal(schema.url, `${publicSite}/`);
+    assert.equal(schema.founder.url, `${publicSite}/sobre-castillo/`);
+    assert.doesNotMatch(html, /gersoncastillo\.dev/i);
+  }
+  const sitemap = readFileSync("dist/sitemap.xml", "utf8");
+  for (const route of routes) {
+    assert.ok(
+      sitemap.includes(`<loc>${new URL(route, publicSite).href}</loc>`),
+    );
+  }
+  assert.doesNotMatch(sitemap, /gersoncastillo\.dev/i);
+  const robots = readFileSync("dist/robots.txt", "utf8");
+  assert.ok(robots.includes(`Sitemap: ${publicSite}/sitemap.xml`));
+  assert.doesNotMatch(robots, /gersoncastillo\.dev/i);
+  const contactHtml = readFileSync(resolve("/contacto/"), "utf8");
+  assert.match(
+    contactHtml,
+    /name="subject" value="\[Castillo\] Nueva consulta · gersoncastillo\.com"/,
+  );
+  assert.match(
+    contactHtml,
+    /name="origen" value="gersoncastillo\.com\/contacto"/,
+  );
 });
 
 test("Commercial positioning and service deliverables are visible on the homepage", () => {

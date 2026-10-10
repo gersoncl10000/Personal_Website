@@ -44,4 +44,6 @@ El contacto ofrece formulario y LinkedIn. El formulario usa Web3Forms directamen
 
 ## Publicación
 
-El workflow de GitHub compila con Node 24, ejecuta las pruebas y publica `website/dist` en `ProfessionalWebsite`, el único Azure Static Web App que sirve `gersoncastillo.dev` y `www.gersoncastillo.dev`. La clave pública de Web3Forms se incorpora durante el build desde el secreto `PUBLIC_WEB3FORMS_ACCESS_KEY`; no se versiona `.env.local`. Los cinco workflows históricos de otros recursos se retiraron para impedir despliegues duplicados. No se requiere cambiar DNS.
+El workflow de GitHub compila con Node 24, ejecuta las pruebas y publica `website/dist` en `ProfessionalWebsite`. El dominio principal configurado en Astro es `https://gersoncastillo.com`; canonical, Open Graph, Twitter Cards y schema.org se generan desde esa configuración. Robots, sitemap y origen del formulario apuntan también a `.com`. Los dominios anteriores `gersoncastillo.dev` y `www.gersoncastillo.dev` permanecen asociados al recurso durante la migración.
+
+La migración de dominio está en preparación: `.com` resuelve a Azure mediante ALIAS y queda pendiente la validación del dominio y HTTPS en Azure. Publicar esta configuración cuando el dominio disponga de HTTPS operativo. La clave pública de Web3Forms se incorpora durante el build desde el secreto `PUBLIC_WEB3FORMS_ACCESS_KEY`; no se versiona `.env.local`. Los cinco workflows históricos de otros recursos se retiraron para impedir despliegues duplicados.

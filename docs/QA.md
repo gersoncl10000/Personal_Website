@@ -18,6 +18,15 @@ La autorización actual incluye publicación. Se utiliza el workflow existente B
 ---
 # Validación local
 
+## Dominio principal .com — 2026-10-10
+
+Migración preparada localmente, sin despliegue. `Astro.site` apunta a `https://gersoncastillo.com`; canonical, Open Graph, Twitter Cards y schema.org heredan esa dirección. Sitemap, robots y los campos de asunto y origen del formulario se actualizan a `.com`, conservando el envío a Web3Forms y su configuración.
+
+- Build Astro correcto: seis páginas estáticas y sitemap.
+- 13 pruebas Node aprobadas, incluida la coherencia del dominio público en metadatos, datos estructurados, sitemap, robots y formulario, y la ausencia de `.dev` en el HTML generado.
+- Sin pruebas de navegador ni envío de correos en esta preparación. Las evidencias visuales anteriores se conservan.
+- Pendiente validación del dominio y HTTPS en Azure antes de publicar. El cambio local no confirma que la migración externa haya finalizado.
+
 ## Voz según el contexto — 2026-10-10
 
 La biografía de Gerson en home y Sobre Castillo utiliza primera persona factual. La autoría de Azhum en Sobre Castillo forma parte de esa presentación; el producto en home e IA mantiene descripción objetiva. Servicios y metodología siguen centrados en el proyecto. Contacto y cierre compartido invitan a escribir directamente a Gerson. Se reduce la repetición de condiciones contractuales en las introducciones y se mantiene la identificación objetiva en privacidad, metadatos y responsabilidades. Sin cambios en diseño, CSS, JavaScript o configuración del formulario.
