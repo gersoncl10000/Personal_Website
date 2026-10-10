@@ -18,6 +18,17 @@ La autorización actual incluye publicación. Se utiliza el workflow existente B
 ---
 # Validación local
 
+## Voz editorial — 2026-10-10
+
+Corregida la presentación personal de la práctica: Servicios y Metodología en navegación; titular nominal de modernización y automatización; alcance y entregables descritos desde el trabajo; experiencia factual en Sobre Castillo; agentes, Azhum y contacto con voz consistente. Se conserva la identidad visual, los enlaces y fragmentos existentes y la configuración del formulario.
+
+- Build Astro correcto y 12 pruebas Node aprobadas.
+- 6 pruebas de navegador aprobadas, incluida la interfaz del formulario con respuestas simuladas, sin enviar correos reales.
+- Cinco rutas verificadas a 390, 768 y 1440 px: sin desbordamiento horizontal ni errores JavaScript; imágenes cargadas y Axe WCAG A/AA sin infracciones detectadas.
+- Capturas de home, Sobre Castillo, agentes y contacto revisadas en escritorio y móvil. Imagen social regenerada y revisada.
+- Lighthouse no se repite en esta edición de contenido: las métricas de la revisión comercial anterior no constituyen una nueva medición.
+- Evidencia: C:/Users/gerso/Documents/Codex/2026-09-19/files-pasted-by-the-user-project/outputs/castillo-voz-editorial-2026-10-10/.
+
 ## Formulario de contacto — 2026-09-20
 
 Build correcto y siete pruebas Node aprobadas, repetidas tras configurar la clave propia aportada por el propietario. Incluyen respuestas exitosas y fallidas del proveedor, límite 429, error de red, JSON inválido, bloqueo por falta de clave y honeypot, ausencia de reintentos y conservación del mensaje. Estas pruebas automatizadas simulan peticiones. Comprobación del build sin mailto ni correo personal.

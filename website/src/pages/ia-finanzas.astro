@@ -25,23 +25,23 @@ const opportunities = [
 const phases = [
   [
     "Delimitar la tarea",
-    "Identifico con Finanzas qué trabajo se repite, sus entradas, salidas y excepciones. Acordamos qué resultado merece construir y cómo aceptarlo.",
+    "El análisis con Finanzas identifica el trabajo que debe resolverse, sus entradas, salidas y excepciones. El alcance recoge el resultado esperado y los criterios de aceptación.",
   ],
   [
     "Diseñar datos y controles",
-    "Defino las fuentes, los permisos, las acciones permitidas y las aprobaciones. Cada respuesta o propuesta debe conservar su evidencia.",
+    "El diseño especifica las fuentes, los permisos, las acciones permitidas y las aprobaciones. Cada respuesta o propuesta debe conservar la evidencia que la sustenta.",
   ],
   [
     "Construir y probar",
-    "Desarrollo o dirijo la construcción según el alcance. Pruebo con casos representativos, errores y excepciones antes de habilitar acciones.",
+    "La construcción puede ser directa o realizarse con IT y especialistas, según el alcance. Las pruebas incluyen casos representativos, errores y excepciones antes de habilitar acciones.",
   ],
   [
     "Implantar con revisión humana",
-    "Acordamos quién revisa, quién aprueba y cómo se detiene o escala una incidencia. Acompaño el despliegue y el traspaso al equipo.",
+    "La implantación establece quién revisa, quién aprueba y cómo se detiene o escala una incidencia. La puesta en marcha incluye el traspaso al equipo responsable.",
   ],
   [
     "Medir calidad y coste",
-    "Reviso exactitud, errores, coste de operación y adopción frente a los criterios acordados. Ajusto el alcance y los controles con esa evidencia.",
+    "El seguimiento contrasta exactitud, errores, coste de operación y uso con los criterios acordados. Los resultados permiten ajustar el alcance y los controles.",
   ],
 ];
 ---
@@ -62,9 +62,10 @@ const phases = [
         <em>en la función financiera.</em>
       </h1>
       <p class="lead">
-        Diseño agentes para tareas concretas: consultar información, contrastar
-        documentos o preparar propuestas. Con datos trazados, acciones
-        delimitadas y una persona que aprueba lo que lo requiere.
+        Diseño e implantación de agentes para tareas concretas: consultar
+        información, contrastar documentos o preparar propuestas. Cada tarea
+        requiere fuentes identificadas, acciones delimitadas y aprobación humana
+        cuando corresponde.
       </p>
       <a class="button" href="/contacto/#message-heading">
         Hablemos de tu caso <span aria-hidden="true">→</span>
@@ -80,8 +81,8 @@ const phases = [
           <h2>No toda tarea necesita IA.</h2>
         </div>
         <p>
-          Primero distingo qué puede resolverse con reglas, qué necesita
-          interpretación y qué debe seguir decidiendo una persona.
+          El primer paso es distinguir qué puede resolverse con reglas, qué
+          necesita interpretación y qué debe seguir decidiendo una persona.
         </p>
       </div>
       <div class="opportunity-grid">
@@ -147,10 +148,10 @@ const phases = [
         <p class="eyebrow gold">GOBIERNO DESDE EL DISEÑO</p>
         <h2>Quién puede hacer qué.</h2>
         <p>
-          Defino con Finanzas e IT el acceso al dato, los límites de actuación y
-          las aprobaciones. El agente debe poder explicar de dónde sale una
-          propuesta y detenerse cuando falta información o encuentra una
-          excepción.
+          Finanzas e IT acuerdan el acceso al dato, los límites de actuación y
+          las aprobaciones. El diseño debe permitir comprobar de dónde sale una
+          propuesta y detener la ejecución cuando falta información o aparece
+          una excepción.
         </p>
       </div>
       <ul class="checks">
@@ -181,7 +182,7 @@ const phases = [
       <div class="section-heading">
         <div>
           <p class="eyebrow">DEL CASO DE USO A LA IMPLANTACIÓN</p>
-          <h2>Cómo construyo un agente.</h2>
+          <h2>Diseño, pruebas y puesta en marcha.</h2>
         </div>
         <p>
           Una tarea delimitada, controles acordados y pruebas antes de llevarla
@@ -211,11 +212,12 @@ const phases = [
       <div>
         <h2>Azhum y Lumen, su capa de inteligencia.</h2>
         <p>
-          Azhum es la plataforma de inteligencia financiera que he diseñado y
-          construido. Su modelo de contabilidad analítica conecta las cifras con
-          su origen y sus reglas de atribución. Lumen consulta ese modelo para
-          preparar análisis con evidencia, distinguiendo datos, cálculos y
-          estimaciones. Puede formar parte de una solución cuando encaja.
+          Azhum es la plataforma de inteligencia financiera diseñada y
+          construida por Gerson Castillo. Su modelo de contabilidad analítica
+          conecta las cifras con su origen y sus reglas de atribución. Lumen
+          consulta ese modelo para preparar análisis con evidencia,
+          distinguiendo datos, cálculos y estimaciones. Puede formar parte de
+          una solución cuando encaja.
         </p>
         <p>
           El reporting puede consultarse en la demo pública de Azhum. La capa de
@@ -253,8 +255,8 @@ const phases = [
             ¿Quién construye la solución?<span aria-hidden="true">+</span>
           </summary>
           <div>
-            Puedo desarrollar directamente cuando el alcance encaja, o definir y
-            dirigir la implantación con tu equipo de IT, un proveedor o
+            Gerson Castillo puede desarrollar directamente cuando el alcance
+            encaja, o definir y dirigir la implantación con IT, un proveedor o
             especialistas externos. Las responsabilidades y los criterios de
             aceptación se acuerdan desde el inicio.
           </div>
@@ -265,9 +267,10 @@ const phases = [
             <span aria-hidden="true">+</span>
           </summary>
           <div>
-            Formulo un caso de negocio con supuestos explícitos sobre volumen,
-            tiempos, costes y riesgos. Esos supuestos deben contrastarse con
-            pruebas y mediciones; no son una promesa de ahorro.
+            Un caso de negocio permite estimar el retorno con supuestos
+            explícitos sobre volumen, tiempos, costes y riesgos. Esos supuestos
+            deben contrastarse con pruebas y mediciones; no son una promesa de
+            ahorro.
           </div>
         </details>
       </div>
@@ -276,6 +279,6 @@ const phases = [
 
   <ContactCTA
     label="Hablemos de tu caso"
-    description="Cuéntame qué tarea quieres mejorar, con qué datos trabajáis y qué decisiones necesitan revisión. Con ese contexto acordamos el siguiente paso."
+    description="Una primera conversación permite revisar la tarea, los datos disponibles y las decisiones que requieren supervisión."
   />
 </Layout>

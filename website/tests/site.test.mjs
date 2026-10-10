@@ -56,8 +56,8 @@ test("Commercial positioning and service deliverables are visible on the homepag
   const html = readFileSync(resolve("/"), "utf8");
   for (const text of [
     "17 años en Finanzas",
-    "Modernizo y automatizo",
-    "tu función financiera.",
+    "Modernización y automatización",
+    "de la función financiera.",
     "Qué está frenando a tu equipo financiero.",
     "QUÉ RECIBE EL CLIENTE",
     "Mapa de situación y hoja de ruta con proyectos priorizados.",

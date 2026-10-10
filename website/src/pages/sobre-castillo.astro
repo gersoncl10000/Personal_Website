@@ -3,7 +3,7 @@ import Layout from "../layouts/Layout.astro";
 import AzhumLogo from "../components/AzhumLogo.astro";
 import CastilloOffice from "../components/CastilloOffice.astro";
 import ContactCTA from "../components/ContactCTA.astro";
-import { careerPath, education, identity } from "../data/content";
+import { education, identity } from "../data/content";
 ---
 
 <Layout
@@ -13,15 +13,11 @@ import { careerPath, education, identity } from "../data/content";
   <section class="page-hero about-hero">
     <div class="wrap">
       <p class="eyebrow">SOBRE CASTILLO</p>
-      <h1>
-        Finanzas, sistemas
-        <br />
-        <em>y transformación.</em>
-      </h1>
+      <h1>Gerson Castillo</h1>
       <p class="lead">
-        Castillo es mi práctica profesional independiente. Conecto el criterio
-        financiero con el diseño y la construcción de soluciones para modernizar
-        cómo trabaja Finanzas.
+        Castillo · Transformación Financiera es la práctica independiente de
+        Gerson Castillo, dedicada a la modernización de procesos y sistemas de
+        la función financiera.
       </p>
     </div>
   </section>
@@ -38,19 +34,15 @@ import { careerPath, education, identity } from "../data/content";
         <span>17 AÑOS EN FINANZAS</span>
       </div>
       <div class="founder-copy">
-        <p class="eyebrow">GERSON CASTILLO</p>
-        <h2>Entender Finanzas. Saber construir.</h2>
+        <p class="eyebrow">PERFIL PROFESIONAL</p>
+        <h2>Experiencia financiera</h2>
         <p class="lead">
-          Soy Gerson Castillo. Mi trayectoria combina 17 años en Finanzas con
-          implantación de sistemas y desarrollo de software, en entornos
-          multisociedad entre Latinoamérica y Europa.
+          17 años en Finanzas, con responsabilidades de dirección en
+          organizaciones multisociedad de Latinoamérica y Europa.
         </p>
         <p>
-          He trabajado desde tres posiciones: como responsable financiero que
-          decide y utiliza tecnología, como profesional que dirige
-          implantaciones y como fundador que construye producto. Esa experiencia
-          me permite entender el problema del director financiero y traducirlo a
-          procesos, requisitos y soluciones operativas.
+          La experiencia abarca contabilidad y estados consolidados, tesorería,
+          planificación y relación con bancos.
         </p>
         <a
           class="text-link"
@@ -65,52 +57,43 @@ import { careerPath, education, identity } from "../data/content";
   </section>
 
   <section class="section career-section">
-    <div class="wrap">
-      <div class="section-heading">
-        <div>
-          <p class="eyebrow">TRAYECTORIA</p>
-          <h2>De la función financiera a la construcción de soluciones.</h2>
+    <div class="wrap split">
+      <p class="eyebrow">SISTEMAS</p>
+      <div>
+        <h2>Implantación de software financiero</h2>
+        <div class="two-copy">
+          <p>
+            Dirección de implantaciones de software de consolidación financiera
+            para grupos de Iberia y Latinoamérica.
+          </p>
+          <p>
+            Subdirección financiera en uno de los principales grupos de
+            transporte y logística de España, con diseño e implantación de
+            nuevos sistemas financieros junto a IT.
+          </p>
         </div>
-        <p>
-          Experiencia dentro de Finanzas, en implantación de sistemas y en
-          desarrollo de producto.
-        </p>
       </div>
-      <ol class="career-timeline">
-        {careerPath.map(([title, description], index) => (
-          <li>
-            <span>0{index + 1}</span>
-            <div>
-              <h3>{title}</h3>
-              <p>{description}</p>
-            </div>
-          </li>
-        ))}
-      </ol>
     </div>
   </section>
 
   <section class="section about-intro">
     <div class="wrap split">
-      <p class="eyebrow">LA PRÁCTICA ACTUAL</p>
+      <p class="eyebrow">LA PRÁCTICA</p>
       <div>
-        <h2>Diagnosticar, priorizar y llevar cada mejora a operación.</h2>
+        <h2>Castillo · Transformación Financiera</h2>
         <div class="two-copy">
           <p>
-            Castillo nace de esa combinación de Finanzas y Tecnología. Reviso
-            cómo trabaja el equipo, qué sistemas utiliza y dónde se pierde
-            tiempo o fiabilidad. Con el director financiero, delimito el
-            problema y priorizo mejoras con alcance y entregables claros.
+            Los proyectos se acuerdan directamente con el director financiero y
+            su equipo, con alcance, entregables y responsabilidades definidos.
           </p>
           <p>
-            Lidero personalmente cada proyecto. Construyo directamente cuando el
-            alcance encaja, o especifico y dirijo el trabajo con IT, proveedores
-            y especialistas externos. Acompaño las pruebas, la puesta en marcha
-            y el traspaso al equipo del cliente.
+            Gerson Castillo asume personalmente la dirección del trabajo, con
+            los equipos del cliente, IT y proveedores o especialistas externos
+            según el alcance.
           </p>
         </div>
         <a class="text-link" href="/#como-trabajo">
-          Cómo trabajo <span aria-hidden="true">→</span>
+          Método de trabajo <span aria-hidden="true">→</span>
         </a>
       </div>
     </div>
@@ -120,7 +103,7 @@ import { careerPath, education, identity } from "../data/content";
     <div class="wrap split">
       <div>
         <p class="eyebrow">FORMACIÓN ACADÉMICA</p>
-        <h2>Base financiera, jurídica y tecnológica.</h2>
+        <h2>Titulaciones universitarias</h2>
       </div>
       <ul class="education-list">
         {education.map(([degree, institution]) => (
@@ -136,22 +119,21 @@ import { careerPath, education, identity } from "../data/content";
   <section class="azhum-section about-azhum">
     <div class="wrap azhum-grid">
       <div>
-        <p class="eyebrow">TECNOLOGÍA PROPIA / INTELIGENCIA FINANCIERA</p>
+        <p class="eyebrow">TECNOLOGÍA PROPIA</p>
         <h2 class="azhum-logo">
           <AzhumLogo />
         </h2>
       </div>
       <div>
-        <h3>Azhum, una herramienta que he construido.</h3>
+        <h3>Plataforma de inteligencia financiera</h3>
         <p>
-          Azhum es la plataforma de inteligencia financiera que he diseñado y
-          construido. Combina contabilidad analítica y una capa de agentes de IA
-          sobre información financiera trazada.
+          Azhum ha sido diseñada y construida por Gerson Castillo. Combina
+          contabilidad analítica y una capa de agentes de IA sobre información
+          financiera trazada.
         </p>
         <p>
-          La utilizo cuando encaja como parte de la solución. Cuando el problema
-          requiere mejorar el ERP, integrar otros sistemas o trabajar con una
-          herramienta de mercado, propongo esa alternativa.
+          Su uso depende del proyecto. La arquitectura puede apoyarse en el ERP
+          existente, integraciones u otras herramientas de mercado.
         </p>
         <a
           class="text-link"

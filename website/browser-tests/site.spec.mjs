@@ -49,10 +49,17 @@ test("Mobile menu, details, AI contact and keyboard", async ({ page }) => {
   await menu.click();
   await page
     .getByRole("navigation")
-    .getByRole("link", { name: "Qué hago" })
+    .getByRole("link", { name: "Servicios" })
     .click();
   await expect(menu).toHaveAttribute("aria-expanded", "false");
   await expect(page.locator("#servicios")).toBeInViewport();
+  await menu.click();
+  await page
+    .getByRole("navigation")
+    .getByRole("link", { name: "Metodología" })
+    .click();
+  await expect(menu).toHaveAttribute("aria-expanded", "false");
+  await expect(page.locator("#como-trabajo")).toBeInViewport();
   await page.goto("/");
   await expect(
     page.getByRole("link", { name: "Hablemos de tu proyecto" }).first(),
@@ -64,7 +71,7 @@ test("Mobile menu, details, AI contact and keyboard", async ({ page }) => {
   ).toHaveAttribute("href", "/contacto/#message-heading");
   await page.goto("/sobre-castillo/");
   await expect(
-    page.getByRole("heading", { name: /Finanzas, sistemas/ }),
+    page.getByRole("heading", { name: "Gerson Castillo", level: 1 }),
   ).toBeVisible();
   await expect(
     page.getByText("Licenciatura en Contaduría Pública"),

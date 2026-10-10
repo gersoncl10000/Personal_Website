@@ -55,7 +55,7 @@ export const services = [
     title: "Diagnóstico y hoja de ruta",
     problem:
       "Sabes que hay trabajo manual, información poco fiable o controles que necesitan mejorar, pero falta decidir por dónde empezar.",
-    work: "Reviso con Finanzas los procesos, sistemas, datos y controles. Identifico riesgos y oportunidades, y priorizo intervenciones por valor, esfuerzo y dependencias.",
+    work: "El diagnóstico revisa procesos, sistemas, datos y controles con el equipo financiero. Las propuestas se ordenan por valor, esfuerzo y dependencias, con los riesgos identificados.",
     examples: [
       "Cierre, conciliaciones y controles",
       "R2R · P2P/S2P · O2C",
@@ -69,7 +69,7 @@ export const services = [
     title: "Proyectos de transformación",
     problem:
       "El problema está identificado. Hace falta convertirlo en una solución que el equipo pueda utilizar y mantener.",
-    work: "Diseño el proceso objetivo y los requisitos funcionales. Construyo directamente cuando el alcance encaja, o dirijo con IT y proveedores. Coordino pruebas, puesta en marcha y adopción.",
+    work: "Cada proyecto incluye el proceso objetivo y los requisitos funcionales, el desarrollo o la coordinación con IT y proveedores, las pruebas de aceptación y la puesta en marcha.",
     examples: [
       "Integraciones y mejora del ERP",
       "Reporting conciliado y calidad del dato",
@@ -82,20 +82,20 @@ export const services = [
 ];
 export const steps = [
   [
-    "Entender",
-    "Revisar con Finanzas el problema, los procesos, los datos y los sistemas. Cuando hace falta, con un diagnóstico específico.",
+    "Diagnóstico",
+    "Revisión del problema con Finanzas: procesos, datos, sistemas y controles. El análisis permite decidir qué necesita cambiar.",
   ],
   [
-    "Priorizar y acordar",
-    "Definir una fase acotada, con alcance, entregables, calendario y criterios de aceptación.",
+    "Alcance y prioridades",
+    "Cada fase tiene entregables, calendario y criterios de aceptación acordados. Las prioridades consideran valor, esfuerzo y dependencias.",
   ],
   [
-    "Construir o dirigir",
-    "Desarrollar la solución o dirigir con IT y proveedores. Asumir la coordinación y la validación de lo acordado.",
+    "Desarrollo y dirección",
+    "Desarrollo directo o ejecución con IT y proveedores, según el proyecto. Responsabilidades definidas y validación de lo acordado.",
   ],
   [
-    "Implantar y medir",
-    "Probar con usuarios, formar y traspasar al equipo. Revisar resultados antes de acordar la siguiente fase.",
+    "Implantación y seguimiento",
+    "Pruebas con usuarios, formación y traspaso al equipo. Los resultados se revisan antes de acordar la siguiente fase.",
   ],
 ];
 

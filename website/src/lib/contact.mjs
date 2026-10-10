@@ -4,7 +4,7 @@ export async function sendContact(formData, fetcher = fetch) {
   if (!formData.get("access_key") || formData.get("botcheck")) {
     return {
       ok: false,
-      message: "No se pudo enviar. Puedes contactarme por LinkedIn.",
+      message: "No se pudo enviar. Puedes contactar por LinkedIn.",
     };
   }
   const controller = new AbortController();
@@ -21,7 +21,7 @@ export async function sendContact(formData, fetcher = fetch) {
       return {
         ok: false,
         message:
-          "El servicio ha alcanzado su límite de envíos. Prueba más tarde o contáctame por LinkedIn.",
+          "El servicio ha alcanzado su límite de envíos. Prueba más tarde o contacta por LinkedIn.",
       };
     }
     const result = await response.json();
@@ -29,19 +29,18 @@ export async function sendContact(formData, fetcher = fetch) {
       return {
         ok: false,
         message:
-          "No se pudo enviar el mensaje. Conservamos tu texto para que puedas intentarlo de nuevo o contactarme por LinkedIn.",
+          "No se pudo enviar el mensaje. Tu texto sigue en el formulario para que puedas intentarlo de nuevo o contactar por LinkedIn.",
       };
     }
     return {
       ok: true,
-      message:
-        "Mensaje enviado. Gracias por contarme tu proyecto; te responderé al correo que indicaste.",
+      message: "Mensaje enviado. Recibirás la respuesta en el correo indicado.",
     };
   } catch {
     return {
       ok: false,
       message:
-        "No pudimos confirmar el envío. Tu texto sigue aquí. Puedes esperar unos minutos o contactarme por LinkedIn.",
+        "No se ha podido confirmar el envío. Tu texto sigue aquí. Puedes esperar unos minutos o contactar por LinkedIn.",
     };
   } finally {
     clearTimeout(timeout);
