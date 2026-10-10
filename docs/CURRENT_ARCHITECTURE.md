@@ -2,7 +2,11 @@
 
 ## Actualización de dominio — 2026-10-10
 
-La aplicación actual es Astro estático en `website/`, publicado en el mismo recurso Azure Static Web Apps `ProfessionalWebsite`. Se prepara `https://gersoncastillo.com` como dominio principal: configuración Astro, sitemap, robots y origen del formulario actualizados. El dominio `.com` resuelve a Azure mediante ALIAS; su validación y HTTPS deben completarse antes de publicar el cambio. Los dominios `.dev` continúan asociados al recurso durante la migración. La auditoría que sigue registra el estado anterior y se conserva como historial.
+La aplicación actual es Astro estático en `website/`, publicado en el mismo recurso Azure Static Web Apps `ProfessionalWebsite`. La migración está completada: `https://gersoncastillo.com` es el dominio principal y predeterminado; configuración Astro, metadatos, sitemap, robots y origen del formulario apuntan a `.com`.
+
+Los únicos dominios personalizados vinculados al recurso en el plan Free son `gersoncastillo.com` y `gersoncastillo.es`. Ambos están en estado Ready, con TLS válido. `.com` resuelve a Azure mediante ALIAS y `.es` redirige con HTTP 301 a `.com`, conservando ruta y parámetros. Los dominios `.dev` ya no están vinculados al recurso.
+
+El despliegue [38061514955](https://github.com/gersoncl10000/Personal_Website/actions/runs/38061514955) terminó correctamente. Build, pruebas de contenido y revisión de navegador sobre producción `.com` aprobados; ver `docs/QA.md`. El formulario conserva su configuración y no se modificaron recursos de Azhum. La auditoría que sigue registra el estado anterior y se conserva como historial.
 
 ## Auditoría histórica
 

@@ -16,16 +16,21 @@ Capturas e informes locales: C:/Users/gerso/Documents/Codex/2026-09-19/files-pas
 La autorización actual incluye publicación. Se utiliza el workflow existente Build and deploy Castillo sobre master, con el recurso Azure Static Web Apps que ya sirve gersoncastillo.dev.
 
 ---
-# Validación local
+# Validación local y de producción
 
-## Dominio principal .com — 2026-10-10
+## Dominio principal .com — verificación en producción, 2026-10-10
 
-Migración preparada localmente, sin despliegue. `Astro.site` apunta a `https://gersoncastillo.com`; canonical, Open Graph, Twitter Cards y schema.org heredan esa dirección. Sitemap, robots y los campos de asunto y origen del formulario se actualizan a `.com`, conservando el envío a Web3Forms y su configuración.
+Migración completada y publicada. `https://gersoncastillo.com` es el dominio principal y predeterminado en Azure Static Web Apps. `.com` y `.es` son los únicos dominios personalizados vinculados en el plan Free: ambos Ready y con TLS válido. `gersoncastillo.es` redirige con HTTP 301 a `.com`, conservando ruta y parámetros.
+
+`Astro.site` apunta a `.com`; canonical, Open Graph, Twitter Cards y schema.org heredan esa dirección. Sitemap, robots y los campos de asunto y origen del formulario apuntan también a `.com`, conservando el envío a Web3Forms y su configuración.
 
 - Build Astro correcto: seis páginas estáticas y sitemap.
 - 13 pruebas Node aprobadas, incluida la coherencia del dominio público en metadatos, datos estructurados, sitemap, robots y formulario, y la ausencia de `.dev` en el HTML generado.
-- Sin pruebas de navegador ni envío de correos en esta preparación. Las evidencias visuales anteriores se conservan.
-- Pendiente validación del dominio y HTTPS en Azure antes de publicar. El cambio local no confirma que la migración externa haya finalizado.
+- 6 pruebas de navegador aprobadas sobre producción `https://gersoncastillo.com`: cinco rutas a 390, 768 y 1440 px, sin desbordamiento horizontal ni errores JavaScript; imágenes, navegación, teclado y formulario con respuestas simuladas comprobados.
+- Axe WCAG 2 A/AA y 2.1 AA sin infracciones detectadas en las cinco rutas y los tres anchos.
+- Símbolo original de Castillo utilizado como favicon verificado: el archivo publicado coincide exactamente con el asset de origen.
+- Despliegue [38061514955](https://github.com/gersoncl10000/Personal_Website/actions/runs/38061514955) completado con resultado success.
+- No se envió un nuevo correo real ni se modificaron recursos de Azhum. Las auditorías y evidencias anteriores se conservan como historial.
 
 ## Voz según el contexto — 2026-10-10
 
