@@ -109,6 +109,9 @@ test("Capture review screenshots", async ({ page }) => {
       });
       if (name === "home") {
         await page.screenshot({ path: `test-results/hero-${width}.png` });
+        await page.locator("#gerson").screenshot({
+          path: `test-results/gerson-${width}.png`,
+        });
       }
     }
   }

@@ -18,6 +18,16 @@ La autorización actual incluye publicación. Se utiliza el workflow existente B
 ---
 # Validación local
 
+## Voz según el contexto — 2026-10-10
+
+La biografía de Gerson en home y Sobre Castillo utiliza primera persona factual. La autoría de Azhum en Sobre Castillo forma parte de esa presentación; el producto en home e IA mantiene descripción objetiva. Servicios y metodología siguen centrados en el proyecto. Contacto y cierre compartido invitan a escribir directamente a Gerson. Se reduce la repetición de condiciones contractuales en las introducciones y se mantiene la identificación objetiva en privacidad, metadatos y responsabilidades. Sin cambios en diseño, CSS, JavaScript o configuración del formulario.
+
+- Build Astro y 12 pruebas Node aprobados.
+- 6 pruebas de navegador aprobadas a 390, 768 y 1440 px; cinco rutas sin overflow ni errores JavaScript, imágenes cargadas, navegación y formulario con respuestas simuladas.
+- Axe WCAG 2 A/AA y 2.1 AA sin infracciones detectadas en las rutas y anchos comprobados.
+- Capturas revisadas en escritorio y móvil, con nueva captura específica del bloque Gerson para verificar el cambio de voz. Lighthouse no se repite en esta edición de texto.
+- Evidencia: C:/Users/gerso/Documents/Codex/2026-09-19/files-pasted-by-the-user-project/outputs/castillo-narrativa-contextual-2026-10-10/.
+
 ## Presentación de la actividad — 2026-10-10
 
 Retirada la firma «Práctica independiente · Dirigida por Gerson Castillo» de la apertura. El hero muestra ámbitos de trabajo, y los 17 años se atribuyen a Gerson en el bloque de dirección. La home conserva una síntesis de trayectoria; la formación completa queda en Sobre Castillo. Esta página presenta primero la actividad y el modelo de proyecto, seguidos por la dirección y la experiencia. La responsabilidad se expresa sin prometer ejecución individual de cada tarea ni presentar una plantilla propia. Se retiran estilos de la firma y la formación eliminadas de la home.
