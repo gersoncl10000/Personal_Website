@@ -3,12 +3,12 @@ import "../styles/tokens.css";
 import "@fontsource-variable/manrope";
 import "@fontsource-variable/inter";
 import "../styles/global.css";
-import { identity } from "../data/content";
+import { castilloOffice, identity } from "../data/content";
 import interLatin from "@fontsource-variable/inter/files/inter-latin-wght-normal.woff2?url";
 import manropeLatin from "@fontsource-variable/manrope/files/manrope-latin-wght-normal.woff2?url";
 const {
   title = identity.name,
-  description = "Transformación financiera que conecta procesos, sistemas y Data & AI. Del diagnóstico a la solución implantada, con Gerson Castillo.",
+  description = "Modernización y automatización de la función financiera con Gerson Castillo. Diagnóstico, sistemas y proyectos por fases hasta la puesta en marcha.",
   noindex = false,
 } = Astro.props;
 const current = Astro.url.pathname;
@@ -77,6 +77,13 @@ const canonical = new URL(current, Astro.site);
         url: Astro.site,
         logo: new URL("/images/castillo-symbol.png", Astro.site),
         image: new URL("/images/castillo-symbol.png", Astro.site),
+        address: {
+          "@type": "PostalAddress",
+          streetAddress: castilloOffice.streetAddress,
+          postalCode: castilloOffice.postalCode,
+          addressLocality: castilloOffice.locality,
+          addressCountry: "ES",
+        },
         founder: {
           "@type": "Person",
           name: "Gerson Castillo",
@@ -107,13 +114,13 @@ const canonical = new URL(current, Astro.site);
           Menú <span aria-hidden="true">☰</span>
         </button>
         <nav id="navigation" aria-label="Navegación principal">
-          <a href="/#servicios">Servicios</a>
+          <a href="/#servicios">Qué hago</a>
           <a href="/#como-trabajo">Cómo trabajo</a>
           <a
             href="/ia-finanzas/"
             aria-current={current === "/ia-finanzas/" ? "page" : undefined}
           >
-            Data & AI
+            Agentes de IA
           </a>
           <a
             href="/sobre-castillo/"

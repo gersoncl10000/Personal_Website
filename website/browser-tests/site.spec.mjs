@@ -49,7 +49,7 @@ test("Mobile menu, details, AI contact and keyboard", async ({ page }) => {
   await menu.click();
   await page
     .getByRole("navigation")
-    .getByRole("link", { name: "Servicios" })
+    .getByRole("link", { name: "Qué hago" })
     .click();
   await expect(menu).toHaveAttribute("aria-expanded", "false");
   await expect(page.locator("#servicios")).toBeInViewport();
@@ -57,14 +57,14 @@ test("Mobile menu, details, AI contact and keyboard", async ({ page }) => {
   await expect(
     page.getByRole("link", { name: "Hablemos de tu proyecto" }).first(),
   ).toHaveAttribute("href", "/contacto/#message-heading");
-  await expect(page.getByText("QUÉ RECIBE EL CLIENTE")).toHaveCount(4);
+  await expect(page.getByText("QUÉ RECIBE EL CLIENTE")).toHaveCount(2);
   await page.goto("/ia-finanzas/");
   await expect(
-    page.getByRole("link", { name: "Hablemos de tu proyecto" }).first(),
+    page.getByRole("link", { name: "Hablemos de tu caso" }).first(),
   ).toHaveAttribute("href", "/contacto/#message-heading");
   await page.goto("/sobre-castillo/");
   await expect(
-    page.getByRole("heading", { name: /Finanzas, transformación/ }),
+    page.getByRole("heading", { name: /Finanzas, sistemas/ }),
   ).toBeVisible();
   await expect(
     page.getByText("Licenciatura en Contaduría Pública"),
@@ -82,6 +82,8 @@ test("Capture review screenshots", async ({ page }) => {
     for (const [name, route] of [
       ["home", "/"],
       ["sobre-castillo", "/sobre-castillo/"],
+      ["agentes", "/ia-finanzas/"],
+      ["contacto", "/contacto/"],
     ]) {
       await page.goto(route);
       await page.evaluate(() => document.fonts.ready);

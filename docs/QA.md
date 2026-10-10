@@ -1,3 +1,21 @@
+# Revisión comercial — 10 de octubre de 2026
+
+Aplicada la propuesta aprobada: nueva promesa de modernización y automatización, seis problemas concretos, diagnóstico y proyectos con entregables visibles, método en cuatro pasos, Gerson antes de agentes y Azhum, trayectoria específica, contacto con siguiente paso y oficina de Castillo. Se conserva identidad visual, ruta de IA, formulario y arquitectura estática. Imagen social y metadatos actualizados.
+
+- Build Astro correcto: seis páginas estáticas y sitemap.
+- 12 pruebas Node aprobadas: formulario, privacidad del destinatario, metadatos, favicon/OG, posicionamiento, titulaciones, oficina, claims, enlaces/fragmentos y recursos educativos.
+- 5 pruebas de navegador aprobadas: cinco rutas a 390, 768 y 1440 px, imágenes, desbordamiento, errores JS, teclado, menú, enlaces y capturas.
+- Prueba adicional de interfaz del formulario aprobada con respuestas simuladas: rechazo conserva el mensaje; éxito confirmado limpia campos y habilita el botón. La configuración permanece activa y no se modifica el destinatario.
+- Axe WCAG 2 A/AA y 2.1 AA: cero infracciones detectadas en las cinco rutas y tres anchos comprobados.
+- Capturas revisadas de home, Sobre Castillo, agentes y contacto en 1440 y 390 px; imagen social revisada.
+- Lighthouse 13.5.0 sobre preview local: 100 rendimiento, 100 accesibilidad, 100 buenas prácticas y 100 SEO en móvil y escritorio. LCP de laboratorio: 1,5 s móvil y 0,3 s escritorio; CLS 0 y TBT 0 ms. Informes completos sin errores de auditoría. Edge devolvió EPERM al limpiar su perfil temporal después de guardar los informes; los informes válidos se conservaron.
+- Prettier y git diff --check correctos.
+
+Capturas e informes locales: C:/Users/gerso/Documents/Codex/2026-09-19/files-pasted-by-the-user-project/outputs/castillo-revision-2026-10-10/.
+
+La autorización actual incluye publicación. Se utiliza el workflow existente Build and deploy Castillo sobre master, con el recurso Azure Static Web Apps que ya sirve gersoncastillo.dev.
+
+---
 # Validación local
 
 ## Formulario de contacto — 2026-09-20

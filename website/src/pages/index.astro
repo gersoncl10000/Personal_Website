@@ -5,73 +5,76 @@ import AzhumLogo from "../components/AzhumLogo.astro";
 import CastilloOffice from "../components/CastilloOffice.astro";
 import ContactCTA from "../components/ContactCTA.astro";
 import {
-  capabilities,
   careerPath,
   cfoProblems,
   credentials,
   education,
   identity,
+  services,
   steps,
-  technologyOptions,
 } from "../data/content";
 ---
 
 <Layout
-  title="Transformación financiera y sistemas · Castillo"
-  description="Castillo conecta Finanzas y Tecnología: diagnóstico, procesos, arquitectura funcional, datos e implantación de soluciones lideradas por Gerson Castillo."
+  title="Modernización y automatización financiera · Castillo"
+  description="Gerson Castillo dirige y ejecuta transformación financiera: diagnóstico, procesos, sistemas y automatización por fases, hasta la puesta en marcha. Madrid."
 >
   <section class="hero">
     <div class="wrap hero-grid">
       <div class="hero-copy">
         <p class="eyebrow">
-          <span class="gold-dash"></span> CASTILLO · TRANSFORMACIÓN FINANCIERA
+          <span class="gold-dash"></span> DIRECCIÓN DE TRANSFORMACIÓN FINANCIERA
         </p>
         <h1>
-          <span class="hero-line">Del problema</span>{" "}
-          <span class="hero-line">financiero a la</span>{" "}
-          <em>solución implantada.</em>
+          <span class="hero-line">Modernizo y automatizo</span>{" "}
+          <em>tu función financiera.</em>
         </h1>
         <p class="hero-description">
-          Diseño procesos, sistemas y soluciones tecnológicas para mejorar cómo
-          Finanzas opera, controla y toma decisiones. Data & AI cuando aportan
-          valor.
+          Diagnostico procesos y sistemas, priorizo las mejoras y construyo o
+          dirijo cada solución hasta su puesta en marcha. Por fases acotadas,
+          con entregables claros.
         </p>
         <div class="hero-actions">
           <a class="button" href="/contacto/#message-heading">
             Hablemos de tu proyecto <span aria-hidden="true">→</span>
           </a>
-          <a class="text-link" href="#servicios">
-            Explorar servicios <span aria-hidden="true">↓</span>
+          <a class="text-link" href="#como-trabajo">
+            Cómo trabajo <span aria-hidden="true">↓</span>
           </a>
         </div>
         <p class="hero-signature">
           Gerson Castillo <span>·</span> Finanzas, transformación y tecnología
         </p>
+        <div class="credentials-strip" aria-label="Credenciales profesionales">
+          {credentials.map((credential) => (
+            <span>{credential}</span>
+          ))}
+        </div>
       </div>
       <TransformationGraphic />
-    </div>
-    <div class="wrap credentials-strip" aria-label="Credenciales profesionales">
-      {credentials.map((credential) => (
-        <span>{credential}</span>
-      ))}
     </div>
   </section>
 
   <section class="section cfo-problems">
-    <div class="wrap problems-grid">
-      <div>
-        <p class="eyebrow">CUÁNDO TIENE SENTIDO HABLAR</p>
-        <h2>Cuando Finanzas sabe que algo tiene que cambiar.</h2>
-        <p class="section-intro">
-          El punto de partida no es una herramienta. Es una fricción concreta
-          que afecta al control, la operación o la capacidad de decidir.
+    <div class="wrap">
+      <div class="section-heading">
+        <div>
+          <p class="eyebrow">CUÁNDO TIENE SENTIDO HABLAR</p>
+          <h2>Qué está frenando a tu equipo financiero.</h2>
+        </div>
+        <p>
+          El primer paso es entender qué ocurre, cuánto pesa y por dónde
+          conviene empezar.
         </p>
       </div>
       <ol class="problem-list">
-        {cfoProblems.map((problem, index) => (
+        {cfoProblems.map(([title, description], index) => (
           <li>
             <span>0{index + 1}</span>
-            {problem}
+            <div>
+              <h3>{title}</h3>
+              <p>{description}</p>
+            </div>
           </li>
         ))}
       </ol>
@@ -91,15 +94,14 @@ import {
         </h2>
         <div class="two-copy">
           <p>
-            La Dirección Financiera sabe qué necesita conseguir, pero no siempre
-            puede convertirlo en arquitectura funcional, especificaciones,
-            datos, integraciones y criterios de aceptación.
+            La Dirección Financiera sabe qué necesita conseguir. Convertirlo en
+            procesos, requisitos funcionales, datos, integraciones y criterios
+            de aceptación requiere conocer la lógica financiera.
           </p>
           <p>
-            IT conoce la tecnología, pero no necesariamente la lógica financiera
-            y contable. Trabajo precisamente en esa frontera para convertir una
-            necesidad del negocio en una solución que pueda construirse,
-            validarse y operar.
+            Trabajo en ese punto de conexión: entiendo el problema con Finanzas,
+            especifico lo que IT necesita y construyo o dirijo la solución,
+            comprobando con el equipo que funciona.
           </p>
         </div>
       </div>
@@ -110,33 +112,46 @@ import {
     <div class="wrap">
       <div class="section-heading">
         <div>
-          <p class="eyebrow">SERVICIOS</p>
+          <p class="eyebrow">QUÉ HAGO</p>
           <h2>
-            Del diagnóstico.
+            Entender qué cambiar.
             <br />
-            <em>A la solución implantada.</em>
+            <em>Llevarlo a operación.</em>
           </h2>
         </div>
         <p>
-          Cuatro líneas de trabajo conectadas por el mismo criterio financiero.
+          Un diagnóstico cuando hace falta. Después, proyectos acotados con
+          resultados y criterios de aceptación acordados.
         </p>
       </div>
       <div class="capability-grid">
-        {capabilities.map((service) => (
+        {services.map((service) => (
           <article class="capability" id={service.id}>
             <span class="number">{service.number}</span>
             <h3>{service.title}</h3>
-            <p class="service-label">QUÉ PROBLEMA RESUELVE</p>
+            <p class="service-label">CUÁNDO TIENE SENTIDO</p>
             <p>{service.problem}</p>
-            <p class="service-label">QUÉ HACE CASTILLO</p>
+            <p class="service-label">QUÉ HAGO</p>
             <p>{service.work}</p>
-            <p class="tags">{service.tags}</p>
+            <ul class="service-examples">
+              {service.examples.map((example) => (
+                <li>{example}</li>
+              ))}
+            </ul>
             <div class="service-deliverable">
               <span>QUÉ RECIBE EL CLIENTE</span>
               <strong>{service.deliverable}</strong>
             </div>
           </article>
         ))}
+      </div>
+      <div class="continuity-note">
+        <h3>Continuidad, cuando el proyecto la necesita.</h3>
+        <p>
+          Puedo acompañar la transformación a tiempo parcial, coordinando
+          prioridades, equipos y siguientes fases. El alcance se acuerda según
+          lo que necesita la función financiera.
+        </p>
       </div>
     </div>
   </section>
@@ -147,12 +162,15 @@ import {
         <div>
           <p class="eyebrow">CÓMO TRABAJO</p>
           <h2>
-            El diseño es el inicio.
+            Del problema financiero
             <br />
-            <em>La implantación, el compromiso.</em>
+            <em>a la solución implantada.</em>
           </h2>
         </div>
-        <p>Proyectos definidos por alcance, entregables y calendario.</p>
+        <p>
+          Cada fase tiene alcance, entregables y criterios de aceptación.
+          Revisamos lo conseguido antes de decidir el siguiente paso.
+        </p>
       </div>
       <ol class="steps">
         {steps.map(([title, description], index) => (
@@ -165,74 +183,14 @@ import {
       </ol>
       <div class="method-note">
         <div>
-          <span>INDEPENDENCIA TECNOLÓGICA</span>
-          <h3>La tecnología es consecuencia del problema.</h3>
-          <p>
-            Castillo no parte de una herramienta predeterminada. La solución se
-            decide después de entender el proceso, los datos, los controles y la
-            arquitectura existente.
-          </p>
+          <span>CRITERIO TECNOLÓGICO</span>
+          <h3>La tecnología se elige después de entender el problema.</h3>
         </div>
-        <ul class="technology-options">
-          {technologyOptions.map((option) => (
-            <li>{option}</li>
-          ))}
-        </ul>
-      </div>
-    </div>
-  </section>
-
-  <section class="ai-feature">
-    <div class="wrap ai-grid">
-      <div>
-        <p class="eyebrow gold">
-          DATA & AI / NUEVAS PALANCAS DE TRANSFORMACIÓN
-        </p>
-        <h2>
-          Inteligencia artificial.
-          <br />
-          <em>Criterio financiero.</em>
-          <br />
-          Aplicación real.
-        </h2>
         <p>
-          Data & AI amplía las opciones de transformación. La pregunta sigue
-          siendo qué problema merece resolverse, con qué datos y con qué
-          controles.
-        </p>
-        <a class="button light" href="/ia-finanzas/">
-          Explorar Data & AI para Finanzas <span aria-hidden="true">→</span>
-        </a>
-      </div>
-      <div class="ai-opportunities">
-        <p class="diagram-label">OPORTUNIDADES QUE PODEMOS EVALUAR</p>
-        <a href="/ia-finanzas/#oportunidades">
-          <span>01</span>
-          <div>
-            <h3>Operaciones con menos fricción</h3>
-            <p>Automatización, agentes y procesamiento documental.</p>
-          </div>
-          <b aria-hidden="true">↗</b>
-        </a>
-        <a href="/ia-finanzas/#oportunidades">
-          <span>02</span>
-          <div>
-            <h3>Información para anticiparse</h3>
-            <p>Analítica avanzada, forecasting y señales de riesgo.</p>
-          </div>
-          <b aria-hidden="true">↗</b>
-        </a>
-        <a href="/ia-finanzas/#gobierno">
-          <span>03</span>
-          <div>
-            <h3>IA con control y trazabilidad</h3>
-            <p>Validación, supervisión humana y gobierno.</p>
-          </div>
-          <b aria-hidden="true">↗</b>
-        </a>
-        <p class="ai-note">
-          Cada oportunidad parte de tus procesos, tus datos y tus criterios de
-          riesgo.
+          Puede bastar con rediseñar un proceso o aprovechar mejor el ERP. En
+          otros casos hacen falta integraciones, analítica, Power Platform,
+          software específico o IA. Trabajo con la arquitectura adecuada y con
+          los equipos o proveedores que el proyecto requiere.
         </p>
       </div>
     </div>
@@ -251,27 +209,22 @@ import {
         <span>GERSON CASTILLO / FUNDADOR</span>
       </div>
       <div class="founder-copy">
-        <p class="eyebrow">GERSON CASTILLO</p>
-        <h2>
-          Finanzas, transformación
-          <br />
-          <em>y tecnología.</em>
-        </h2>
+        <p class="eyebrow">QUIÉN ESTÁ DETRÁS</p>
+        <h2>Gerson Castillo</h2>
         <p class="lead">
-          Mi trayectoria profesional se ha desarrollado en la intersección entre
-          la dirección financiera y los sistemas: desde la gestión de Finanzas
-          en organizaciones complejas hasta el diseño e implantación de software
-          y soluciones de datos.
+          Mi trayectoria combina dirección financiera, implantación de sistemas
+          y construcción de software.
         </p>
         <p>
-          He trabajado desde tres lados de la misma mesa: como responsable
-          financiero que compra y utiliza tecnología, como profesional que
-          dirige implantaciones y como fundador que construye producto.
+          He trabajado como responsable financiero, dirigiendo implantaciones y
+          creando producto. Esa experiencia me permite conectar el problema del
+          CFO con una solución que llega a operación.
         </p>
         <div class="career-preview" aria-label="Trayectoria ejecutiva">
-          {careerPath.slice(0, 4).map(([title]) => (
+          {careerPath.slice(0, 3).map(([title]) => (
             <span>{title}</span>
           ))}
+          <span>Fundador y arquitecto de Azhum</span>
         </div>
         <p class="education-preview">
           <strong>Formación:</strong>{" "}
@@ -279,7 +232,7 @@ import {
         </p>
         <div class="inline-actions">
           <a class="button" href="/sobre-castillo/">
-            Sobre Castillo y Gerson <span aria-hidden="true">→</span>
+            Conocer el recorrido <span aria-hidden="true">→</span>
           </a>
           <a
             class="text-link"
@@ -295,6 +248,60 @@ import {
     </div>
   </section>
 
+  <section class="ai-feature">
+    <div class="wrap ai-grid">
+      <div>
+        <p class="eyebrow gold">ESPECIALIDAD / AUTOMATIZACIÓN E IA</p>
+        <h2>
+          Agentes de IA,
+          <br />
+          <em>con criterio financiero</em>
+          <br />y control.
+        </h2>
+        <p>
+          Identifico tareas donde un agente puede aportar valor, defino qué
+          puede hacer y qué necesita aprobación, y construyo o dirijo la
+          solución con pruebas y seguimiento.
+        </p>
+        <a class="button light" href="/ia-finanzas/">
+          Cómo planteo los agentes <span aria-hidden="true">→</span>
+        </a>
+      </div>
+      <div class="ai-opportunities">
+        <p class="diagram-label">ANTES DE CONSTRUIR</p>
+        <a href="/ia-finanzas/#oportunidades">
+          <span>01</span>
+          <div>
+            <h3>Una tarea y un resultado concretos</h3>
+            <p>
+              Elegir entre reglas, automatización o un agente según el caso.
+            </p>
+          </div>
+          <b aria-hidden="true">↗</b>
+        </a>
+        <a href="/ia-finanzas/#gobierno">
+          <span>02</span>
+          <div>
+            <h3>Permisos y aprobación definidos</h3>
+            <p>Qué puede ejecutar y qué debe revisar una persona.</p>
+          </div>
+          <b aria-hidden="true">↗</b>
+        </a>
+        <a href="/ia-finanzas/#gobierno">
+          <span>03</span>
+          <div>
+            <h3>Evidencia y calidad verificables</h3>
+            <p>Fuentes, acciones y excepciones registradas para su revisión.</p>
+          </div>
+          <b aria-hidden="true">↗</b>
+        </a>
+        <p class="ai-note">
+          No toda tarea necesita IA. El problema define la solución.
+        </p>
+      </div>
+    </div>
+  </section>
+
   <section class="azhum-section">
     <div class="wrap azhum-grid">
       <div>
@@ -304,24 +311,38 @@ import {
         </h2>
       </div>
       <div>
-        <h3>Capacidad tecnológica, construida.</h3>
+        <h3>Azhum, tecnología propia.</h3>
         <p>
-          Azhum es la plataforma de inteligencia financiera diseñada y
-          construida por Gerson Castillo.
+          Azhum es la plataforma de inteligencia financiera que he diseñado y
+          construido. Conecta contabilidad y datos operativos para analizar el
+          resultado por cliente, línea o unidad, y seguir el origen de las
+          cifras y sus reglas de atribución.
         </p>
         <p>
-          Puede formar parte de una solución cuando encaja. Castillo mantiene
-          independencia tecnológica para trabajar con la herramienta o
-          arquitectura adecuada para cada proyecto.
+          La utilizo cuando encaja en el proyecto; cuando la solución adecuada
+          es otra, propongo otra.
         </p>
-        <a
-          class="text-link"
-          href={identity.azhum}
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Conocer Azhum <span aria-hidden="true">↗</span>
-        </a>
+        <div class="inline-actions">
+          <a
+            class="text-link"
+            href={identity.azhum}
+            target="_blank"
+            rel="noopener noreferrer"
+          >
+            Conocer Azhum <span aria-hidden="true">↗</span>
+          </a>
+          <a
+            class="text-link"
+            href={identity.azhumDemo}
+            target="_blank"
+            rel="noopener noreferrer"
+          >
+            Ver el reporting en vivo <span aria-hidden="true">↗</span>
+          </a>
+        </div>
+        <p class="demo-note">
+          Reporting abierto, sin registro y con datos de demostración.
+        </p>
       </div>
     </div>
   </section>

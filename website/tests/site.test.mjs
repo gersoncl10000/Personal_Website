@@ -56,12 +56,12 @@ test("Commercial positioning and service deliverables are visible on the homepag
   const html = readFileSync(resolve("/"), "utf8");
   for (const text of [
     "17 años en Finanzas",
-    "Cuando Finanzas sabe que algo tiene que cambiar.",
+    "Modernizo y automatizo",
+    "tu función financiera.",
+    "Qué está frenando a tu equipo financiero.",
     "QUÉ RECIBE EL CLIENTE",
-    "Un proceso objetivo y una hoja de ruta con prioridades.",
-    "Un diseño funcional con alcance y criterios de aceptación.",
-    "Una oportunidad evaluada y una solución diseñada para su contexto.",
-    "Una implantación con responsabilidades, pruebas y seguimiento.",
+    "Mapa de situación y hoja de ruta con proyectos priorizados.",
+    "Solución implantada, pruebas de aceptación y traspaso al equipo.",
     "Hablemos de tu proyecto",
   ]) {
     assert.match(html, new RegExp(text.replace(/[.*+?^${}()|[\]\\]/g, "\\$&")));
@@ -81,7 +81,7 @@ test("About page contains only the approved academic qualifications", () => {
   ]) {
     assert.match(html, new RegExp(degree));
   }
-  assert.doesNotMatch(html, /HarvardX|MOOC|certificaci[oó]n|curso/i);
+  assert.doesNotMatch(html, /Harvard|INEAF|MOOC|certificaci[oó]n|curso/i);
 });
 
 test("Madrid office is presented as Castillo's address", () => {

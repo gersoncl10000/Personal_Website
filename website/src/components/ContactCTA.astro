@@ -1,20 +1,25 @@
+---
+interface Props {
+  title?: string;
+  description?: string;
+  label?: string;
+}
+const {
+  title = "¿Por dónde empezamos?",
+  description = "Cuéntame qué proceso quieres mejorar y dónde encontráis dificultades. Con ese contexto acordamos el siguiente paso.",
+  label = "Hablemos de tu proyecto",
+} = Astro.props;
+---
+
 <section class="contact-cta">
   <div class="wrap cta-inner">
     <div>
       <p class="eyebrow">EL SIGUIENTE PASO</p>
-      <h2>
-        Hablemos de lo que
-        <br />
-        necesita cambiar.
-      </h2>
-      <p>
-        Un proceso que no escala. Un sistema que no conecta.
-        <br />
-        Una oportunidad de IA que merece evaluarse.
-      </p>
+      <h2>{title}</h2>
+      <p>{description}</p>
     </div>
     <a class="button light" href="/contacto/#message-heading">
-      Hablemos de tu proyecto <span aria-hidden="true">→</span>
+      {label} <span aria-hidden="true">→</span>
     </a>
   </div>
 </section>

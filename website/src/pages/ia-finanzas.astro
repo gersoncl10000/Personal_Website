@@ -1,84 +1,88 @@
 ---
 import Layout from "../layouts/Layout.astro";
 import ContactCTA from "../components/ContactCTA.astro";
+import AzhumLogo from "../components/AzhumLogo.astro";
+import { identity } from "../data/content";
+
 const opportunities = [
   [
-    "Documentos y tareas repetitivas",
-    "Extraer y clasificar información de documentos, preparar registros y coordinar tareas con automatización y agentes.",
-    "Evaluar: volumen, excepciones y validación humana.",
+    "Reglas e integraciones",
+    "Mover datos entre sistemas, calcular importes o conciliar con reglas estables suele resolverse con automatización convencional. El proceso debe ser fiable antes de añadir autonomía.",
+    "Decidir: qué puede ejecutarse con reglas y qué necesita interpretar una excepción.",
   ],
   [
-    "Análisis y explicación financiera",
-    "Consultar información y preparar borradores de análisis con GenAI, utilizando fuentes identificables y permisos adecuados.",
-    "Evaluar: trazabilidad, exactitud y acceso al dato.",
+    "Documentos y excepciones",
+    "Un agente puede revisar documentación, contrastarla con los datos disponibles y preparar una propuesta cuando hay información variable. Las decisiones y acciones permitidas se delimitan desde el diseño.",
+    "Decidir: qué propone el agente, qué aprueba una persona y cuándo se detiene.",
   ],
   [
-    "Previsión y señales de riesgo",
-    "Explorar forecasting, modelos predictivos y detección de anomalías para orientar la revisión y la toma de decisiones.",
-    "Evaluar: histórico, calidad del dato y error tolerable.",
+    "Consulta y análisis con evidencia",
+    "Un agente puede consultar fuentes autorizadas y preparar explicaciones para una revisión financiera. La analítica, el forecasting y los modelos predictivos pueden ser herramientas de apoyo; cada uno se evalúa por su utilidad.",
+    "Decidir: qué fuentes sustentan la respuesta y cómo se comprueba su exactitud.",
   ],
 ];
+
 const phases = [
   [
-    "Descubrir",
-    "Identificar fricciones y casos de uso con Finanzas y Administración.",
-  ],
-  ["Priorizar", "Contrastar viabilidad, retorno esperado, coste y riesgo."],
-  [
-    "Diseñar",
-    "Definir arquitectura, datos, controles y criterios de aceptación.",
+    "Delimitar la tarea",
+    "Identifico con Finanzas qué trabajo se repite, sus entradas, salidas y excepciones. Acordamos qué resultado merece construir y cómo aceptarlo.",
   ],
   [
-    "Construir o dirigir",
-    "Desarrollar o coordinar al equipo y la plataforma adecuados.",
+    "Diseñar datos y controles",
+    "Defino las fuentes, los permisos, las acciones permitidas y las aprobaciones. Cada respuesta o propuesta debe conservar su evidencia.",
   ],
   [
-    "Implantar",
-    "Probar con usuarios, validar excepciones y acompañar la adopción.",
+    "Construir y probar",
+    "Desarrollo o dirijo la construcción según el alcance. Pruebo con casos representativos, errores y excepciones antes de habilitar acciones.",
   ],
   [
-    "Medir y gobernar",
-    "Seguir resultados, costes, calidad y oportunidades de mejora.",
+    "Implantar con revisión humana",
+    "Acordamos quién revisa, quién aprueba y cómo se detiene o escala una incidencia. Acompaño el despliegue y el traspaso al equipo.",
+  ],
+  [
+    "Medir calidad y coste",
+    "Reviso exactitud, errores, coste de operación y adopción frente a los criterios acordados. Ajusto el alcance y los controles con esa evidencia.",
   ],
 ];
 ---
 
 <Layout
-  title="Data & AI para Finanzas · Castillo"
-  description="Evaluación, diseño e implantación de automatización, GenAI, agentes, analítica y forecasting desde el problema financiero, con control y trazabilidad."
+  title="Agentes de IA en la función financiera · Castillo"
+  description="Cuándo utilizar agentes de IA en Finanzas y cómo diseñarlos con datos trazados, permisos, aprobación humana y evidencia. Del caso de uso a la implantación."
 >
   <section class="page-hero">
     <div class="wrap">
       <div class="page-kicker">
-        <p class="eyebrow">DATA & AI / FINANZAS Y ADMINISTRACIÓN</p>
+        <p class="eyebrow">AGENTES DE IA / FUNCIÓN FINANCIERA</p>
         <a href="/">← Transformación financiera</a>
       </div>
       <h1>
-        De la oportunidad de IA
+        Agentes de IA
         <br />
-        <em>a una solución que opera.</em>
+        <em>en la función financiera.</em>
       </h1>
       <p class="lead">
-        Identificar dónde aporta valor, decidir qué merece construirse y
-        llevarlo a producción con los controles que Finanzas necesita.
+        Diseño agentes para tareas concretas: consultar información, contrastar
+        documentos o preparar propuestas. Con datos trazados, acciones
+        delimitadas y una persona que aprueba lo que lo requiere.
       </p>
       <a class="button" href="/contacto/#message-heading">
-        Hablemos de tu proyecto <span aria-hidden="true">→</span>
+        Hablemos de tu caso <span aria-hidden="true">→</span>
       </a>
     </div>
   </section>
+
   <section class="section white-section" id="oportunidades">
     <div class="wrap">
       <div class="section-heading">
         <div>
-          <p class="eyebrow">PARTIR DEL PROBLEMA</p>
-          <h2>
-            No toda tarea necesita IA.
-            <br />
-            <em>Algunas sí merecen otra solución.</em>
-          </h2>
+          <p class="eyebrow">PARTIR DE LA TAREA</p>
+          <h2>No toda tarea necesita IA.</h2>
         </div>
-        <p>Ámbitos de aplicación para evaluar según tus datos y procesos.</p>
+        <p>
+          Primero distingo qué puede resolverse con reglas, qué necesita
+          interpretación y qué debe seguir decidiendo una persona.
+        </p>
       </div>
       <div class="opportunity-grid">
         {opportunities.map(([title, text, check], i) => (
@@ -92,18 +96,97 @@ const phases = [
       </div>
     </div>
   </section>
+
   <section class="section">
     <div class="wrap">
       <div class="section-heading">
         <div>
-          <p class="eyebrow">DEL CASO DE USO A LA IMPLANTACIÓN</p>
-          <h2>
-            Primero, criterio.
-            <br />
-            <em>Después, tecnología.</em>
-          </h2>
+          <p class="eyebrow">UN POSIBLE PROYECTO</p>
+          <h2>Revisar facturas antes de aprobarlas.</h2>
         </div>
-        <p>Una hoja de ruta con decisiones y entregables en cada etapa.</p>
+        <p>
+          Ejemplo de una tarea que podría diseñarse con supervisión. El alcance
+          depende del proceso, de los sistemas y de la calidad del dato.
+        </p>
+      </div>
+      <div class="opportunity-grid">
+        <article>
+          <span class="number">01</span>
+          <h3>Contrastar la información</h3>
+          <p>
+            Una integración recoge los datos disponibles. Las reglas comprueban
+            importes y duplicados; un agente podría interpretar documentación y
+            señalar información que falta o requiere revisión.
+          </p>
+        </article>
+        <article>
+          <span class="number">02</span>
+          <h3>Preparar una propuesta</h3>
+          <p>
+            El agente podría sugerir una clasificación o una respuesta,
+            mostrando los documentos y datos que la sustentan. Las excepciones
+            pasan a la persona responsable.
+          </p>
+        </article>
+        <article>
+          <span class="number">03</span>
+          <h3>Aprobar y conservar evidencia</h3>
+          <p>
+            Una persona valida la propuesta antes de contabilizar o autorizar
+            una acción. Quedan registrados la evidencia, la aprobación y el
+            resultado para poder revisarlos.
+          </p>
+        </article>
+      </div>
+    </div>
+  </section>
+
+  <section class="section governance" id="gobierno">
+    <div class="wrap ai-grid">
+      <div>
+        <p class="eyebrow gold">GOBIERNO DESDE EL DISEÑO</p>
+        <h2>Quién puede hacer qué.</h2>
+        <p>
+          Defino con Finanzas e IT el acceso al dato, los límites de actuación y
+          las aprobaciones. El agente debe poder explicar de dónde sale una
+          propuesta y detenerse cuando falta información o encuentra una
+          excepción.
+        </p>
+      </div>
+      <ul class="checks">
+        <li>
+          <span>01</span> Fuentes identificadas y datos trazados hasta su
+          origen.
+        </li>
+        <li>
+          <span>02</span> Permisos y acciones acotados a la tarea.
+        </li>
+        <li>
+          <span>03</span> Aprobación humana y escalado de excepciones.
+        </li>
+        <li>
+          <span>04</span> Registro de consultas, propuestas, acciones y
+          evidencia.
+        </li>
+        <li>
+          <span>05</span> Pruebas, seguimiento y capacidad de detener la
+          ejecución.
+        </li>
+      </ul>
+    </div>
+  </section>
+
+  <section class="section white-section">
+    <div class="wrap">
+      <div class="section-heading">
+        <div>
+          <p class="eyebrow">DEL CASO DE USO A LA IMPLANTACIÓN</p>
+          <h2>Cómo construyo un agente.</h2>
+        </div>
+        <p>
+          Una tarea delimitada, controles acordados y pruebas antes de llevarla
+          a operación.
+        </p>
       </div>
       <div class="opportunity-grid">
         {phases.map(([title, text], i) => (
@@ -116,41 +199,40 @@ const phases = [
       </div>
     </div>
   </section>
-  <section class="section governance" id="gobierno">
-    <div class="wrap ai-grid">
+
+  <section class="azhum-section">
+    <div class="wrap azhum-grid">
       <div>
-        <p class="eyebrow gold">GOBIERNO DESDE EL DISEÑO</p>
-        <h2>
-          Más autonomía.
-          <br />
-          <em>Con límites claros.</em>
-        </h2>
-        <p>
-          La calidad de una solución también se mide por cómo trata una
-          excepción, justifica una respuesta y permite que una persona
-          intervenga.
-        </p>
+        <p class="eyebrow">TECNOLOGÍA PROPIA</p>
+        <div class="azhum-logo">
+          <AzhumLogo />
+        </div>
       </div>
-      <ul class="checks">
-        <li>
-          <span>01</span> Datos, permisos y fuentes identificados.
-        </li>
-        <li>
-          <span>02</span> Revisión humana en las decisiones que lo requieren.
-        </li>
-        <li>
-          <span>03</span> Pruebas y criterios de aceptación antes del
-          despliegue.
-        </li>
-        <li>
-          <span>04</span> Trazabilidad de resultados y gestión de excepciones.
-        </li>
-        <li>
-          <span>05</span> Seguimiento de calidad, coste y adopción.
-        </li>
-      </ul>
+      <div>
+        <h2>Azhum y Lumen, su capa de inteligencia.</h2>
+        <p>
+          Azhum es la plataforma de inteligencia financiera que he diseñado y
+          construido. Su modelo de contabilidad analítica conecta las cifras con
+          su origen y sus reglas de atribución. Lumen consulta ese modelo para
+          preparar análisis con evidencia, distinguiendo datos, cálculos y
+          estimaciones. Puede formar parte de una solución cuando encaja.
+        </p>
+        <p>
+          El reporting puede consultarse en la demo pública de Azhum. La capa de
+          inteligencia Lumen se presenta mediante una demostración guiada.
+        </p>
+        <a
+          class="text-link"
+          href={identity.azhum}
+          target="_blank"
+          rel="noopener noreferrer"
+        >
+          Conocer Azhum <span aria-hidden="true">↗</span>
+        </a>
+      </div>
     </div>
   </section>
+
   <section class="section white-section">
     <div class="wrap faq">
       <p class="eyebrow">PREGUNTAS PRÁCTICAS</p>
@@ -161,9 +243,9 @@ const phases = [
             ¿Hay que sustituir el ERP?<span aria-hidden="true">+</span>
           </summary>
           <div>
-            No necesariamente. El diagnóstico determina qué puede resolverse con
-            el sistema actual, una integración, automatización o una aplicación
-            específica. La tecnología se elige después de entender el proceso.
+            El diagnóstico determina qué puede resolverse con el sistema actual,
+            una integración, automatización o una aplicación específica. La
+            tecnología se elige después de entender el proceso.
           </div>
         </details>
         <details>
@@ -173,18 +255,8 @@ const phases = [
           <div>
             Puedo desarrollar directamente cuando el alcance encaja, o definir y
             dirigir la implantación con tu equipo de IT, un proveedor o
-            especialistas externos. Las responsabilidades se acuerdan desde el
-            inicio.
-          </div>
-        </details>
-        <details>
-          <summary>
-            ¿Es obligatorio utilizar Azhum?<span aria-hidden="true">+</span>
-          </summary>
-          <div>
-            No. Azhum es mi producto propio y una opción cuando encaja. Castillo
-            mantiene independencia para trabajar con la plataforma que mejor
-            responda a tu contexto.
+            especialistas externos. Las responsabilidades y los criterios de
+            aceptación se acuerdan desde el inicio.
           </div>
         </details>
         <details>
@@ -193,13 +265,17 @@ const phases = [
             <span aria-hidden="true">+</span>
           </summary>
           <div>
-            Se puede formular un caso de negocio con hipótesis explícitas sobre
-            volumen, tiempos, costes y riesgos. Esas hipótesis deben
-            contrastarse; no son una promesa de ahorro.
+            Formulo un caso de negocio con supuestos explícitos sobre volumen,
+            tiempos, costes y riesgos. Esos supuestos deben contrastarse con
+            pruebas y mediciones; no son una promesa de ahorro.
           </div>
         </details>
       </div>
     </div>
   </section>
-  <ContactCTA />
+
+  <ContactCTA
+    label="Hablemos de tu caso"
+    description="Cuéntame qué tarea quieres mejorar, con qué datos trabajáis y qué decisiones necesitan revisión. Con ese contexto acordamos el siguiente paso."
+  />
 </Layout>

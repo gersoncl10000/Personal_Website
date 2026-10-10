@@ -1,6 +1,6 @@
 # Castillo · Transformación Financiera
 
-Rediseño local en `redesign/castillo-transformacion`. Aplicación nueva en `website/`; proyecto Blazor anterior conservado. Producción y workflows no modificados.
+Sitio estático Astro en `website/`, publicado en Azure Static Web Apps mediante GitHub. Práctica independiente de Gerson Castillo: diagnóstico y proyectos de modernización y automatización financiera. Proyecto Blazor anterior conservado como referencia.
 
 ## Instalar y ejecutar
 
@@ -40,7 +40,7 @@ Para comprobar el build con preview en 4322: establecer `$env:TEST_BASE_URL = 'h
 - `website/src/styles/tokens.css`: colores con procedencia documentada.
 - `website/public/images/castillo-symbol.png`: archivo original aportado por el propietario, sin redibujar.
 
-LinkedIn es el contacto principal. El formulario alternativo usa Web3Forms directamente desde el navegador, sin publicar el correo destinatario ni requerir un backend de Azure. Copiar `website/.env.example` a `website/.env.local` y definir `PUBLIC_WEB3FORMS_ACCESS_KEY` con la clave del formulario Castillo tras comprobar su destinatario. Reiniciar desarrollo o reconstruir el sitio después de cambiarla. Sin clave, el formulario permanece deshabilitado y LinkedIn sigue disponible. Ver `docs/CONTACT_FORM.md`.
+El contacto ofrece formulario y LinkedIn. El formulario usa Web3Forms directamente desde el navegador, sin publicar el correo destinatario ni requerir un backend de Azure. Copiar `website/.env.example` a `website/.env.local` y definir `PUBLIC_WEB3FORMS_ACCESS_KEY` con la clave del formulario Castillo tras comprobar su destinatario. Reiniciar desarrollo o reconstruir el sitio después de cambiarla. Sin clave, el formulario permanece deshabilitado y LinkedIn sigue disponible. Ver `docs/CONTACT_FORM.md`.
 
 ## Publicación
 

@@ -2,6 +2,7 @@ export const identity = {
   name: "Castillo · Transformación Financiera",
   linkedin: "https://www.linkedin.com/in/gersoncastillolorenzo/",
   azhum: "https://azhum.com",
+  azhumDemo: "https://logisticaexpress-demo.azhum.com/",
 };
 
 export const castilloOffice = {
@@ -16,74 +17,86 @@ export const castilloOffice = {
 export const credentials = [
   "17 años en Finanzas",
   "Dirección financiera",
-  "Implantación de software financiero",
+  "Implantación de sistemas",
   "Fundador de Azhum",
 ];
 
 export const cfoProblems = [
-  "El cierre depende de demasiado trabajo manual.",
-  "Los sistemas no reflejan cómo Finanzas necesita operar.",
-  "Reporting, contabilidad y operación no terminan de conectar.",
-  "IT necesita requisitos funcionales claros para construir correctamente.",
-  "Hay una oportunidad de automatización o IA, pero todavía no existe un caso de negocio y una arquitectura aterrizados.",
+  [
+    "Datos que se introducen dos veces",
+    "Información que ya existe en un sistema y alguien vuelve a teclear en otro, en Excel o en el ERP.",
+  ],
+  [
+    "Sistemas que se concilian a mano",
+    "ERP, operación, bancos y CRM separados. El equipo tiene que reconstruir la conexión entre ellos.",
+  ],
+  [
+    "Cierre e informes que dependen de personas clave",
+    "Hojas enlazadas, ajustes de última hora y conocimiento que solo tiene una persona.",
+  ],
+  [
+    "Márgenes que no cuadran con contabilidad",
+    "Resultados por cliente, línea o proyecto que cuesta conciliar con el cierre contable.",
+  ],
+  [
+    "Trabajo repetitivo que consume al equipo",
+    "Copiar datos, revisar documentos y preparar información deja poco tiempo para analizar y decidir.",
+  ],
+  [
+    "Procesos que el ERP no cubre bien",
+    "Compras, cobros o activos dependen de circuitos manuales y soluciones fuera del sistema.",
+  ],
 ];
 
-export const capabilities = [
+export const services = [
   {
-    id: "procesos",
+    id: "diagnostico",
     number: "01",
-    title: "Transformación financiera y procesos",
+    title: "Diagnóstico y hoja de ruta",
     problem:
-      "Procesos fragmentados, trabajo manual y controles que dificultan el cierre y la información de gestión.",
-    tags: "R2R · P2P · O2C · Cierre · Control de gestión",
-    work: "Diagnóstico As-Is y diseño To-Be; conciliaciones, contabilidad analítica, controles y modelo operativo.",
-    deliverable: "Un proceso objetivo y una hoja de ruta con prioridades.",
+      "Sabes que hay trabajo manual, información poco fiable o controles que necesitan mejorar, pero falta decidir por dónde empezar.",
+    work: "Reviso con Finanzas los procesos, sistemas, datos y controles. Identifico riesgos y oportunidades, y priorizo intervenciones por valor, esfuerzo y dependencias.",
+    examples: [
+      "Cierre, conciliaciones y controles",
+      "R2R · P2P/S2P · O2C",
+      "Información de gestión y modelo operativo",
+    ],
+    deliverable: "Mapa de situación y hoja de ruta con proyectos priorizados.",
   },
   {
-    id: "sistemas",
+    id: "proyectos",
     number: "02",
-    title: "Sistemas y arquitectura funcional",
+    title: "Proyectos de transformación",
     problem:
-      "Finanzas sabe qué necesita, pero falta traducirlo a una solución que IT y los proveedores puedan construir.",
-    tags: "Requisitos · ERP · Integraciones · Portales",
-    work: "Requisitos funcionales, datos, integraciones, ERP, portales, reporting y coordinación con IT y proveedores.",
-    deliverable: "Un diseño funcional con alcance y criterios de aceptación.",
-  },
-  {
-    id: "datos",
-    number: "03",
-    title: "Data, automatización e IA",
-    problem:
-      "Existen oportunidades de automatización y análisis, pero aún no están priorizadas ni diseñadas para el contexto financiero.",
-    tags: "Agentes · Analítica · GenAI · Modelos predictivos",
-    work: "Automatización, analítica, GenAI, agentes, procesamiento documental, modelos y evaluación de oportunidades.",
+      "El problema está identificado. Hace falta convertirlo en una solución que el equipo pueda utilizar y mantener.",
+    work: "Diseño el proceso objetivo y los requisitos funcionales. Construyo directamente cuando el alcance encaja, o dirijo con IT y proveedores. Coordino pruebas, puesta en marcha y adopción.",
+    examples: [
+      "Integraciones y mejora del ERP",
+      "Reporting conciliado y calidad del dato",
+      "Portales, software y automatización",
+      "Agentes de IA cuando el caso lo justifica",
+    ],
     deliverable:
-      "Una oportunidad evaluada y una solución diseñada para su contexto.",
-  },
-  {
-    id: "implantacion",
-    number: "04",
-    title: "Dirección de la implantación",
-    problem:
-      "El diseño existe, pero la implantación necesita decisiones, coordinación, pruebas y adopción para llegar a la operación.",
-    tags: "Roadmap · UAT · Formación · Adopción",
-    work: "Roadmap, coordinación, construcción directa cuando encaja, UAT, formación, despliegue y adopción.",
-    deliverable:
-      "Una implantación con responsabilidades, pruebas y seguimiento.",
+      "Solución implantada, pruebas de aceptación y traspaso al equipo.",
   },
 ];
 export const steps = [
-  ["Diagnosticar", "Entender el problema, los datos y la forma de trabajar."],
-  ["Diseñar", "Definir el proceso objetivo, la solución y sus controles."],
+  [
+    "Entender",
+    "Revisar con Finanzas el problema, los procesos, los datos y los sistemas. Cuando hace falta, con un diagnóstico específico.",
+  ],
+  [
+    "Priorizar y acordar",
+    "Definir una fase acotada, con alcance, entregables, calendario y criterios de aceptación.",
+  ],
   [
     "Construir o dirigir",
-    "Desarrollar o coordinar al equipo y la plataforma adecuados.",
+    "Desarrollar la solución o dirigir con IT y proveedores. Asumir la coordinación y la validación de lo acordado.",
   ],
   [
-    "Implantar",
-    "Validar con usuarios, formar y acompañar la puesta en marcha.",
+    "Implantar y medir",
+    "Probar con usuarios, formar y traspasar al equipo. Revisar resultados antes de acordar la siguiente fase.",
   ],
-  ["Medir", "Revisar resultados, excepciones y nuevas oportunidades."],
 ];
 
 export const technologyOptions = [
@@ -101,20 +114,20 @@ export const technologyOptions = [
 
 export const careerPath = [
   [
-    "Dirección financiera",
-    "Experiencia dentro de la función financiera, gestionando operación, control e información para la toma de decisiones.",
+    "Dirección financiera multisociedad",
+    "Gestión de la función financiera en entornos multisociedad entre Latinoamérica y Europa: contabilidad, tesorería, planificación y control.",
   ],
   [
-    "Transformación e implantación de sistemas",
-    "Traducción de necesidades financieras a procesos, requisitos, pruebas y soluciones operativas.",
+    "Implantación de software de consolidación",
+    "Dirección de implantaciones de software de consolidación financiera en Iberia y Latinoamérica.",
   ],
   [
-    "Software financiero",
-    "Capacidad para diseñar y construir producto, integraciones, datos y aplicaciones específicas.",
+    "Subdirección financiera",
+    "Subdirección financiera de uno de los principales grupos de transporte y logística de España, con diseño e implantación de sistemas junto a IT.",
   ],
   [
-    "Transformación financiera y digital",
-    "Una práctica independiente para acompañar el recorrido completo, desde el problema hasta la implantación.",
+    "Castillo · Transformación Financiera",
+    "Práctica independiente que conecta diagnóstico, arquitectura funcional y ejecución de proyectos con los equipos del cliente.",
   ],
   [
     "Azhum",
