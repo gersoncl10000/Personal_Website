@@ -71,7 +71,7 @@ test("Mobile menu, details, AI contact and keyboard", async ({ page }) => {
   ).toHaveAttribute("href", "/contacto/#message-heading");
   await page.goto("/sobre-castillo/");
   await expect(
-    page.getByRole("heading", { name: "Gerson Castillo", level: 1 }),
+    page.getByRole("heading", { name: "Sobre Castillo", level: 1 }),
   ).toBeVisible();
   await expect(
     page.getByText("Licenciatura en Contaduría Pública"),

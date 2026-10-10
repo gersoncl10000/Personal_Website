@@ -18,6 +18,16 @@ La autorización actual incluye publicación. Se utiliza el workflow existente B
 ---
 # Validación local
 
+## Presentación de la actividad — 2026-10-10
+
+Retirada la firma «Práctica independiente · Dirigida por Gerson Castillo» de la apertura. El hero muestra ámbitos de trabajo, y los 17 años se atribuyen a Gerson en el bloque de dirección. La home conserva una síntesis de trayectoria; la formación completa queda en Sobre Castillo. Esta página presenta primero la actividad y el modelo de proyecto, seguidos por la dirección y la experiencia. La responsabilidad se expresa sin prometer ejecución individual de cada tarea ni presentar una plantilla propia. Se retiran estilos de la firma y la formación eliminadas de la home.
+
+- Build Astro y 12 pruebas Node aprobados.
+- 6 pruebas de navegador aprobadas a 390, 768 y 1440 px; cinco rutas sin overflow ni errores JavaScript, imágenes cargadas, navegación y formulario con respuestas simuladas.
+- Axe WCAG 2 A/AA y 2.1 AA sin infracciones detectadas en las rutas y anchos comprobados.
+- Capturas de escritorio y móvil revisadas. No se introduce JavaScript; Lighthouse no se repite en esta edición editorial.
+- Evidencia: C:/Users/gerso/Documents/Codex/2026-09-19/files-pasted-by-the-user-project/outputs/castillo-presentacion-2026-10-10/.
+
 ## Voz editorial — 2026-10-10
 
 Corregida la presentación personal de la práctica: Servicios y Metodología en navegación; titular nominal de modernización y automatización; alcance y entregables descritos desde el trabajo; experiencia factual en Sobre Castillo; agentes, Azhum y contacto con voz consistente. Se conserva la identidad visual, los enlaces y fragmentos existentes y la configuración del formulario.

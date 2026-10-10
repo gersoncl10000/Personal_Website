@@ -244,16 +244,6 @@ nav a[aria-current] {
 .hero .text-link {
   color: #e1e8f1;
 }
-.hero-signature {
-  font-size: 11px;
-  margin-top: 30px;
-  color: #aebed0;
-  max-width: 490px;
-}
-.hero-signature span {
-  padding: 0 8px;
-  color: var(--gold);
-}
 .hero-bottom {
   display: flex;
   justify-content: space-between;
@@ -1063,12 +1053,6 @@ footer {
   font-size: 12px;
   padding: 10px 0;
 }
-.founder .education-preview {
-  border-left: 2px solid var(--gold);
-  font-size: 12px !important;
-  margin-top: 24px;
-  padding-left: 15px;
-}
 .inline-actions {
   display: flex;
   align-items: center;
@@ -1210,9 +1194,6 @@ footer {
   .hero-bottom {
     font-size: 9px;
   }
-  .hero-signature {
-    max-width: 370px;
-  }
   .problem-list {
     grid-template-columns: repeat(2, 1fr);
   }
@@ -1284,9 +1265,6 @@ footer {
   }
   .hero .eyebrow {
     font-size: 9px;
-  }
-  .hero-signature {
-    max-width: 100%;
   }
   .transformation-graphic {
     max-width: 530px;
@@ -1446,9 +1424,6 @@ footer {
   .hero-actions {
     align-items: flex-start;
     flex-direction: column;
-  }
-  .hero-signature {
-    font-size: 10px;
   }
   .transformation-graphic svg {
     max-height: 260px;

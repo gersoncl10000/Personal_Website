@@ -14,11 +14,11 @@ export const castilloOffice = {
   maps: "https://www.google.com/maps/search/?api=1&query=Avalon%20PE%20AVALON%2C%20Calle%20Santa%20Leonor%2065%2C%2028037%20Madrid%2C%20Espa%C3%B1a",
 };
 
-export const credentials = [
-  "17 años en Finanzas",
-  "Dirección financiera",
-  "Implantación de sistemas",
-  "Fundador de Azhum",
+export const practiceAreas = [
+  "Procesos financieros",
+  "Sistemas e integraciones",
+  "Datos y automatización",
+  "Dirección de implantación",
 ];
 
 export const cfoProblems = [

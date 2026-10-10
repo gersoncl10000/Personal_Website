@@ -6,8 +6,7 @@ import CastilloOffice from "../components/CastilloOffice.astro";
 import ContactCTA from "../components/ContactCTA.astro";
 import {
   cfoProblems,
-  credentials,
-  education,
+  practiceAreas,
   identity,
   services,
   steps,
@@ -16,7 +15,7 @@ import {
 
 <Layout
   title="Modernización y automatización financiera · Castillo"
-  description="Modernización de procesos y sistemas financieros: diagnóstico, reporting, integraciones y automatización hasta la puesta en marcha. Práctica independiente en Madrid."
+  description="Modernización de procesos y sistemas financieros: diagnóstico, reporting, integraciones y automatización hasta la puesta en marcha. Proyectos por fases. Madrid."
 >
   <section class="hero">
     <div class="wrap hero-grid">
@@ -41,12 +40,9 @@ import {
             Metodología <span aria-hidden="true">↓</span>
           </a>
         </div>
-        <p class="hero-signature">
-          Práctica independiente <span>·</span> Dirigida por Gerson Castillo
-        </p>
-        <div class="credentials-strip" aria-label="Credenciales profesionales">
-          {credentials.map((credential) => (
-            <span>{credential}</span>
+        <div class="credentials-strip" aria-label="Ámbitos de trabajo">
+          {practiceAreas.map((area) => (
+            <span>{area}</span>
           ))}
         </div>
       </div>
@@ -201,10 +197,10 @@ import {
           height="1280"
           loading="lazy"
         />
-        <span>GERSON CASTILLO / FUNDADOR</span>
+        <span>GERSON CASTILLO</span>
       </div>
       <div class="founder-copy">
-        <p class="eyebrow">QUIÉN ESTÁ DETRÁS</p>
+        <p class="eyebrow">DIRECCIÓN</p>
         <h2>Gerson Castillo</h2>
         <p class="lead">
           17 años en Finanzas en entornos multisociedad, entre Latinoamérica y
@@ -215,10 +211,6 @@ import {
           de consolidación en Iberia y Latinoamérica y subdirección financiera
           en un grupo español de transporte y logística. Fundador y arquitecto
           de Azhum.
-        </p>
-        <p class="education-preview">
-          <strong>Formación:</strong>{" "}
-          {education.map(([degree]) => degree).join(" · ")}
         </p>
         <div class="inline-actions">
           <a class="button" href="/sobre-castillo/">
