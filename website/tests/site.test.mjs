@@ -35,7 +35,7 @@ test("All public pages contain indexable Spanish content and unique metadata", (
     titles.add(title);
   }
 });
-test("Homepage declares the Castillo symbol as favicon and business logo", () => {
+test("Castillo favicon declarations and legacy icon paths use the supplied symbol", () => {
   const html = readFileSync(resolve("/"), "utf8");
   assert.match(
     html,
@@ -50,6 +50,29 @@ test("Homepage declares the Castillo symbol as favicon and business logo", () =>
     html,
     /property="og:image" content="https:\/\/gersoncastillo\.dev\/images\/castillo-social\.png"/,
   );
+  const symbol = readFileSync("dist/images/castillo-symbol.png");
+  for (const alias of ["gerson_ico.png", "favicon.png"]) {
+    assert.deepEqual(readFileSync(path.join("dist", alias)), symbol, alias);
+  }
+  const icon = readFileSync("dist/favicon.ico");
+  assert.equal(icon.readUInt16LE(0), 0);
+  assert.equal(icon.readUInt16LE(2), 1);
+  assert.equal(icon.readUInt16LE(4), 1);
+  assert.equal(icon[6], 48);
+  assert.equal(icon[7], 48);
+  assert.equal(icon.readUInt16LE(10), 1);
+  assert.equal(icon.readUInt16LE(12), 32);
+  const length = icon.readUInt32LE(14);
+  const offset = icon.readUInt32LE(18);
+  assert.equal(offset, 22);
+  assert.equal(offset + length, icon.length);
+  const png = icon.subarray(offset);
+  assert.deepEqual(
+    png.subarray(0, 8),
+    Buffer.from([137, 80, 78, 71, 13, 10, 26, 10]),
+  );
+  assert.equal(png.readUInt32BE(16), 48);
+  assert.equal(png.readUInt32BE(20), 48);
 });
 
 test("Commercial positioning and service deliverables are visible on the homepage", () => {
