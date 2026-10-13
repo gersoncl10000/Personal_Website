@@ -64,7 +64,7 @@ test("Mobile menu, details, AI contact and keyboard", async ({ page }) => {
   await expect(
     page.getByRole("link", { name: "Hablemos de tu proyecto" }).first(),
   ).toHaveAttribute("href", "/contacto/#message-heading");
-  await expect(page.getByText("QUÉ RECIBE EL CLIENTE")).toHaveCount(2);
+  await expect(page.getByText("QUÉ RECIBE EL CLIENTE")).toHaveCount(3);
   await page.goto("/ia-finanzas/");
   await expect(
     page.getByRole("link", { name: "Hablemos de tu caso" }).first(),

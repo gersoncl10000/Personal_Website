@@ -39,8 +39,8 @@ export const cfoProblems = [
     "Resultados por cliente, línea o proyecto que cuesta conciliar con el cierre contable.",
   ],
   [
-    "Trabajo repetitivo que consume al equipo",
-    "Copiar datos, revisar documentos y preparar información deja poco tiempo para analizar y decidir.",
+    "Proyectos que no terminan de avanzar",
+    "Decisiones pendientes, responsabilidades poco claras o entregas sin validar entre Finanzas, IT y proveedores.",
   ],
   [
     "Procesos que el ERP no cubre bien",
@@ -69,12 +69,13 @@ export const services = [
     title: "Proyectos de transformación",
     problem:
       "El problema está identificado. Hace falta convertirlo en una solución que el equipo pueda utilizar y mantener.",
-    work: "Cada proyecto incluye el proceso objetivo y los requisitos funcionales, el desarrollo o la coordinación con IT y proveedores, las pruebas de aceptación y la puesta en marcha.",
+    work: "Cada proyecto incluye el proceso objetivo y los requisitos funcionales, un plan de ejecución con responsabilidades definidas, el desarrollo o la coordinación con IT y proveedores, las pruebas de aceptación y la puesta en marcha.",
     examples: [
       "Integraciones y mejora del ERP",
+      "Implantación de herramientas EPM: planificación, presupuestos, forecasting y consolidación financiera",
       "Reporting conciliado y calidad del dato",
       "Portales, software y automatización",
-      "Agentes de IA cuando el caso lo justifica",
+      "IA agéntica: automatización de la conciliación intercompany y análisis de excepciones",
     ],
     deliverable:
       "Solución implantada, pruebas de aceptación y traspaso al equipo.",
@@ -101,6 +102,7 @@ export const steps = [
 
 export const technologyOptions = [
   "Mejorar el ERP existente",
+  "Implantar herramientas EPM",
   "Integrar sistemas",
   "Rediseñar procesos",
   "Automatizar",
