@@ -57,7 +57,7 @@ export const services = [
       "Sabes que hay trabajo manual, información poco fiable o controles que necesitan mejorar, pero falta decidir por dónde empezar.",
     work: "El diagnóstico revisa procesos, sistemas, datos y controles con el equipo financiero. Las propuestas se ordenan por valor, esfuerzo y dependencias, con los riesgos identificados.",
     examples: [
-      "Cierre, conciliaciones y controles",
+      "Tesorería, cierre, conciliaciones y controles",
       "R2R · P2P/S2P · O2C",
       "Reporting financiero, contabilidad analítica y modelo operativo",
     ],
@@ -73,6 +73,7 @@ export const services = [
     examples: [
       "Integraciones y mejora del ERP",
       "Implantación de herramientas EPM: planificación, presupuestos, forecasting y consolidación financiera",
+      "Implantación de herramientas de tesorería (TMS): posición de caja, previsiones de liquidez e integración bancaria",
       "Mejora y automatización del reporting financiero y de gestión, con datos conciliados",
       "Desarrollo de contabilidad analítica y análisis de rentabilidad por línea de negocio, cliente, centro y otras dimensiones relevantes para la operación",
       "Portales, software y automatización",
