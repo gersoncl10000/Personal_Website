@@ -36,7 +36,7 @@ export const cfoProblems = [
   ],
   [
     "Márgenes que no cuadran con contabilidad",
-    "Resultados por cliente, línea o proyecto que cuesta conciliar con el cierre contable.",
+    "Costes, ingresos y márgenes por línea de negocio, cliente, centro u otra dimensión relevante que cuesta analizar y conciliar con contabilidad.",
   ],
   [
     "Proyectos que no terminan de avanzar",
@@ -59,7 +59,7 @@ export const services = [
     examples: [
       "Cierre, conciliaciones y controles",
       "R2R · P2P/S2P · O2C",
-      "Información de gestión y modelo operativo",
+      "Reporting financiero, contabilidad analítica y modelo operativo",
     ],
     deliverable: "Mapa de situación y hoja de ruta con proyectos priorizados.",
   },
@@ -73,7 +73,8 @@ export const services = [
     examples: [
       "Integraciones y mejora del ERP",
       "Implantación de herramientas EPM: planificación, presupuestos, forecasting y consolidación financiera",
-      "Reporting conciliado y calidad del dato",
+      "Mejora y automatización del reporting financiero y de gestión, con datos conciliados",
+      "Desarrollo de contabilidad analítica y análisis de rentabilidad por línea de negocio, cliente, centro y otras dimensiones relevantes para la operación",
       "Portales, software y automatización",
       "IA agéntica: automatización de la conciliación intercompany y análisis de excepciones",
     ],
